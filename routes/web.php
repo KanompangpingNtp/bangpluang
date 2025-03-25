@@ -8,6 +8,7 @@ use App\Http\Controllers\procurement\AdminProcurementController;
 use App\Http\Controllers\procurement_results\AdminProcurementResultsController;
 use App\Http\Controllers\average_price\AdminAveragePriceController;
 use App\Http\Controllers\procurement_report\AdminProcurementReportController;
+use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 
 
 /*
@@ -69,4 +70,10 @@ Route::middleware(['checklogin'])->group(function () {
     Route::post('/ProcurementReport/create', [AdminProcurementReportController::class, 'ProcurementReportCreate'])->name('ProcurementReportCreate');
     Route::delete('/ProcurementReport/delete{id}', [AdminProcurementReportController::class, 'ProcurementReportDelete'])->name('ProcurementReportDelete');
     Route::put('/ProcurementReport/update/{id}', [AdminProcurementReportController::class, 'ProcurementReportUpdate'])->name('ProcurementReportUpdate');
+
+    //admin TouristAttraction
+    Route::get('/TouristAttraction/page', [AdminTouristAttractionController::class, 'TouristAttractionPage'])->name('TouristAttractionPage');
+    Route::post('/TouristAttraction/create', [AdminTouristAttractionController::class, 'TouristAttractionCreate'])->name('TouristAttractionCreate');
+    Route::delete('/TouristAttraction/delete/{id}', [AdminTouristAttractionController::class, 'TouristAttractionDelete'])->name('TouristAttractionDelete');
+    Route::put('/TouristAttraction/update/{id}', [AdminTouristAttractionController::class, 'TouristAttractionUpdate'])->name('TouristAttractionUpdate');
 });

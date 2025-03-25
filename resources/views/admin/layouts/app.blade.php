@@ -63,7 +63,7 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li> --}}
-                    <li style="font-size: 14px;">
+                    <li style="font-size: 13px;">
                         <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                             @csrf
                             <button type="submit" class="dropdown-item">
@@ -80,7 +80,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading" style="font-size: 10px;">MENU</div>
+                        <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
                         {{-- <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
@@ -122,13 +122,13 @@
                                 <a class="nav-link" href="{{route('ProcurementReportHome')}}">รายงานผลจัดซื้อจัดจ้าง</a>
                             </nav>
                         </div>
-                        {{-- <a class="nav-link" href="{{route('TouristAttractionPage')}}">
+                        <a class="nav-link" href="{{route('TouristAttractionPage')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             แนะนำสถานที่ท่องเที่ยว
                         </a>
-                        <a class="nav-link" href="{{route('ManagePersonnel')}}">
+                        {{-- <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>

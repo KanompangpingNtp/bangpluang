@@ -21,6 +21,8 @@ class PostTypeSeeder extends Seeder
             ['type_name' => 'ผลประกาศจัดซื้อจัดจ้าง'],
             ['type_name' => 'ประกาศราคากลาง'],
             ['type_name' => 'รายงานผลจัดซื้อจัดจ้าง'],
+
+            ['type_name' => 'แนะนำสถานที่ท่องเที่ยว'],
         ];
 
         foreach ($data as $item) {
