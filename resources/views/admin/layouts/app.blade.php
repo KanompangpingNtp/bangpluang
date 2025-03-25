@@ -148,6 +148,12 @@
                             </div>
                             เมนูสำหรับประชาชน
                         </a>
+                        <a class="nav-link" href="{{route('OperationalPlanType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            แผนพัฒนาท้องถิ่น
+                        </a>
                     </div>
                 </div>
             </nav>
