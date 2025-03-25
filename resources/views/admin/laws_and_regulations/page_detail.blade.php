@@ -1,10 +1,10 @@
 @extends('admin.layouts.app')
-@section('title', 'แผนพัฒนาท้องถิ่น')
+@section('title', 'กฏหมายและกฏระเบียบ')
 @section('content')
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
-<h3 class="text-center">ข้อมูล <br> <span class="text-primary">{{$OperationalPlanSection->section_name}}</span></h3><br>
+<h3 class="text-center">ข้อมูล <br> <span class="text-primary">{{$LawsRegsSection->section_name}}</span> </h3><br>
 
 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
     แนบไฟล์เอกสาร
@@ -17,7 +17,7 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">แนบไฟล์เอกสาร</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('OperationalPlanDetailCreate',$OperationalPlanSection->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('LawsAndRegulationsDetailCreate',$LawsRegsSection->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body">
                     <div class="mb-3">
@@ -43,25 +43,26 @@
 <br>
 
 <table class="table table-bordered" id="data_table">
-    <thead class="text-center">
+    <thead>
         <tr>
-            <th>#</th>
-            <th>ไฟล์</th>
-            <th>การจัดการ</th>
+            <th class="text-center">#</th>
+            <th class="text-center">ไฟล์</th>
+            <th class="text-center">การจัดการ</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($OperationalPlanFile as $index => $details)
+        @foreach ($LawsRegsFiles as $index => $details)
         <tr>
             <td class="text-center">{{ $index + 1 }}</td>
             <td>
+                <!-- แสดงชื่อไฟล์ -->
                 {{ basename($details->files_path) }}
             </td>
             <td class="text-center">
                 <a href="{{ Storage::url($details->files_path) }}" class="btn btn-info btn-sm" target="_blank">
                     <i class="bi bi-file-earmark"></i>
                 </a>
-                <form action="{{ route('OperationalPlanDetailDelete', $details->id) }}" method="POST" style="display:inline;">
+                <form action="{{ route('LawsAndRegulationsDetailDelete', $details->id) }}" method="POST" style="display:inline;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
@@ -71,6 +72,7 @@
         @endforeach
     </tbody>
 </table>
+
 
 <script src="{{asset('js/datatable.js')}}"></script>
 <script src="{{asset('js/multipart_files.js')}}"></script>
