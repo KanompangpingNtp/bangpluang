@@ -17,10 +17,36 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" style="font-size: 15px;">
+                                {{-- <p><strong>รายการอัพเดทเมนูเพิ่มเติม</strong></p>
+                                <ul>
+                                    <li class="mb-1">การประเมินคุณธรรม (ITA)</li>
+                                    <li class="mb-1">เมนูพื้นฐาน
+                                        <ul>
+                                            <li class="mb-1">ประวัติความเป็นมา</li>
+                                            <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
+                                            <li class="mb-1">ผลิตภัณฑ์ชุมชน</li>
+                                            <li class="mb-1">สถานที่สำคัญ</li>
+                                            <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mb-1">บุคลากร</li>
+                                    <li class="mb-1">กฏหมายและกฏระเบียบ</li>
+                                </ul> --}}
                                 <p><strong>รายการอัพเดทเมนูเพิ่มเติม</strong></p>
-                                <li>การประเมินคุณธรรม (ITA)</li>
-                                <li>บุคลากร</li>
-                                <li>กฏหมายและกฏระเบียบ</li>
+                                <ul id="menuList">
+                                    <li class="mb-1">การประเมินคุณธรรม (ITA)</li>
+                                    <li class="mb-1">เมนูพื้นฐาน
+                                        <ul>
+                                            <li class="mb-1">ประวัติความเป็นมา</li>
+                                            <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
+                                            <li class="mb-1">ผลิตภัณฑ์ชุมชน</li>
+                                            <li class="mb-1">สถานที่สำคัญ</li>
+                                            <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
+                                        </ul>
+                                    </li>
+                                    <li class="mb-1">บุคลากร</li>
+                                    <li class="mb-1">กฏหมายและกฏระเบียบ</li>
+                                </ul>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
@@ -39,6 +65,7 @@
     $(document).ready(function() {
         $('#welcomeModal').modal('show');
     });
+
 </script>
 
 @endsection
