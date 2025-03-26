@@ -35,9 +35,9 @@ use App\Http\Controllers\ITA\ITAController;
 |
 */
 
-// Route::get('/index', function () {
-//     return view('welcome');
-// });
+Route::get('/index', function () {
+    return view('users.layouts.main-layout');
+});
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
