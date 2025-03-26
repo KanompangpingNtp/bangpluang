@@ -46,7 +46,7 @@
     @endif
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
+        <a class="navbar-brand ps-3" href="{{route('AdminIndex')}}"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" title="Toggle sidebar">
             <i class="fas fa-bars"></i>
@@ -127,6 +127,12 @@
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             แนะนำสถานที่ท่องเที่ยว
+                        </a>
+                        <a class="nav-link" href="{{route('AdminITAType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            การประเมินคุณธรรม (ITA)
                         </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
