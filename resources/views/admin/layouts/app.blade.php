@@ -130,7 +130,7 @@
                         </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>

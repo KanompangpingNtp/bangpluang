@@ -19,6 +19,7 @@ use App\Http\Controllers\authority\AdminAuthorityController;
 use App\Http\Controllers\authority\AuthorityController;
 use App\Http\Controllers\laws_and_regulations\AdminLawsAndRegulationsController;
 use App\Http\Controllers\laws_and_regulations\LawsAndRegulationsController;
+use App\Http\Controllers\personnel\AdminPersonnelController;
 
 
 /*
@@ -160,4 +161,24 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/LawsAndRegulations/show/section/detail/{id}', [AdminLawsAndRegulationsController::class, 'LawsAndRegulationsShowDetails'])->name('LawsAndRegulationsShowDetails');
     Route::post('/Admin/LawsAndRegulations/show/section/detail/create/{id}', [AdminLawsAndRegulationsController::class, 'LawsAndRegulationsDetailCreate'])->name('LawsAndRegulationsDetailCreate');
     Route::delete('/Admin/LawsAndRegulations/show/section/detail/delete/{id}', [AdminLawsAndRegulationsController::class, 'LawsAndRegulationsDetailDelete'])->name('LawsAndRegulationsDetailDelete');
+
+    //ManagePersonnel
+    Route::get('/Personnel/page', [AdminPersonnelController::class, 'ManagePersonnel'])->name('ManagePersonnel');
+    Route::post('/Personnel/agency/create', [AdminPersonnelController::class, 'agencyCreate'])->name('agencyCreate');
+    Route::put('/Personnel/agency/update/{id}', [AdminPersonnelController::class, 'agencyUpdate'])->name('agencyUpdate');
+    Route::delete('/Personnel/agency/delete{id}', [AdminPersonnelController::class, 'agencyDelete'])->name('agencyDelete');
+
+    Route::get('/PersonnelRankDetails/page/{id}', [AdminPersonnelController::class, 'PersonnelRankDetails'])->name('PersonnelRankDetails');
+    Route::post('/Personnel/PersonnelRank/create/{id}', [AdminPersonnelController::class, 'PersonnelRankCreate'])->name('PersonnelRankCreate');
+    Route::put('/Personnel/PersonnelRank/update/{id}', [AdminPersonnelController::class, 'PersonnelRankUpdate'])->name('PersonnelRankUpdate');
+    Route::delete('/Personnel/PersonnelRank/delete{id}', [AdminPersonnelController::class, 'PersonnelRankDelete'])->name('PersonnelRankDelete');
+
+    Route::get('/Personnel/PersonnelRank/PersonnelDetails/page/{id}', [AdminPersonnelController::class, 'PersonnelDetails'])->name('PersonnelDetails');
+    Route::post('/Personnel/PersonnelRank/PersonnelDetails/create/{id}', [AdminPersonnelController::class, 'PersonnelDetailsCreate'])->name('PersonnelDetailsCreate');
+    Route::put('/Personnel/PersonnelRank/PersonnelDetails/update/{id}', [AdminPersonnelController::class, 'PersonnelDetailsUpdate'])->name('PersonnelDetailsUpdate');
+    Route::delete('/Personnel/PersonnelRank/PersonnelDetails/delete{id}', [AdminPersonnelController::class, 'PersonnelDetailsDelete'])->name('PersonnelDetailsDelete');
+
+    Route::get('/PersonnelGroupPhotoPage/page/{id}', [AdminPersonnelController::class, 'PersonnelGroupPhotoPage'])->name('PersonnelGroupPhotoPage');
+    Route::post('/PersonnelGroupPhotoPage/create/{id}', [AdminPersonnelController::class, 'PersonnelGroupPhotoCreate'])->name('PersonnelGroupPhotoCreate');
+    Route::delete('/PersonnelGroupPhotoPage/delete{id}', [AdminPersonnelController::class, 'PersonnelGroupPhotoDelete'])->name('PersonnelGroupPhotoDelete');
 });
