@@ -33,6 +33,7 @@ use App\Http\Controllers\basic_information\important_places\AdminImportantPlaces
 use App\Http\Controllers\basic_information\important_places\ImportantPlacesController;
 use App\Http\Controllers\basic_information\landscape_gallery\AdminLandscapeGalleryController;
 use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryController;
+use App\Http\Controllers\page\contact\AdminContactController;
 use App\Http\Controllers\page\home\HomeController;
 
 
@@ -270,4 +271,11 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/ImportantPlaces/show/details/{id}', [AdminImportantPlacesController::class, 'ImportantPlacesShowDertails'])->name('ImportantPlacesShowDertails');
     Route::post('/Admin/ImportantPlaces/show/details/{id}/create', [AdminImportantPlacesController::class, 'ImportantPlacesDertailsCreate'])->name('ImportantPlacesDertailsCreate');
     Route::delete('/Admin/ImportantPlaces/show/details/{id}/delete', [AdminImportantPlacesController::class, 'ImportantPlacesDetailsDelete'])->name('ImportantPlacesDetailsDelete');
+
+    //History
+    Route::get('/Admin/Contact/page', [AdminContactController::class, 'ContactAdmin'])->name('ContactAdmin');
+    Route::post('/Admin/Contact/create', [AdminContactController::class, 'ContactCreate'])->name('ContactCreate');
+
+
+
 });
