@@ -1,6 +1,13 @@
 @extends('admin.layouts.app')
 @section('title', 'หน้าหลัก')
 @section('content')
+
+<style>
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
@@ -17,25 +24,10 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body" style="font-size: 15px;">
-                                {{-- <p><strong>รายการอัพเดทเมนูเพิ่มเติม</strong></p>
-                                <ul>
-                                    <li class="mb-1">การประเมินคุณธรรม (ITA)</li>
-                                    <li class="mb-1">เมนูพื้นฐาน
-                                        <ul>
-                                            <li class="mb-1">ประวัติความเป็นมา</li>
-                                            <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
-                                            <li class="mb-1">ผลิตภัณฑ์ชุมชน</li>
-                                            <li class="mb-1">สถานที่สำคัญ</li>
-                                            <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
-                                        </ul>
-                                    </li>
-                                    <li class="mb-1">บุคลากร</li>
-                                    <li class="mb-1">กฏหมายและกฏระเบียบ</li>
-                                </ul> --}}
-                                <p><strong>รายการอัพเดทเมนูเพิ่มเติม</strong></p>
+                                <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
-                                    <li class="mb-1">การประเมินคุณธรรม (ITA)</li>
-                                    <li class="mb-1">เมนูพื้นฐาน
+                                    <li class="mb-1"><a href="{{route('OrgStructureAdmin')}}">โครงสร้างองค์กร</a></li>
+                                    {{-- <li class="mb-1">เมนูพื้นฐาน
                                         <ul>
                                             <li class="mb-1">ประวัติความเป็นมา</li>
                                             <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
@@ -43,9 +35,7 @@
                                             <li class="mb-1">สถานที่สำคัญ</li>
                                             <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
                                         </ul>
-                                    </li>
-                                    <li class="mb-1">บุคลากร</li>
-                                    <li class="mb-1">กฏหมายและกฏระเบียบ</li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="modal-footer">
