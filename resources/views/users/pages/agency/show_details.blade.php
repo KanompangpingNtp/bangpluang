@@ -11,13 +11,13 @@
     }
 
     .custom-gradient-shadow {
-    border-radius: 30px;
-    box-shadow:
-        0 4px 15px rgba(0, 123, 255, 0.3),
-        0 0 50px -10px rgba(0, 198, 255, 0.8),
-        0 0 50px -10px rgba(102, 204, 255, 0.8);
-    background-color: #ffffff;
-}
+        border-radius: 30px;
+        box-shadow:
+            0 4px 15px rgba(0, 123, 255, 0.3),
+            0 0 50px -10px rgba(0, 198, 255, 0.8),
+            0 0 50px -10px rgba(102, 204, 255, 0.8);
+        background-color: #ffffff;
+    }
 
 
     .title-section {
@@ -85,6 +85,7 @@
                                     margin-top: 1.5px;
                                     margin-bottom: 2px;
                                 }
+
                             </style>
 
                             <div class="mt-2 details" style="font-size: 14px;">
@@ -177,39 +178,39 @@
                     <div class="carousel-inner">
                         @foreach ($photos as $index => $photo)
                         <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                            <img src="{{ asset('storage/' . $photo->group_photo_file) }}" class="d-block rounded" alt="รูปแนบ">
-                        </div>
-                        @endforeach
-                    </div>
-                    <!-- ปุ่มเลื่อนซ้าย -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <!-- ปุ่มเลื่อนขวา -->
-                    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                @endif
-
-                <br>
-                <br>
-            </div> --}}
-
+            <img src="{{ asset('storage/' . $photo->group_photo_file) }}" class="d-block rounded" alt="รูปแนบ">
         </div>
-
-        <style>
-            .carousel-item img {
-                width: 655px;
-                height: 437px;
-                object-fit: cover;
-            }
-
-        </style>
-
+        @endforeach
     </div>
+    <!-- ปุ่มเลื่อนซ้าย -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <!-- ปุ่มเลื่อนขวา -->
+    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+@endif
+
+<br>
+<br>
+</div> --}}
+
+</div>
+
+<style>
+    .carousel-item img {
+        width: 655px;
+        height: 437px;
+        object-fit: cover;
+    }
+
+</style>
+
+</div>
 </div>
 </div>
 @endsection

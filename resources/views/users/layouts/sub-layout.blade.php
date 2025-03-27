@@ -511,7 +511,7 @@
                                 <div class="d-flex flex-column flex-md-row justify-content-end align-items-center align-items-md-start gap-2">
                                     <div class="d-flex flex-row justify-content-center align-items-center gap-1">
                                         <div class=" d-flex flex-column justify-content-center align-items-center gap-1">
-                                            <a class="button-blue lh-1" href="#">
+                                            <a class="button-blue lh-1" href="{{route('home')}}">
                                                 หน้าแรก</a>
                                             <a class="button-blue lh-1" href="#">
                                                 ติดต่อ</a>
@@ -641,8 +641,8 @@
                                     <ul class="dropdown-menu" style="left: 50%; transform: translateX(-50%);" aria-labelledby="authorityDropdown">
                                         @foreach ($AuthorityMenu as $detail)
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('AuthorityShowDetails', ['id' => $detail->id]) }}">
-                                                {{ $detail->list_details_name }}
+                                            <a class="dropdown-item" href="{{ route('AuthorityShowDetailsPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
                                             </a>
                                         </li>
                                         @endforeach
