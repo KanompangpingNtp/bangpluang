@@ -35,7 +35,7 @@ class PersonnelController extends Controller
         $text = trim($matches[1] ?? '');
         $phone = trim($matches[2] ?? '');
 
-        return view('users.page.agency.show_details', compact(
+        return view('users.pages.agency.show_details', compact(
             'agency',
             'photos',
             'text',
