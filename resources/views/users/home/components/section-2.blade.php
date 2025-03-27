@@ -1,7 +1,7 @@
 <head>
     <style>
-        .bg-page1 {
-            background-image: url('{{ asset('pages/home/section-1/bg-1.png') }}');
+        .bg-page2 {
+            background-image: url('{{ asset('pages/home/section-2/bg-2.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -97,11 +97,8 @@
     </style>
 </head>
 
-<main class="d-flex bg-page1">
+<main class="d-flex bg-page2">
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <div class="title-section1">
-            คณะผู้บริหาร
-        </div>
 
         <!-- Container สำหรับเลื่อนแนวนอน -->
         <div class="horizontal-scroll-container">
@@ -109,17 +106,14 @@
                 <!-- Slide 1 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm" >
-                                <span class="fs-3 fw-bold">ตำแหน่ง</span><br>
+                                <span class="fs-3 fw-bold">ปลัด</span><br>
                                 <span>ชื่อ-นามสกุล</span><br>
                                 <a href="tel:9999999990" class="fw-bold text-center text-dark pe-2 mt-2"
                                     style="font-size:1.25rem; text-decoration: none;">
                                     999-9999990
                                 </a>
                             </div>
-                        </div>
-                        
                         <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="mb-4 personal-img">
                     </div>
                 </div>
@@ -127,16 +121,14 @@
                 <!-- Slide 2 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
+                                <span class="fs-4 fw-bold">รองปลัด</span><br>
                                 <span>ชื่อ-นามสกุล</span><br>
                                 <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
                                     style="font-size:17px; text-decoration: none;">
                                     999-9999990
                                 </a>
                             </div>
-                        </div>
                         <img src="{{ asset('pages/home/section-1/5.png') }}" alt="personal1" class="mb-4 personal-img">
                     </div>
 
@@ -145,87 +137,79 @@
                 
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
+                                <span class="fs-4 fw-bold">หัสหน้าสำนัก</span><br>
                                 <span>ชื่อ-นามสกุล</span><br>
                                 <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
                                     style="font-size:17px; text-decoration: none;">
                                     999-9999990
                                 </a>
                             </div>
-                        </div>
-                        
                         <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal2" class="mb-4 personal-img">
                     </div>
                 </div>
                 <!-- Slide 4 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
+                                <span class="fs-4 fw-bold">ผอ.กองคลัง</span><br>
                                 <span>ชื่อ-นามสกุล</span><br>
                                 <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
                                     style="font-size:17px; text-decoration: none;">
                                     999-9999990
                                 </a>
                             </div>
-                        </div>
                         <img src="{{ asset('pages/home/section-1/1.png') }}" alt="personal4" class="mb-4 personal-img">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row w-100 mt-5 justify-content-start align-items-center">
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 ps-5 lh-1"
-                style="font-size:20px;">
-                    <img src="{{ asset('pages/home/section-1/logo1.png') }}" alt="icon">
-                    สารจากนายก
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
-                    style="font-size:18px;">
-                    <img src="{{ asset('pages/home/section-1/logo2.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;">รับแจ้งเรื่องราว<br> ร้องทุกข์</span>
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
-                    style="font-size:16px;">
-                    <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส<br> (ITA)</span>
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 lh-1"
-                    style="font-size:18px;">
-                    <img src="{{ asset('pages/home/section-1/logo4.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;">ท้องถิ่นดิจิทัล </span>
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
-                    style="font-size:18px;">
-                    <img src="{{ asset('pages/home/section-1/logo5.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;"> เจตจำนงสุจริต <br> ของผู้บริหาร</span>
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
-                    style="font-size:16px;">
-                    <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;">รับเรื่องร้องเรียน <br> ทุจริตประพฤติมิชอบ</span>
-                </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
-                    style="font-size:16px;">
-                    <img src="{{ asset('pages/home/section-1/logo7.png') }}" alt="icon">
-                    <span style="padding-left: 4rem;"> ระบบภูมิศาสตร์สนเทศ<br>การจัดการน้ำ<br> และชุมชน</span>
-                </a>
+        <div class="horizontal-scroll-container">
+            <div class="horizontal-scroll-content justify-content-between justify-content-lg-center">
+                <!-- Slide 2 -->
+                <div class="scroll-item">
+                    <div class="d-flex flex-column-reverse align-items-center justify-content-center">
+                            <div class="consultant-info text-center lh-sm">
+                                <span class="fs-4 fw-bold">ผอ.กองช่าง</span><br>
+                                <span>ชื่อ-นามสกุล</span><br>
+                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
+                                    style="font-size:17px; text-decoration: none;">
+                                    999-9999990
+                                </a>
+                            </div>
+                        <img src="{{ asset('pages/home/section-1/5.png') }}" alt="personal1" class="mb-4 personal-img">
+                    </div>
+
+                </div>
+                <!-- Slide 3 -->
+                
+                <div class="scroll-item">
+                    <div class="d-flex flex-column-reverse align-items-center justify-content-center">
+                            <div class="consultant-info text-center lh-sm">
+                                <span class="fs-4 fw-bold">ผอ.กองการศึกษา</span><br>
+                                <span>ชื่อ-นามสกุล</span><br>
+                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
+                                    style="font-size:17px; text-decoration: none;">
+                                    999-9999990
+                                </a>
+                            </div>
+                        <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal2" class="mb-4 personal-img">
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="scroll-item">
+                    <div class="d-flex flex-column-reverse align-items-center justify-content-center">
+                            <div class="consultant-info text-center lh-sm">
+                                <span class="fs-4 fw-bold">ผอ.กองการเกษตร</span><br>
+                                <span>ชื่อ-นามสกุล</span><br>
+                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
+                                    style="font-size:17px; text-decoration: none;">
+                                    999-9999990
+                                </a>
+                            </div>
+                        <img src="{{ asset('pages/home/section-1/1.png') }}" alt="personal4" class="mb-4 personal-img">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
