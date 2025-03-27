@@ -32,7 +32,7 @@ class PerformanceResultsController extends Controller
         $PerfResultsType = PerfResultsType::findOrFail($id);
         $PerfResultsSection = PerfResultsSection::where('type_id', $id)
         ->orderBy('created_at', 'desc')
-        ->get();
+        ->paginate(14);
 
         return view('users.pages.performance_results.page_section', compact(
             'PerfResultsType',
@@ -62,7 +62,7 @@ class PerformanceResultsController extends Controller
         $PerfResultsSection = PerfResultsSection::with('type')->findOrFail($id);
         $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
         ->orderBy('created_at', 'desc')
-        ->get();
+        ->paginate(14);
 
         return view('users.pages.performance_results.page_sub_topic', compact(
             'PerfResultsSection',

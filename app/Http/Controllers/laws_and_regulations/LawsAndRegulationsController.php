@@ -31,7 +31,7 @@ class LawsAndRegulationsController extends Controller
         $LawsRegsType = LawsRegsType::findOrFail($id);
         $LawsRegsSection = LawsRegsSection::where('type_id', $id)
         ->orderBy('created_at', 'desc')
-        ->get();
+        ->paginate(14);
 
         return view('users.pages.laws_and_regulations.page_section', compact(
             'LawsRegsType',

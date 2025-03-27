@@ -32,7 +32,7 @@ class OperationalPlanController extends Controller
         $OperationalPlanType = OperationalPlanType::findOrFail($id);
         $OperationalPlanSection = OperationalPlanSection::where('type_id', $id)
         ->orderBy('created_at', 'desc')
-        ->get();
+        ->paginate(14);
 
         return view('users.pages.operational_plan.page_section', compact(
             'OperationalPlanType',

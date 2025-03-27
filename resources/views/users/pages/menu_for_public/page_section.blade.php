@@ -122,6 +122,29 @@
                 @endforeach
             </table>
 
+            @if($PublicMenusSection && $PublicMenusSection->count() > 0)
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center mt-5">
+                    <!-- Previous button -->
+                    <li class="page-item {{ $PublicMenusSection->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $PublicMenusSection->previousPageUrl() }}">ก่อนหน้า</a>
+                    </li>
+
+                    <!-- Page number buttons -->
+                    @foreach ($PublicMenusSection->getUrlRange(1, $PublicMenusSection->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $PublicMenusSection->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                    @endforeach
+
+                    <!-- Next button -->
+                    <li class="page-item {{ !$PublicMenusSection->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $PublicMenusSection->nextPageUrl() }}">ต่อไป</a>
+                    </li>
+                </ul>
+            </nav>
+            @endif
+
         </div>
 
     </div>

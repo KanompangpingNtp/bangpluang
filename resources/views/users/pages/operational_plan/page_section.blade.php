@@ -122,6 +122,29 @@
                 @endforeach
             </table>
 
+            @if($OperationalPlanSection && $OperationalPlanSection->count() > 0)
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center mt-5">
+                    <!-- Previous button -->
+                    <li class="page-item {{ $OperationalPlanSection->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $OperationalPlanSection->previousPageUrl() }}">ก่อนหน้า</a>
+                    </li>
+
+                    <!-- Page number buttons -->
+                    @foreach ($OperationalPlanSection->getUrlRange(1, $OperationalPlanSection->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $OperationalPlanSection->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                    @endforeach
+
+                    <!-- Next button -->
+                    <li class="page-item {{ !$OperationalPlanSection->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $OperationalPlanSection->nextPageUrl() }}">ต่อไป</a>
+                    </li>
+                </ul>
+            </nav>
+            @endif
+
         </div>
 
     </div>

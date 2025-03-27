@@ -125,6 +125,29 @@
                 @endforeach
             </table>
 
+            @if($PerfResultsSubTopic && $PerfResultsSubTopic->count() > 0)
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center mt-5">
+                    <!-- Previous button -->
+                    <li class="page-item {{ $PerfResultsSubTopic->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $PerfResultsSubTopic->previousPageUrl() }}">ก่อนหน้า</a>
+                    </li>
+
+                    <!-- Page number buttons -->
+                    @foreach ($PerfResultsSubTopic->getUrlRange(1, $PerfResultsSubTopic->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $PerfResultsSubTopic->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                    @endforeach
+
+                    <!-- Next button -->
+                    <li class="page-item {{ !$PerfResultsSubTopic->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $PerfResultsSubTopic->nextPageUrl() }}">ต่อไป</a>
+                    </li>
+                </ul>
+            </nav>
+            @endif
+
         </div>
 
     </div>

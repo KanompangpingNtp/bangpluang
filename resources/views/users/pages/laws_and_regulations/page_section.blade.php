@@ -122,6 +122,29 @@
                 @endforeach
             </table>
 
+            @if($LawsRegsSection && $LawsRegsSection->count() > 0)
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center mt-5">
+                    <!-- Previous button -->
+                    <li class="page-item {{ $LawsRegsSection->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $LawsRegsSection->previousPageUrl() }}">ก่อนหน้า</a>
+                    </li>
+
+                    <!-- Page number buttons -->
+                    @foreach ($LawsRegsSection->getUrlRange(1, $LawsRegsSection->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $LawsRegsSection->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                    @endforeach
+
+                    <!-- Next button -->
+                    <li class="page-item {{ !$LawsRegsSection->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $LawsRegsSection->nextPageUrl() }}">ต่อไป</a>
+                    </li>
+                </ul>
+            </nav>
+            @endif
+
         </div>
 
     </div>

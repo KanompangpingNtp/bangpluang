@@ -29,7 +29,9 @@ class MenuForPublicController extends Controller
         $PublicMenus = PublicMenusType::all();
 
         $PublicMenusType = PublicMenusType::findOrFail($id);
-        $PublicMenusSection = PublicMenusSection::where('type_id', $id)->get();
+        $PublicMenusSection = PublicMenusSection::where('type_id', $id)
+        ->orderBy('created_at', 'desc')
+        ->paginate(14);
 
         return view('users.pages.menu_for_public.page_section', compact(
             'PublicMenusType',
