@@ -20,6 +20,7 @@ use App\Http\Controllers\authority\AuthorityController;
 use App\Http\Controllers\laws_and_regulations\AdminLawsAndRegulationsController;
 use App\Http\Controllers\laws_and_regulations\LawsAndRegulationsController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
+use App\Http\Controllers\personnel\PersonnelController;
 use App\Http\Controllers\ITA\AdminITAController;
 use App\Http\Controllers\ITA\ITAController;
 use App\Http\Controllers\basic_information\history\AdminHistoryController;
@@ -32,6 +33,7 @@ use App\Http\Controllers\basic_information\important_places\AdminImportantPlaces
 use App\Http\Controllers\basic_information\important_places\ImportantPlacesController;
 use App\Http\Controllers\basic_information\landscape_gallery\AdminLandscapeGalleryController;
 use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryController;
+use App\Http\Controllers\page\home\HomeController;
 
 
 /*
@@ -49,9 +51,14 @@ Route::get('/index', function () {
     return view('users.layouts.main-layout');
 });
 
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//บุคลากร
+Route::get('/agency/detail/{id}', [PersonnelController::class, 'AgencyShow'])->name('AgencyShow');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
