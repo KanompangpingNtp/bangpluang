@@ -58,7 +58,7 @@
     </style>
 </head>
 
-<main class="d-flex flex-column bg-page-8">
+<main class=" bg-page-8">
     <div class=" d-flex bg-page-in-8">
         <div class="container ">
             <div class="d-flex flex-column flex-md-row justify-content-center align-items-end h-100 gap-2">
