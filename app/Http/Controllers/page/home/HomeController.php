@@ -10,6 +10,7 @@ use App\Models\AuthorityType;
 use App\Models\PersonnelAgency;
 use App\Models\PublicMenusType;
 use App\Models\PerfResultsType;
+use App\Models\PostDetail;
 
 class HomeController extends Controller
 {
@@ -36,13 +37,31 @@ class HomeController extends Controller
             ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
             ->get();
 
-        return view('users.home.app',compact(
+        //ข่าวประชาสัมพันธ์
+        $pressRelease = PostDetail::with('postType', 'videos', 'photos', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'ข่าวประชาสัมพันธ์');
+            })
+            ->orderBy('date', 'desc')
+            ->get();
+
+        //กิจกรรม
+        $activity = PostDetail::with('postType', 'videos', 'photos', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'กิจกรรม');
+            })
+            ->orderBy('date', 'desc')
+            ->get();
+
+        return view('users.home.app', compact(
             'PerfResultsMenu',
             'AuthorityMenu',
             'OperationalPlanMenu',
             'LawsRegsMenu',
             'PublicMenus',
-            'personnelAgencies'
+            'personnelAgencies',
+            'pressRelease',
+            'activity'
         ));
     }
 }
