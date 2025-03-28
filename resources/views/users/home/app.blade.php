@@ -9,4 +9,5 @@
     @include('users.home.components.section-5')
     @include('users.home.components.section-6')
     @include('users.home.components.section-7')
+    @include('users.home.components.section-8')
 @endsection

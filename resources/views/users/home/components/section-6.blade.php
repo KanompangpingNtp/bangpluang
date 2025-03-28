@@ -10,7 +10,7 @@
         }
 
         .title-section6 {
-            font-size: 45px;
+            font-size: 35px;
             font-weight: bold;
             text-shadow:
                 2px 2px 4px rgba(255, 255, 255, 0.5),
@@ -188,15 +188,15 @@
                 <img src="{{ asset('pages/home/section-6/กรอบข่าวประชาสัมพันธ์.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section6 d-flex flex-column justify-content-center px-3 py-4">
                     @foreach ($pressRelease->take(4) as $item)
-                        <a href="#" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-center align-items-center mb-2">
-                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-2">
+                        <a href="#" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-start align-items-start mb-2">
+                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-2 w-100">
                                 @php
                                     $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
                                 @endphp
                                 <img src="{{ $imagePath ? asset('storage/' . $imagePath) : asset('pages/home/section-5/LOGOบางพลวง.png') }}"
                                      alt="logo" class="bg-white">
-                                <div class="text d-flex flex-column justify-content-center">
-                                    <div class="text-dark bg-white py-1 py-md-3 py-lg-1 py-xl-3 px-3 lh-sm fs-6 rounded-4">
+                                <div class="text d-flex flex-column justify-content-center" style="width: 100%; height:100%;">
+                                    <div class="text-dark bg-white py-1 py-md-3 py-lg-1 py-xl-3 px-3 lh-sm fs-6 rounded-4 h-100">
                                         {{ Str::limit($item->title_name, 140, '...') }}
                                     </div>
                                 </div>

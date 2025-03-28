@@ -80,6 +80,18 @@
             border-color: #1ecbff;
             /* ขอบสีฟ้า */
         }
+
+        .bg-video{
+            background-color: #9fe0ff;
+            border-radius: 15px;
+            box-shadow:
+                2px 2px 4px rgba(255, 255, 255, 0.5),
+                -2px -2px 4px rgba(255, 255, 255, 0.5),
+                2px -2px 4px rgba(255, 255, 255, 0.5),
+                -2px 2px 4px rgba(255, 255, 255, 0.5);
+            width: 100%;
+            height: 370px;
+        }
     </style>
 </head>
 
@@ -176,7 +188,23 @@
                 </div> --}}
             </div>
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-
+                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+                <div class="bg-video p-2">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+                    <a href="#" class=" banner-hover">
+                        <img src="{{asset('pages/home/section-7/N1.png')}}" alt="btn-1">
+                    </a>
+                    <a href="#" class=" banner-hover">
+                        <img src="{{asset('pages/home/section-7/N2.png')}}" alt="btn-2">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
