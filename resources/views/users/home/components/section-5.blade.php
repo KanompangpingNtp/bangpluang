@@ -19,7 +19,7 @@
         }
 
         .bg-blue-section5 {
-            background: linear-gradient(to bottom, #86ccfe, #c7e4ff ,#c9e5ff);
+            background: linear-gradient(to bottom, #86ccfe, #c7e4ff, #c9e5ff);
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
             box-shadow:
@@ -149,14 +149,14 @@
             }
 
             .bg-blue-section5 {
-            border-radius: 20px;
-        }
+                border-radius: 20px;
+            }
         }
 
         .banner-hover {
             padding: 7px;
             position: relative;
-            overflow:inherit;
+            overflow: inherit;
         }
 
         .banner-text {
@@ -182,6 +182,7 @@
             opacity: 0.8;
             /* ลดความเข้มของภาพ */
         }
+
     </style>
 </head>
 
@@ -192,53 +193,47 @@
         </div>
         <div class="row w-100">
 
-            <div class="col-lg-6 col-xl-4 d-flex flex-column justify-content-center align-items-center mb-4 mb-xl-0 ">
-                <img src="{{ asset('pages/home/section-5/กรอบกลาง.png') }}" alt="topper" class="mt-4 img-fluid px-2"
-                    style="z-index: 2; margin-bottom:-7px;">
+            <div class="col-lg-6 col-xl-4 d-flex flex-column justify-content-center align-items-center mb-4 mb-xl-0">
+                <img src="{{ asset('pages/home/section-5/กรอบกลาง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section5 d-flex flex-column justify-content-center px-3 py-4">
-                    @for ($i = 0; $i < 3; $i++)
-                        <a href="#"
-                            class="bg-card-section5 p-2 d-flex justify-content-center align-items-center gap-2 mb-2">
-                            <img src="{{ asset('pages/home/section-5/LOGOบางพลวง.png') }}" alt="logo"
-                                class="bg-white">
-                            <div class="text d-flex flex-column justify-content-center">
-                                <div class="bg-white py-1 px-4 text-dark text-center fw-bold fs-6 rounded-5">
-                                    dd/mm/yyyy
-                                </div>
-                                <div class="text-white p-1 lh-sm fs-6">
-                                    <?php
-                                    $text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vero inventore';
-                                    $maxLength = 70; // กำหนดจำนวนตัวอักษรที่ต้องการให้แสดง
-                                    echo mb_substr($text, 0, $maxLength) . (mb_strlen($text) > $maxLength ? '...' : '');
-                                    ?>
-                                </div>
-
+                    @foreach ($activity->take(3) as $item)
+                    <a href="#" class="bg-card-section5 p-2 d-flex justify-content-center align-items-center gap-2 mb-2">
+                        @php
+                        $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
+                        @endphp
+                        <img src="{{ $imagePath ? asset('storage/' . $imagePath) : asset('pages/home/section-5/LOGOบางพลวง.png') }}" alt="logo" class="bg-white">
+                        <div class="text d-flex flex-column justify-content-center">
+                            <div class="bg-white py-1 px-4 text-dark text-center fw-bold fs-6 rounded-5">
+                                {{ \Carbon\Carbon::parse($item->date)->format('d/m/Y') }}
                             </div>
-                        </a>
-                    @endfor
+                            <div class="text-white p-1 lh-sm fs-6">
+                                {{ Str::limit($item->title_name, 70, '...') }}
+                            </div>
+                        </div>
+                    </a>
+                    @endforeach
+
                     <a href="#" class="btn-viewall-section5 px-4 py-1 mt-2 ms-auto">
-                        <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด</a>
+                        <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด
+                    </a>
                 </div>
             </div>
+
             <div class="col-lg-6 col-xl-4 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
                 <div class="bg-blue-right-section5 d-flex flex-column align-items-start">
-                    <a href="#"
-                        class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
+                    <a href="#" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
                         <img src="{{ asset('pages/home/section-5/iconขวา1.png') }}" alt="icon1">
                         <span class="ms-2 me-4">รางวัล<br>แห่งความภาคภูมิใจ</span>
                     </a>
-                    <a href="#"
-                        class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
+                    <a href="#" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
                         <span class="ms-2 me-4">ปฎิทินกิจกรรม</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา2.png') }}" alt="icon1">
                     </a>
-                    <a href="#"
-                        class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
+                    <a href="#" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
                         <img src="{{ asset('pages/home/section-5/iconขวา3.png') }}" alt="icon1">
                         <span class="ms-2 me-4">ประมวลจริยธรรม</span>
                     </a>
-                    <a href="#"
-                        class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
+                    <a href="#" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
                         <span class="ms-2 me-4">องค์กรแห่งการ<br>เรียนรู้(KM)</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา4.png') }}" alt="icon1">
                     </a>
@@ -249,60 +244,42 @@
             </div>
         </div>
         <div class="row w-100 justify-content-center align-items-center mt-4">
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN1.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:16px;">อาสาสมัครป้องกันภัย<br>ฝ่ายพลเรือน</span>
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:16px;">อาสาสมัครป้องกันภัย<br>ฝ่ายพลเรือน</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN2.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:18px;">ประกาศ<br>จัดซื้อจัดจ้าง</span>
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:18px;">ประกาศ<br>จัดซื้อจัดจ้าง</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN3.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark  banner-text"
-                    style="left: 57%; top: 68%; font-size:18px;">ศูนย์ดำรงธรรม</span>
+                <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:18px;">ศูนย์ดำรงธรรม</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN4.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark  banner-text"
-                    style="left: 57%; top: 68%; font-size:14px;">การประเมินประสิทธิ<br>ภาพของ อปท. (LPA)</span>
+                <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:14px;">การประเมินประสิทธิ<br>ภาพของ อปท. (LPA)</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN5.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:14px;">ศูนย์ข้อมูลข่าวสาร<br>อิเล็กทรอนิกส์
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:14px;">ศูนย์ข้อมูลข่าวสาร<br>อิเล็กทรอนิกส์
                     <br>ราชการ(OIC)</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN6.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:16px;">สาระดีๆจากศาล<br>ปกครอง</span>
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:16px;">สาระดีๆจากศาล<br>ปกครอง</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN7.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark  banner-text"
-                    style="left: 57%; top: 68%; font-size:14px;">สำนักงานคณะกรรมการ<br>ป้องกันและปราบปราม<br>การทุจริตแห่งชาติ</span>
+                <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:14px;">สำนักงานคณะกรรมการ<br>ป้องกันและปราบปราม<br>การทุจริตแห่งชาติ</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN8.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:20px;">E-Leraning</span>
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:20px;">E-Leraning</span>
             </a>
-            <a href="#"
-                class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="#" class="col-sm-6 col-lg-4 col-xl-3 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN9.png') }}" alt="banner" class="img-fluid">
-                <span class="position-absolute translate-middle text-center text-dark banner-text"
-                    style="left: 57%; top: 68%; font-size:14px;">งานบริการของศูนย์ <br>บริการร่วม One Stop
+                <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:14px;">งานบริการของศูนย์ <br>บริการร่วม One Stop
                     <br>Service</span>
             </a>
         </div>

@@ -187,32 +187,32 @@
                 </div>
                 <img src="{{ asset('pages/home/section-6/กรอบข่าวประชาสัมพันธ์.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section6 d-flex flex-column justify-content-center px-3 py-4">
-                    @for ($i = 0; $i < 3; $i++) <a href="#" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-center align-items-center  mb-2">
-                        <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-2">
-                            <img src="{{ asset('pages/home/section-6/ปกข่าวประชาสัมพันธ์.png') }}" alt="logo" class="bg-white">
-                            <div class="text d-flex flex-column justify-content-center">
-                                <div class="text-dark bg-white py-1 py-md-3 py-lg-1 py-xl-3 px-3 lh-sm fs-6 rounded-4">
-                                    <?php
-                                        $text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam asperiores molestiae aliquid sunt atque eaque rem, totam nesciunt praesentium tenetur ut quibusdam quam perspiciatis ad numquam hic repellendus at veniam!
-                                                                                                                                                                                                                                            ';
-                                        $maxLength = 140; // กำหนดจำนวนตัวอักษรที่ต้องการให้แสดง
-                                        echo mb_substr($text, 0, $maxLength) . (mb_strlen($text) > $maxLength ? '...' : '');
-                                        ?>
+                    @foreach ($pressRelease->take(4) as $item)
+                        <a href="#" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-center align-items-center mb-2">
+                            <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-2">
+                                @php
+                                    $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
+                                @endphp
+                                <img src="{{ $imagePath ? asset('storage/' . $imagePath) : asset('pages/home/section-5/LOGOบางพลวง.png') }}"
+                                     alt="logo" class="bg-white">
+                                <div class="text d-flex flex-column justify-content-center">
+                                    <div class="text-dark bg-white py-1 py-md-3 py-lg-1 py-xl-3 px-3 lh-sm fs-6 rounded-4">
+                                        {{ Str::limit($item->title_name, 140, '...') }}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="w-100 mt-4 rounded-4 ms-3 me-2" style="border:2px solid #ffff;">
-                            {{-- เส็น --}}
-                        </div>
-                        <div class="bg-white text-dark fw-bold d-flex justify-content-center align-items-center py-1 px-2 rounded-4 text-decoration control-date" style="position: absolute; font-size:14px;">
-                            <img src="{{ asset('pages/home/section-6/นาฬิกา.png') }}" alt="clock" style="width: 15px; height:15px;" class="me-1">
-                            dd/mm/yyyy
-                        </div>
-
+                            <div class="w-100 mt-4 rounded-4 ms-3 me-2" style="border:2px solid #ffff;">
+                                {{-- เส้น --}}
+                            </div>
+                            <div class="bg-white text-dark fw-bold d-flex justify-content-center align-items-center py-1 px-2 rounded-4 text-decoration control-date" style="position: absolute; font-size:14px;">
+                                <img src="{{ asset('pages/home/section-6/นาฬิกา.png') }}" alt="clock" style="width: 15px; height:15px;" class="me-1">
+                                {{ \Carbon\Carbon::parse($item->date)->format('d/m/Y') }}
+                            </div>
                         </a>
-                        @endfor
-                        <a href="#" class="btn-viewall-section6 px-4 py-1 mt-1 ms-auto">
-                            <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด</a>
+                    @endforeach
+                    <a href="#" class="btn-viewall-section6 px-4 py-1 mt-1 ms-auto">
+                        <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด
+                    </a>
                 </div>
             </div>
             <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
