@@ -197,7 +197,7 @@
                                      alt="logo" class="bg-white">
                                 <div class="text d-flex flex-column justify-content-center">
                                     <div class="text-dark bg-white py-1 py-md-3 py-lg-1 py-xl-3 px-3 lh-sm fs-6 rounded-4">
-                                        {{ Str::limit($item->details, 140, '...') }}
+                                        {{ Str::limit($item->title_name, 140, '...') }}
                                     </div>
                                 </div>
                             </div>
