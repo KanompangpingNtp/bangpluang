@@ -302,7 +302,7 @@
 
         /* ส่วนที่ใช้ควบคุมสีของ scrollbar */
         ::-webkit-scrollbar-thumb {
-            background-color: #e3742a;
+            background-color: #9ed9fdaf;
             /* สีของ scrollbar */
             border-radius: 10px;
             /* ทำให้ขอบ scrollbar เป็นมุมมน */
@@ -311,7 +311,7 @@
 
         /* ส่วนที่เป็นพื้นหลังของ scrollbar */
         ::-webkit-scrollbar-track {
-            background-color: #ffb367;
+            background-color: #bce4fda1;
             border-radius: 10px;
         }
 
