@@ -26,7 +26,7 @@
 <main class="d-flex bg-page7">
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <div class="title-section7">
-            ข่าวประชาสัมพันธ์
+            หนังสือราชการ
         </div>
                   
     </div>
