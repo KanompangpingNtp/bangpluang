@@ -26,6 +26,7 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
+                                    <li class="mb-1"><a href="{{route('ContactAdmin')}}">จัดการข้อมูลการติดต่อ</a></li>
                                     <li class="mb-1"><a href="{{route('OrgStructureAdmin')}}">โครงสร้างองค์กร</a></li>
                                     {{-- <li class="mb-1">เมนูพื้นฐาน
                                         <ul>

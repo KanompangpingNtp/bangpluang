@@ -491,7 +491,7 @@
                                         <div class=" d-flex flex-column justify-content-center align-items-center gap-1">
                                             <a class="button-blue lh-1" href="{{route('home')}}">
                                                 หน้าแรก</a>
-                                            <a class="button-blue lh-1" href="#">
+                                            <a class="button-blue lh-1" href="{{route('contactPage')}}">
                                                 ติดต่อ</a>
                                         </div>
                                         <div class="d-flex d-md-none flex-column justify-content-center align-items-center gap-1">

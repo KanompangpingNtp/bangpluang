@@ -33,6 +33,8 @@ use App\Http\Controllers\basic_information\important_places\AdminImportantPlaces
 use App\Http\Controllers\basic_information\important_places\ImportantPlacesController;
 use App\Http\Controllers\basic_information\landscape_gallery\AdminLandscapeGalleryController;
 use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryController;
+use App\Http\Controllers\page\contact\AdminContactController;
+use App\Http\Controllers\page\contact\ContactController;
 use App\Http\Controllers\page\home\HomeController;
 
 
@@ -79,6 +81,9 @@ Route::get('/LawsAndRegulations/show/section/details/{id}', [LawsAndRegulationsC
 //เมนูสำหรับประชาชน
 Route::get('/MenuForPublic/show/section/{id}', [MenuForPublicController::class, 'MenuForPublicSectionPages'])->name('MenuForPublicSectionPages');
 Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController::class, 'MenuForPublicShowDetailsPages'])->name('MenuForPublicShowDetailsPages');
+
+//ติดต่อ
+Route::get('/contact', [ContactController::class, 'contactPage'])->name('contactPage');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
@@ -270,4 +275,14 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/ImportantPlaces/show/details/{id}', [AdminImportantPlacesController::class, 'ImportantPlacesShowDertails'])->name('ImportantPlacesShowDertails');
     Route::post('/Admin/ImportantPlaces/show/details/{id}/create', [AdminImportantPlacesController::class, 'ImportantPlacesDertailsCreate'])->name('ImportantPlacesDertailsCreate');
     Route::delete('/Admin/ImportantPlaces/show/details/{id}/delete', [AdminImportantPlacesController::class, 'ImportantPlacesDetailsDelete'])->name('ImportantPlacesDetailsDelete');
+
+    //History
+    Route::get('/Admin/Contact/page', [AdminContactController::class, 'ContactAdmin'])->name('ContactAdmin');
+    Route::post('/Admin/Contact/create', [AdminContactController::class, 'ContactCreate'])->name('ContactCreate');
+    Route::delete('/admin/Contact/delete/{id}', [AdminContactController::class, 'ContactDelete'])->name('ContactDelete');
+    Route::put('/admin/Contact/update/{id}', [AdminContactController::class, 'ContactUpdate'])->name('ContactUpdate');
+
+
+
+
 });
