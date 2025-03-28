@@ -5,12 +5,15 @@ namespace App\Http\Controllers\page\contact;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Storage;
 
 class AdminContactController extends Controller
 {
     public function ContactAdmin()
     {
-        return view('admin.post.contact.page');
+        $contact = Contact::orderBy('id', 'asc')->first();
+
+        return view('admin.post.contact.page', compact('contact'));
     }
 
     public function ContactCreate(Request $request)
@@ -66,5 +69,29 @@ class AdminContactController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'ข้อมูลถูกบันทึกเรียบร้อย');
+    }
+
+    public function ContactDelete($id)
+    {
+        $contact = Contact::findOrFail($id);
+
+        // ลบไฟล์ที่เกี่ยวข้อง
+        if ($contact->logo_file) {
+            Storage::disk('public')->delete($contact->logo_file);
+        }
+        if ($contact->payment_file) {
+            Storage::disk('public')->delete($contact->payment_file);
+        }
+        if ($contact->contact_administration_file) {
+            Storage::disk('public')->delete($contact->contact_administration_file);
+        }
+        if ($contact->contact_finance_file) {
+            Storage::disk('public')->delete($contact->contact_finance_file);
+        }
+
+        // ลบข้อมูลในฐานข้อมูล
+        $contact->delete();
+
+        return redirect()->back()->with('success', 'ลบข้อมูลเรียบร้อยแล้ว');
     }
 }

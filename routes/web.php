@@ -275,6 +275,8 @@ Route::middleware(['checklogin'])->group(function () {
     //History
     Route::get('/Admin/Contact/page', [AdminContactController::class, 'ContactAdmin'])->name('ContactAdmin');
     Route::post('/Admin/Contact/create', [AdminContactController::class, 'ContactCreate'])->name('ContactCreate');
+    Route::delete('/admin/Contact/delete/{id}', [AdminContactController::class, 'ContactDelete'])->name('ContactDelete');
+
 
 
 
