@@ -18,7 +18,16 @@
                 -2px 2px 4px rgba(255, 255, 255, 0.5);
         }
 
-        
+        .bg-blue-section5 {
+            background: linear-gradient(to bottom, #86ccfe, #c7e4ff ,#c9e5ff);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            box-shadow:
+                2px 2px 4px rgba(255, 255, 255, 0.5),
+                -2px -2px 4px rgba(255, 255, 255, 0.5),
+                2px -2px 4px rgba(255, 255, 255, 0.5),
+                -2px 2px 4px rgba(255, 255, 255, 0.5);
+        }
 
         .bg-card-section5 {
 
