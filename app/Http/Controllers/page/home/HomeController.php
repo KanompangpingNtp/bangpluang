@@ -53,6 +53,30 @@ class HomeController extends Controller
             ->orderBy('date', 'desc')
             ->get();
 
+        //ประกาศจัดซื้อจัดจ้าง
+        $procurement = PostDetail::with('postType', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'ประกาศจัดซื้อจัดจ้าง');
+            })->get();
+
+        //ผลประกาศจัดซื้อจัดจ้าง
+        $procurementResults = PostDetail::with('postType', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'ผลประกาศจัดซื้อจัดจ้าง');
+            })->get();
+
+        //ประกาศราคากลาง
+        $averagePrice = PostDetail::with('postType', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'ประกาศราคากลาง');
+            })->get();
+
+        //รายงานผลจัดซื้อจัดจ้าง
+        $procurementReport = PostDetail::with('postType', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'รายงานผลจัดซื้อจัดจ้าง');
+            })->get();
+
         return view('users.home.app', compact(
             'PerfResultsMenu',
             'AuthorityMenu',
@@ -61,7 +85,11 @@ class HomeController extends Controller
             'PublicMenus',
             'personnelAgencies',
             'pressRelease',
-            'activity'
+            'activity',
+            'procurement',
+            'procurementResults',
+            'averagePrice',
+            'procurementReport'
         ));
     }
 }

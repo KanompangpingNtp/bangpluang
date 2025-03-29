@@ -197,7 +197,7 @@
                 <img src="{{ asset('pages/home/section-5/กรอบกลาง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section5 d-flex flex-column justify-content-center px-3 py-4">
                     @foreach ($activity->take(3) as $item)
-                    <a href="#" class="bg-card-section5 p-2 d-flex justify-content-center align-items-center gap-2 mb-2">
+                    <a href="{{ route('ActivityShowDetails', $item->id) }}" class="bg-card-section5 p-2 d-flex justify-content-center align-items-center gap-2 mb-2">
                         @php
                         $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
                         @endphp
@@ -213,7 +213,7 @@
                     </a>
                     @endforeach
 
-                    <a href="#" class="btn-viewall-section5 px-4 py-1 mt-2 ms-auto">
+                    <a href="{{route('ActivityShowData')}}" class="btn-viewall-section5 px-4 py-1 mt-2 ms-auto">
                         <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด
                     </a>
                 </div>

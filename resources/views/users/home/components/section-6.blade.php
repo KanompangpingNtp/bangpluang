@@ -188,7 +188,7 @@
                 <img src="{{ asset('pages/home/section-6/กรอบข่าวประชาสัมพันธ์.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section6 d-flex flex-column justify-content-center px-3 py-4">
                     @foreach ($pressRelease->take(4) as $item)
-                        <a href="#" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-start align-items-start mb-2">
+                        <a href="{{ route('PressReleaseShowDetails', $item->id) }}" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-start align-items-start mb-2">
                             <div class="d-flex flex-column flex-md-row justify-content-center align-items-start gap-2 w-100">
                                 @php
                                     $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
@@ -210,7 +210,7 @@
                             </div>
                         </a>
                     @endforeach
-                    <a href="#" class="btn-viewall-section6 px-4 py-1 mt-1 ms-auto">
+                    <a href="{{route('PressReleaseShowData')}}" class="btn-viewall-section6 px-4 py-1 mt-1 ms-auto">
                         <img src="{{ asset('pages/home/section-5/door-icon.png') }}" alt="icon-door"> ดูทั้งหมด
                     </a>
                 </div>

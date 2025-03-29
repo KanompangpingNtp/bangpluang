@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\activity\AdminActivityController;
+use App\Http\Controllers\activity\ActivityController;
 use App\Http\Controllers\press_release\AdminPressReleaseController;
+use App\Http\Controllers\press_release\PressReleaseController;
 use App\Http\Controllers\procurement\AdminProcurementController;
 use App\Http\Controllers\procurement_results\AdminProcurementResultsController;
 use App\Http\Controllers\average_price\AdminAveragePriceController;
@@ -84,6 +86,14 @@ Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController:
 
 //ติดต่อ
 Route::get('/contact', [ContactController::class, 'contactPage'])->name('contactPage');
+
+//กิจกรรม
+Route::get('/Activity/ShowData', [ActivityController::class, 'ActivityShowData'])->name('ActivityShowData');
+Route::get('/Activity/ShowDetails/{id}', [ActivityController::class, 'ActivityShowDetails'])->name('ActivityShowDetails');
+
+//ประชาสัมพันธ์
+Route::get('/PressRelease/ShowData', [PressReleaseController::class, 'PressReleaseShowData'])->name('PressReleaseShowData');
+Route::get('/PressRelease/ShowDetails/{id}', [PressReleaseController::class, 'PressReleaseShowDetails'])->name('PressReleaseShowDetails');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
