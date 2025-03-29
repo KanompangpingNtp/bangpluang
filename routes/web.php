@@ -7,9 +7,13 @@ use App\Http\Controllers\activity\ActivityController;
 use App\Http\Controllers\press_release\AdminPressReleaseController;
 use App\Http\Controllers\press_release\PressReleaseController;
 use App\Http\Controllers\procurement\AdminProcurementController;
+use App\Http\Controllers\procurement\ProcurementController;
 use App\Http\Controllers\procurement_results\AdminProcurementResultsController;
+use App\Http\Controllers\procurement_results\ProcurementResultsController;
 use App\Http\Controllers\average_price\AdminAveragePriceController;
+use App\Http\Controllers\average_price\AveragePriceController;
 use App\Http\Controllers\procurement_report\AdminProcurementReportController;
+use App\Http\Controllers\procurement_report\ProcurementReportController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 use App\Http\Controllers\performance_results\AdminPerformanceResultsController;
 use App\Http\Controllers\performance_results\PerformanceResultsController;
@@ -94,6 +98,25 @@ Route::get('/Activity/ShowDetails/{id}', [ActivityController::class, 'ActivitySh
 //ประชาสัมพันธ์
 Route::get('/PressRelease/ShowData', [PressReleaseController::class, 'PressReleaseShowData'])->name('PressReleaseShowData');
 Route::get('/PressRelease/ShowDetails/{id}', [PressReleaseController::class, 'PressReleaseShowDetails'])->name('PressReleaseShowDetails');
+
+//ประกาศของคลัง
+Route::get('/TreasuryAnnouncement/ShowData', [HomeController::class, 'TreasuryAnnouncementData'])->name('TreasuryAnnouncementData');
+
+//ประกาศจัดซื้อจัดจ้าง
+Route::get('/procurement/detail/{id}', [ProcurementController::class, 'ProcurementDetail'])->name('ProcurementDetail');
+Route::get('/procurement/ShowData', [ProcurementController::class, 'ProcurementShowData'])->name('ProcurementShowData');
+
+//ผลประกาศจัดซื้อจัดจ้าง
+Route::get('/procurement-results/detail/{id}', [ProcurementResultsController::class, 'ProcurementResultsDetail'])->name('ProcurementResultsDetail');
+Route::get('/procurement-results/ShowData', [ProcurementResultsController::class, 'ProcurementResultsShowData'])->name('ProcurementResultsShowData');
+
+//ประกาศราคากลาง
+Route::get('/AveragePrice/detail/{id}', [AveragePriceController::class, 'AveragePriceDetail'])->name('AveragePriceDetail');
+Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePriceShowData'])->name('AveragePriceShowData');
+
+//รายงานผลจัดซื้อจัดจ้าง
+Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
+Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');

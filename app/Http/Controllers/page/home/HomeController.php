@@ -92,4 +92,23 @@ class HomeController extends Controller
             'procurementReport'
         ));
     }
+
+    public function TreasuryAnnouncementData()
+    {
+        $personnelAgencies = PersonnelAgency::with('ranks')->get();
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.treasury_announcement.show_data', compact(
+            'PublicMenus',
+            'personnelAgencies',
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu'
+        ));
+    }
 }
