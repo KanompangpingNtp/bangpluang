@@ -81,7 +81,7 @@
             /* ขอบสีฟ้า */
         }
 
-        .bg-video{
+        .bg-video {
             background-color: #9fe0ff;
             border-radius: 15px;
             box-shadow:
@@ -92,6 +92,119 @@
             width: 100%;
             height: 370px;
         }
+
+        .bg-egp {
+            background: linear-gradient(to right, #77cff8, #20a7de);
+            position: relative;
+            border: 3px solid #ffffff;
+            border-radius: 20px;
+        }
+
+        .accessory-bg-egp {
+            position: absolute;
+            /* ทำให้รูปภาพเคลื่อนที่ได้ */
+            top: -8%;
+            /* อยู่ที่มุมบน */
+            left: 1%;
+            /* อยู่ที่มุมขวา */
+            max-width: 90px;
+            /* ทำให้รูปภาพยืดหยุ่นตามขนาดคอนเทนเนอร์ */
+            height: auto;
+            /* ควบคุมอัตราส่วนของภาพ */
+            border-radius: 8px;
+            /* หากต้องการมุมมนให้รูป */
+        }
+
+        .bg-menu-egp {
+            background-image: url('{{ asset('pages/home/section-7/แถบEGP.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            gap: 0.6rem 0;
+        }
+
+        .bg-menu-egp div {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 25px;
+            cursor: pointer;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /* ขนาดตัวอักษรปกติ */
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media (max-width: 1400px) {
+
+            /* เมื่อหน้าจอมีความกว้างน้อยกว่าหรือเท่ากับ 991px */
+            .bg-menu-egp div {
+                font-size: 22px;
+                /* ปรับขนาดตัวอักษรให้เล็กลง */
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* เมื่อหน้าจอมีความกว้างน้อยกว่าหรือเท่ากับ 991px */
+            .bg-menu-egp div {
+                font-size: 23px;
+                border-radius: 20px;
+                /* ปรับขนาดตัวอักษรให้เล็กลง */
+            }
+
+            .accessory-bg-egp {
+                top: -7%;
+
+            }
+        }
+
+        .bg-menu-egp div:hover {
+            color: black;
+            background: #f3f3f3;
+        }
+
+        .bg-menu-egp .active {
+            color: black;
+            background: #f3f3f3;
+        }
+
+        .egp-card {
+            background-color: #ffff;
+            border: 0px solid black;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            /* ให้เอฟเฟกต์เปลี่ยนสีพื้นหลังนุ่มนวล */
+        }
+
+        .egp-card:hover {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+            /* พื้นหลังสีดำโปร่งแสงเมื่อ hover */
+            color: white;
+            /* เปลี่ยนสีตัวอักษรเป็นสีขาวเพื่อให้อ่านง่ายขึ้น */
+        }
+
+        .egp-card:hover .card-text {
+            color: #f1f1f1;
+            /* เปลี่ยนสีข้อความเมื่อ hover */
+        }
+
+        .bg-link-button7 {
+    background-color: #56c0ed;
+    border: 2px solid #ffff;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงอย่างนุ่มนวล */
+}
+
+.bg-link-button7:hover {
+    background-color: #1ea7db; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    color: #fff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+    transform: scale(1.02); /* ขยายขนาดปุ่มเล็กน้อย */
+    border-color: #fff; /* เปลี่ยนสีเส้นขอบ */
+}
+
     </style>
 </head>
 
@@ -101,7 +214,8 @@
             หนังสือราชการ
         </div>
         <div class="row w-100 justify-content-center align-items-center gap-3">
-            <div class="col-lg-5 bg-left-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
+            <div
+                class="col-lg-5 bg-left-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากกรมส่งเสริมการปกครองท้องถิ่น
                 </div>
@@ -137,18 +251,18 @@
                     ติดต่อหน่วยงาน สถ.จังหวัด
                 </a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-xl-6">
                 <div class="d-flex flex-column align-items-center justify-content-center">
-                    <div class="lh-1 fw-bold w-100 ms-2 mb-4">
-                        <span
-                            style="font-size:50px; text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;">ประกาศของคลัง</span>
-                        <img src="{{ asset('images/section-7/hired.png') }}" alt="icon" height="50"> <br>
-                        <span class="fs-4 ">องค์การบริหารส่วนตำบลแปลงยาว</span>
+                    <div class="lh-1 fw-bold w-100 ms-2 mb-3 text-center">
+                        <span class="title-section7 mb-3">ประกาศของคลัง</span>
                     </div>
                     <div class="row bg-egp justify-content-center shadow-lg w-100">
+                        <img src="{{ asset('pages/home/section-7/ผ้าไหม2.png') }}" alt="cloth"
+                            class="accessory-bg-egp">
                         <div
                             class="col-lg-4 d-flex flex-column justify-content-start align-items-center bg-menu-egp  ps-0 ps-lg-3 py-2 py-lg-5 fw-bold pe-0">
-                            <div id="btnProcurement" onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
+                            <div id="btnProcurement"
+                                onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
                                 class="w-100 text-center text-lg-start px-4 py-1"
                                 data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}">
                                 ประกาศจัดซื้อจัดจ้าง
@@ -159,7 +273,8 @@
                                 data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
                                 ผลประกาศจัดซื้อจัดจ้าง
                             </div>
-                            <div id="btnAverage" onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averagePrice) }})"
+                            <div id="btnAverage"
+                                onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averagePrice) }})"
                                 class="w-100 text-center text-lg-start px-4 py-1"
                                 data-link="{{ route('AveragePriceDetail', ['id' => ':id']) }}">
                                 ประกาศราคากลาง</div>
@@ -170,34 +285,35 @@
                                 รายงานผลจัดซื้อจัดจ้าง
                             </div>
                         </div>
-                        <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center px-3 py-5 "
-                            style="gap: 1rem 0;" id="contentArea">
+                        <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center px-3 py-5 bg-right-egp"
+                            style="gap: 0.5rem 0;" id="contentArea">
 
                         </div>
                     </div>
                     <div class="d-flex justify-content-end align-items-center w-100 me-2 mt-2">
-                        <a href="{{route('TreasuryAnnouncementData')}}" class="bg-link-button7 px-4 py-1 my-1 ">
-                            ดูทั้งหมด
+                        <a href="{{ route('TreasuryAnnouncementData') }}" class="bg-link-button7 px-4 py-1 my-1 ">
+                            <span class="px-2 py-1 fw-bold" style="background-color: #86d2f4; border-radius:20px;">ดูทั้งหมด</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+            <div class="col-xl-5 d-flex flex-column justify-content-center align-items-center">
+                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper"
+                    class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-video p-2">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
                     <a href="#" class=" banner-hover">
-                        <img src="{{asset('pages/home/section-7/N1.png')}}" alt="btn-1">
+                        <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1">
                     </a>
                     <a href="#" class=" banner-hover">
-                        <img src="{{asset('pages/home/section-7/N2.png')}}" alt="btn-2">
+                        <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2">
                     </a>
                 </div>
             </div>
@@ -205,13 +321,12 @@
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // กำหนดข้อมูลเริ่มต้นของปุ่ม
-            let initialData = {
-                'ประกาศจัดซื้อจัดจ้าง': @json($procurement),
-                'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
-                'ประกาศราคากลาง': @json($averagePrice),
-                'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
-            };
+    let initialData = {
+        'จัดซื้อจัดจ้าง': @json($procurement),
+        'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
+        'ประกาศราคากลาง': @json($averagePrice),
+        'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
+    };
 
             // ตั้งค่าลิงก์เริ่มต้นให้ปุ่มทั้งหมด
             for (let [key, value] of Object.entries(initialData)) {
@@ -227,95 +342,104 @@
 
             // โหลดหมวดหมู่แรกสุดที่มีข้อมูล
             for (let [topic, data] of Object.entries(initialData)) {
-                if (data.length > 0) {
-                    changeContent(topic, data);
-                    break;
-                }
-            }
-        });
+        if (data.length > 0) {
+            changeContent(topic, data);
+            setActiveButton(topic); // เรียก setActiveButton() หลังจากเปลี่ยนเนื้อหา
+            break;
+        }
+    }
+});
 
         function changeContent(topic, data) {
-        allItems = data;
+            allItems = data;
 
-        if (data.length > 0) {
-            let firstId = data[0].id;
-            let activeButton = document.querySelector(`[onclick*="changeContent('${topic}'"]`);
+            if (data.length > 0) {
+                let firstId = data[0].id;
+                let activeButton = document.querySelector(`[onclick*="changeContent('${topic}'"]`);
 
-            if (activeButton) {
-                let linkTemplate = activeButton.getAttribute('data-link');
-                baseLink = linkTemplate.replace(':id', firstId);
+                if (activeButton) {
+                    let linkTemplate = activeButton.getAttribute('data-link');
+                    baseLink = linkTemplate.replace(':id', firstId);
+                }
+            } else {
+                baseLink = "#";
             }
-        } else {
-            baseLink = "#";
-        }
 
-        displayItems();
-        setActiveButton(topic);
-    }
+            displayItems();
+            setActiveButton(topic);
+        }
 
 
         function setActiveButton(topic) {
-            const buttons = ['btnProcurement', 'btnProcurementResults', 'btnAverage', 'btnProcurementPlan',
-                'btnWinnerAnnouncement'
-            ];
-            const topics = ['จัดซื้อจัดจ้าง', 'ผลประกาศจัดซื้อจัดจ้างประจำปี', 'สรุปผลการจัดซื้อจัดจ้าง',
-                'แผนการจัดซื้อจัดจ้าง', 'ประกาศผู้ชนะการเสนอราคา'
-            ];
+    const buttonMap = {
+        'จัดซื้อจัดจ้าง': 'btnProcurement',
+        'ผลประกาศจัดซื้อจัดจ้าง': 'btnProcurementResults',
+        'ประกาศราคากลาง': 'btnAverage',
+        'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan',
+    };
 
-            buttons.forEach(buttonId => document.getElementById(buttonId).classList.remove('active'));
-
-            const activeButtonIndex = topics.indexOf(topic);
-            if (activeButtonIndex !== -1) {
-                document.getElementById(buttons[activeButtonIndex]).classList.add('active');
-            }
+    // ลบคลาส 'active' ออกจากปุ่มทั้งหมด
+    Object.values(buttonMap).forEach(buttonId => {
+        let button = document.getElementById(buttonId);
+        if (button) {
+            button.classList.remove('active');
         }
+    });
+
+    // เพิ่ม 'active' ให้ปุ่มที่ตรงกับ topic
+    let activeButtonId = buttonMap[topic];
+    if (activeButtonId) {
+        let activeButton = document.getElementById(activeButtonId);
+        if (activeButton) {
+            activeButton.classList.add('active');
+        }
+    }
+}
+
 
         let currentPage = 1;
-        const itemsPerPage = 6;
+        const itemsPerPage = 4;
         let allItems = [];
         let baseLink = "#";
         const bookmarkIcon = "{{ asset('images/section-7/bookmark.png') }}";
-        const timeIcon = "{{ asset('images/section-7/fast-time.png') }}";
 
         function displayItems() {
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = currentPage * itemsPerPage;
-        const itemsToDisplay = allItems.slice(startIndex, endIndex);
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = currentPage * itemsPerPage;
+            const itemsToDisplay = allItems.slice(startIndex, endIndex);
 
-        let contentArea = document.getElementById('contentArea');
-        contentArea.innerHTML = '';
+            let contentArea = document.getElementById('contentArea');
+            contentArea.innerHTML = '';
 
-        itemsToDisplay.forEach((item) => {
-            let newContent = document.createElement('a');
+            itemsToDisplay.forEach((item) => {
+                let newContent = document.createElement('a');
 
-            // ใช้ baseLink ที่ตั้งไว้จาก changeContent() แล้วแทนค่า :id ด้วย item.id
-            let itemLink = baseLink.replace(/\d+$/, item.id);
+                // ใช้ baseLink ที่ตั้งไว้จาก changeContent() แล้วแทนค่า :id ด้วย item.id
+                let itemLink = baseLink.replace(/\d+$/, item.id);
 
-            newContent.href = itemLink;
-            newContent.className = "w-100";
-            newContent.style.textDecoration = "none";
+                newContent.href = itemLink;
+                newContent.className = "w-100";
+                newContent.style.textDecoration = "none";
 
-            newContent.innerHTML = `
+                newContent.innerHTML = `
                 <div class="card p-3 egp-card text-black w-100">
                     <div class="d-flex align-items-center">
                         <img src="${bookmarkIcon}" alt="รูปภาพ"
                             class="rounded me-3" style="width: 45px; height: 45px; object-fit: contain;">
                         <div class="flex-grow-1">
-                            <div class="card-text lh-1">
-                                ${truncateText(item.title_name, 180)}
+                            <div class="card-text fs-6 lh-1">
+                                ${truncateText(item.title_name, 140)}
                             </div>
-                            <div class="card-text text-muted">
-                                <img src="${timeIcon}" alt="icon"
-                                    class="me-1" width="18">
+                            <div class="card-text fs-6 text-muted">
                                 ${item.date}
                             </div>
                         </div>
                     </div>
                 </div>`;
 
-            contentArea.appendChild(newContent);
-        });
-    }
+                contentArea.appendChild(newContent);
+            });
+        }
 
 
         function truncateText(text, maxLength) {
