@@ -96,7 +96,9 @@
 
                             <!-- รูปภาพด้านซ้าย -->
                             <div style="flex: 0 0 100px; height: 100px; overflow: hidden; border-radius: 10px;">
-                                <img src="{{ asset('storage/' . ($post->photos->first()->post_photo_file ?? 'pages/home/section-5/LOGOบางพลวง.png')) }}" alt="Image {{ $index + 1 }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="{{ asset('storage/' . (isset($post->photos) && $post->photos->isNotEmpty() ? $post->photos->first()->post_photo_file : 'pages/home/section-5/LOGOบางพลวง.png')) }}"
+                                alt="Image {{ $index + 1 }}" style="width: 100%; height: 100%; object-fit: cover;">
+
                             </div>
 
                             <!-- ข้อความด้านขวา -->
