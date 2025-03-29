@@ -138,7 +138,7 @@
                 </a>
             </div>
             <div class="col-lg-6">
-                {{-- <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex flex-column align-items-center justify-content-center">
                     <div class="lh-1 fw-bold w-100 ms-2 mb-4">
                         <span
                             style="font-size:50px; text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;">ประกาศของคลัง</span>
@@ -154,30 +154,25 @@
                                 ประกาศจัดซื้อจัดจ้าง
                             </div>
                             <div id="btnProcurementResults"
-                                onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
+                                onclick="changeContent('ผลประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurementResults) }})"
                                 class="w-100 text-center text-lg-start px-4 py-1"
                                 data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
-                                ผลประกาศจัดซื้อจัดจ้างประจำปี
+                                ผลประกาศจัดซื้อจัดจ้าง
                             </div>
-                            <div id="btnAverage" onclick="changeContent('สรุปผลการจัดซื้อจัดจ้าง', {{ json_encode($average) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('RevenueDetail', ['id' => ':id']) }}">
-                                สรุปผลการจัดซื้อจัดจ้าง</div>
-                            <div id="btnProcurementPlan"
-                                onclick="changeContent('แผนการจัดซื้อจัดจ้าง', {{ json_encode($revenue) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('ProcurementPlanDetail', ['id' => ':id']) }}">
-                                แผนการจัดซื้อจัดจ้าง
-                            </div>
-                            <div id="btnWinnerAnnouncement"
-                                onclick="changeContent('ประกาศผู้ชนะการเสนอราคา', {{ json_encode($announcement) }})"
+                            <div id="btnAverage" onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averagePrice) }})"
                                 class="w-100 text-center text-lg-start px-4 py-1"
                                 data-link="{{ route('AveragePriceDetail', ['id' => ':id']) }}">
-                                ประกาศผู้ชนะการเสนอราคา</div>
+                                ประกาศราคากลาง</div>
+                            <div id="btnProcurementPlan"
+                                onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($procurementReport) }})"
+                                class="w-100 text-center text-lg-start px-4 py-1"
+                                data-link="{{ route('ProcurementReportDetail', ['id' => ':id']) }}">
+                                รายงานผลจัดซื้อจัดจ้าง
+                            </div>
                         </div>
                         <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center px-3 py-5 "
                             style="gap: 1rem 0;" id="contentArea">
-        
+
                         </div>
                     </div>
                     <div class="d-flex justify-content-end align-items-center w-100 me-2 mt-2">
@@ -185,7 +180,7 @@
                             ดูทั้งหมด
                         </a>
                     </div>
-                </div> --}}
+                </div>
             </div>
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
                 <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
@@ -208,17 +203,16 @@
             </div>
         </div>
     </div>
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             // กำหนดข้อมูลเริ่มต้นของปุ่ม
             let initialData = {
-                'จัดซื้อจัดจ้าง': @json($procurement),
-                'ผลประกาศจัดซื้อจัดจ้างประจำปี': @json($procurementResults),
-                'สรุปผลการจัดซื้อจัดจ้าง': @json($average),
-                'แผนการจัดซื้อจัดจ้าง': @json($revenue),
-                'ประกาศผู้ชนะการเสนอราคา': @json($announcement)
+                'ประกาศจัดซื้อจัดจ้าง': @json($procurement),
+                'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
+                'ประกาศราคากลาง': @json($averagePrice),
+                'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
             };
-    
+
             // ตั้งค่าลิงก์เริ่มต้นให้ปุ่มทั้งหมด
             for (let [key, value] of Object.entries(initialData)) {
                 if (value.length > 0) {
@@ -230,7 +224,7 @@
                     }
                 }
             }
-    
+
             // โหลดหมวดหมู่แรกสุดที่มีข้อมูล
             for (let [topic, data] of Object.entries(initialData)) {
                 if (data.length > 0) {
@@ -239,14 +233,14 @@
                 }
             }
         });
-    
+
         function changeContent(topic, data) {
         allItems = data;
-    
+
         if (data.length > 0) {
             let firstId = data[0].id;
             let activeButton = document.querySelector(`[onclick*="changeContent('${topic}'"]`);
-    
+
             if (activeButton) {
                 let linkTemplate = activeButton.getAttribute('data-link');
                 baseLink = linkTemplate.replace(':id', firstId);
@@ -254,12 +248,12 @@
         } else {
             baseLink = "#";
         }
-    
+
         displayItems();
         setActiveButton(topic);
     }
-    
-    
+
+
         function setActiveButton(topic) {
             const buttons = ['btnProcurement', 'btnProcurementResults', 'btnAverage', 'btnProcurementPlan',
                 'btnWinnerAnnouncement'
@@ -267,40 +261,40 @@
             const topics = ['จัดซื้อจัดจ้าง', 'ผลประกาศจัดซื้อจัดจ้างประจำปี', 'สรุปผลการจัดซื้อจัดจ้าง',
                 'แผนการจัดซื้อจัดจ้าง', 'ประกาศผู้ชนะการเสนอราคา'
             ];
-    
+
             buttons.forEach(buttonId => document.getElementById(buttonId).classList.remove('active'));
-    
+
             const activeButtonIndex = topics.indexOf(topic);
             if (activeButtonIndex !== -1) {
                 document.getElementById(buttons[activeButtonIndex]).classList.add('active');
             }
         }
-    
+
         let currentPage = 1;
         const itemsPerPage = 6;
         let allItems = [];
         let baseLink = "#";
         const bookmarkIcon = "{{ asset('images/section-7/bookmark.png') }}";
         const timeIcon = "{{ asset('images/section-7/fast-time.png') }}";
-    
+
         function displayItems() {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = currentPage * itemsPerPage;
         const itemsToDisplay = allItems.slice(startIndex, endIndex);
-    
+
         let contentArea = document.getElementById('contentArea');
         contentArea.innerHTML = '';
-    
+
         itemsToDisplay.forEach((item) => {
             let newContent = document.createElement('a');
-    
+
             // ใช้ baseLink ที่ตั้งไว้จาก changeContent() แล้วแทนค่า :id ด้วย item.id
             let itemLink = baseLink.replace(/\d+$/, item.id);
-    
+
             newContent.href = itemLink;
             newContent.className = "w-100";
             newContent.style.textDecoration = "none";
-    
+
             newContent.innerHTML = `
                 <div class="card p-3 egp-card text-black w-100">
                     <div class="d-flex align-items-center">
@@ -318,14 +312,14 @@
                         </div>
                     </div>
                 </div>`;
-    
+
             contentArea.appendChild(newContent);
         });
     }
-    
-    
+
+
         function truncateText(text, maxLength) {
             return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
         }
-    </script> --}}
+    </script>
 </main>
