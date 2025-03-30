@@ -14,6 +14,8 @@ class PostTypeSeeder extends Seeder
     public function run(): void
     {
         $data = [
+            ['type_name' => 'ป้ายประกาศ'],
+
             ['type_name' => 'ข่าวประชาสัมพันธ์'],
             ['type_name' => 'กิจกรรม'],
 

@@ -57,24 +57,38 @@ class HomeController extends Controller
         $procurement = PostDetail::with('postType', 'pdfs')
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'ประกาศจัดซื้อจัดจ้าง');
-            })->get();
+            })
+            ->orderBy('date', 'desc')
+            ->get();
 
         //ผลประกาศจัดซื้อจัดจ้าง
         $procurementResults = PostDetail::with('postType', 'pdfs')
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'ผลประกาศจัดซื้อจัดจ้าง');
-            })->get();
+            })
+            ->orderBy('date', 'desc')
+            ->get();
 
         //ประกาศราคากลาง
         $averagePrice = PostDetail::with('postType', 'pdfs')
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'ประกาศราคากลาง');
-            })->get();
+            })
+            ->orderBy('date', 'desc')
+            ->get();
 
         //รายงานผลจัดซื้อจัดจ้าง
         $procurementReport = PostDetail::with('postType', 'pdfs')
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'รายงานผลจัดซื้อจัดจ้าง');
+            })
+            ->orderBy('date', 'desc')
+            ->get();
+
+        //ป้ายประกาศ
+        $noticeBoard = PostDetail::with('postType', 'photos')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'ป้ายประกาศ');
             })->get();
 
         return view('users.home.app', compact(
@@ -89,7 +103,8 @@ class HomeController extends Controller
             'procurement',
             'procurementResults',
             'averagePrice',
-            'procurementReport'
+            'procurementReport',
+            'noticeBoard'
         ));
     }
 

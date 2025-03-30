@@ -81,18 +81,12 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
-                        {{-- <a class="nav-link" href="{{route('NoticeBoardHome')}}">
+                        <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             ป้ายประกาศ
-                        </a> --}}
-                        {{-- <a class="nav-link" href="{{route('AwardsofPrideHome')}}">
-                            <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-folder"></i>
-                            </div>
-                            รางวัลแห่งความภาคภูมิใจ
-                        </a> --}}
+                        </a>
                         <a class="nav-link" href="{{route('ActivityHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>

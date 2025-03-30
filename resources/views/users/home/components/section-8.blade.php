@@ -132,7 +132,7 @@
                     </div>
                     <div class="ms-3 fw-bold fs-6">
                         เมล์:....................................
-                        
+
                     </div>
                     <div class="ms-3 fw-bold fs-6">
                         เบอร์ติดต่อ:.................................
@@ -148,7 +148,7 @@
                         <a href="#">ตรวจสอบอีเมล์</a>
                         <a href="#">เว็บเพื่อนบ้าน</a>
                         <a href="#">เว็บมาสเตอร์</a>
-                        <a href="#">สำหรับแอดมิน</a>
+                        <a href="{{route('showLoginForm')}}">สำหรับแอดมิน</a>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center fs-6">

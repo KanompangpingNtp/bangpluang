@@ -130,6 +130,7 @@
                 height: 18rem;
             }
         }
+
     </style>
 </head>
 
@@ -139,7 +140,7 @@
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
                 <div class="title-section3 d-flex flex-column flex-md-row justify-content-center align-items-center">
                     ป้ายประกาศ
-                    <a href="#" class="bg-btn-section3 px-3 py-2 ms-0 ms-md-4">
+                    <a href="{{route('NoticeBoardShowData')}}" class="bg-btn-section3 px-3 py-2 ms-0 ms-md-4">
                         ดูเพิ่มเติม
                     </a>
                 </div>
@@ -147,25 +148,32 @@
                     <div class="bg-white p-2" style="border-radius: 20px;">
                         <div id="carouselAnnouncement" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner" style="border-radius: 15px;">
+                                @if ($noticeBoard->isNotEmpty())
+                                @foreach ($noticeBoard as $index => $item)
+                                @php
+                                $imagePath = optional($item->photos->where('post_photo_status', '1')->first())->post_photo_file;
+                                @endphp
+                                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                    <img src="{{ $imagePath ? asset('storage/' . $imagePath) : asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Announcement Slide">
+                                </div>
+                                @endforeach
+                                @else
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100"
-                                        alt="Default Slide 1">
+                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
-                                        alt="Default Slide 2">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
                                 </div>
+                                @endif
                             </div>
 
                             <!-- ปุ่ม Previous -->
-                            <button class="carousel-control-prev custom-carousel-btn" type="button"
-                                data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
 
                             <!-- ปุ่ม Next -->
-                            <button class="carousel-control-next custom-carousel-btn" type="button"
-                                data-bs-target="#carouselAnnouncement" data-bs-slide="next">
+                            <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselAnnouncement" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -181,14 +189,11 @@
                 </div>
 
                 <!-- ปรับภาพให้ใช้ object-fit: contain -->
-                <img src="{{ asset('pages/home/section-3/topper-video.png') }}" alt="topper" class="mt-4 img-fluid"
-                    style="z-index: 2; margin-bottom:-7px;">
+                <img src="{{ asset('pages/home/section-3/topper-video.png') }}" alt="topper" class="mt-4 img-fluid" style="z-index: 2; margin-bottom:-7px;">
 
                 <div class="bg-video-section2 p-2 ">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
+                        <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
 

@@ -42,7 +42,8 @@ use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryCon
 use App\Http\Controllers\page\contact\AdminContactController;
 use App\Http\Controllers\page\contact\ContactController;
 use App\Http\Controllers\page\home\HomeController;
-
+use App\Http\Controllers\noticeboard\AdminNoticeBoardController ;
+use App\Http\Controllers\noticeboard\NoticeBoardController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,6 +91,10 @@ Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController:
 
 //ติดต่อ
 Route::get('/contact', [ContactController::class, 'contactPage'])->name('contactPage');
+
+//ป้ายประกาศ
+Route::get('/NoticeBoard/ShowData', [NoticeBoardController::class, 'NoticeBoardShowData'])->name('NoticeBoardShowData');
+Route::get('/NoticeBoard/ShowDetails/{id}', [NoticeBoardController::class, 'NoticeBoardShowDetails'])->name('NoticeBoardShowDetails');
 
 //กิจกรรม
 Route::get('/Activity/ShowData', [ActivityController::class, 'ActivityShowData'])->name('ActivityShowData');
@@ -318,7 +323,8 @@ Route::middleware(['checklogin'])->group(function () {
     Route::delete('/admin/Contact/delete/{id}', [AdminContactController::class, 'ContactDelete'])->name('ContactDelete');
     Route::put('/admin/Contact/update/{id}', [AdminContactController::class, 'ContactUpdate'])->name('ContactUpdate');
 
-
-
-
+    //NoticeBoard
+    Route::get('/NoticeBoard/page', [AdminNoticeBoardController::class, 'NoticeBoardHome'])->name('NoticeBoardHome');
+    Route::post('/NoticeBoard/create', [AdminNoticeBoardController::class, 'NoticeBoardCreate'])->name('NoticeBoardCreate');
+    Route::delete('/NoticeBoard/delete{id}', [AdminNoticeBoardController::class, 'NoticeBoardDelete'])->name('NoticeBoardDelete');
 });
