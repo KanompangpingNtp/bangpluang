@@ -401,7 +401,7 @@
         const itemsPerPage = 4;
         let allItems = [];
         let baseLink = "#";
-        const bookmarkIcon = "{{ asset('images/section-7/bookmark.png') }}";
+        const bookmarkIcon = "{{ asset('navbar/logo.png') }}";
 
         function displayItems() {
             const startIndex = (currentPage - 1) * itemsPerPage;
