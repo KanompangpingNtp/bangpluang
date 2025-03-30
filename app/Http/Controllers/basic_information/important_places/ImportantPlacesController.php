@@ -31,7 +31,8 @@ class ImportantPlacesController extends Controller
         $basicInfoType = BasicInfoType::all();
         $basicInfoTypeID = $basicInfoType->firstWhere('type_name', 'สถานที่สำคัญ')->id;
         $listDetail = ListDetail::with('type', 'images')
-            ->where('basic_info_type_id', $basicInfoTypeID)->get();
+            ->where('basic_info_type_id', $basicInfoTypeID)
+            ->paginate(14);
 
         return view('users.pages.basic_information.important_places.page', compact(
             'listDetail',

@@ -117,6 +117,29 @@
                 @endforeach
             </div>
 
+            @if($listDetail && $listDetail->count() > 0)
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center mt-5">
+                    <!-- Previous button -->
+                    <li class="page-item {{ $listDetail->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $listDetail->previousPageUrl() }}">ก่อนหน้า</a>
+                    </li>
+
+                    <!-- Page number buttons -->
+                    @foreach ($listDetail->getUrlRange(1, $listDetail->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $listDetail->currentPage() ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                    </li>
+                    @endforeach
+
+                    <!-- Next button -->
+                    <li class="page-item {{ !$listDetail->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $listDetail->nextPageUrl() }}">ต่อไป</a>
+                    </li>
+                </ul>
+            </nav>
+            @endif
+
         </div>
     </div>
 </div>
