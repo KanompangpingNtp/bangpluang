@@ -59,9 +59,9 @@ Route::get('/index', function () {
     return view('users.layouts.main-layout');
 });
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
+Route::get('/showlogin', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -117,6 +117,9 @@ Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePri
 //รายงานผลจัดซื้อจัดจ้าง
 Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
 Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
+
+//ita
+Route::get('/ita/page', [ITAController::class, 'itaPage'])->name('itaPage');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');

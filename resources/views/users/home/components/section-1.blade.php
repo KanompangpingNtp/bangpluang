@@ -119,11 +119,11 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="mb-4 personal-img">
                     </div>
                 </div>
-                
+
                 <!-- Slide 2 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
@@ -142,7 +142,7 @@
 
                 </div>
                 <!-- Slide 3 -->
-                
+
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
@@ -155,7 +155,7 @@
                                 </a>
                             </div>
                         </div>
-                        
+
                         <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal2" class="mb-4 personal-img">
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{route('itaPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส<br> (ITA)</span>
