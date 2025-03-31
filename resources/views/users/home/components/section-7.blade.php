@@ -356,7 +356,7 @@
                     </iframe>
                 </div>
             </div>
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+            <div class="col-xl-8 d-flex flex-column justify-content-center align-items-center">
                 <div class="title-section7 mb-1">
                     แนะนำสถานที่ท่องเที่ยว
                 </div>
@@ -402,14 +402,14 @@
                     สถานที่ 1
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center gap-2 banner-container">
-                    <a href="#" class="banner-hover">
-                        <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
-                    </a>
-                    <a href="#" class="banner-hover">
-                        <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2" class="img-fluid">
-                    </a>
-                </div>
+            </div>
+            <div class="col-xl-3 d-flex flex-row flex-xl-column justify-content-center align-items-center gap-2 banner-container">
+                <a href="#" class="banner-hover">
+                    <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
+                </a>
+                <a href="#" class="banner-hover">
+                    <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2" class="img-fluid">
+                </a>
             </div>
         </div>
     </div>
