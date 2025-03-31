@@ -44,6 +44,8 @@ use App\Http\Controllers\page\contact\ContactController;
 use App\Http\Controllers\page\home\HomeController;
 use App\Http\Controllers\noticeboard\AdminNoticeBoardController ;
 use App\Http\Controllers\noticeboard\NoticeBoardController ;
+use App\Http\Controllers\menu_for_public\form\ReceiveComplaintsController;
+use App\Http\Controllers\menu_for_public\form\SatisfactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -134,6 +136,12 @@ Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, '
 
 //ita
 Route::get('/ita/page', [ITAController::class, 'itaPage'])->name('itaPage');
+
+//รับเรื่องราวร้องทุกข์
+Route::get('/ReceiveComplaints/form', [ReceiveComplaintsController::class, 'ReceiveComplaintsForm'])->name('ReceiveComplaintsForm');
+
+//รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
+Route::get('/Satisfaction/form', [SatisfactionController::class, 'SatisfactionForm'])->name('SatisfactionForm');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
