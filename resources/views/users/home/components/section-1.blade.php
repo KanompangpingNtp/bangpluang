@@ -6,7 +6,7 @@
             background-position: center;
             background-repeat: no-repeat;
             min-height: 100vh;
-            padding: 2rem 0rem;
+            padding: 4rem 0rem;
         }
 
         .title-section1 {
@@ -61,7 +61,7 @@
             background: linear-gradient(to right, #37b2e5, #88d7fd);
             border-radius: 40px;
             color: #000000;
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
@@ -83,7 +83,7 @@
             position: absolute;
             left: -30px;
             /* ออกมาครึ่งหนึ่ง */
-            width: 100px;
+            width: 90px;
             /* ปรับขนาดรูป */
             height: auto;
             transition: transform 0.3s ease;
@@ -126,9 +126,9 @@
                 <!-- Slide 1 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3"
+                        <div class="py-3 px-3"
                             style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                            <div class="consultant-info text-center lh-sm">
+                            <div class="consultant-info fs-6 text-center lh-sm">
                                 <span class="fs-5 fw-bold">นายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
                                 <span>นายจิตรกร แก้วไทรเลิศ</span><br>
                                 <a href="tel:+66819492003" class="fw-bold text-center text-dark pe-2 phone-link"
@@ -148,7 +148,7 @@
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="py-2 px-3"
                             style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                            <div class="consultant-info text-center lh-sm">
+                            <div class="consultant-info fs-6 text-center lh-sm">
                                 <span class="fs-5 fw-bold">รองนายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
                                 <span>นายสุดสาย จิระวัฒนโสภณ</span><br>
                                 <a href="tel:+66638286843" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
@@ -167,7 +167,7 @@
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="py-2 px-3"
                             style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                            <div class="consultant-info text-center lh-sm">
+                            <div class="consultant-info fs-6 text-center lh-sm">
                                 <span class="fs-5 fw-bold">รองนายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
                                 <span>นางเกษณี หมื่นศรี</span><br>
                                 <a href="tel:+66981915666" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
@@ -183,10 +183,10 @@
                 <!-- Slide 4 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3"
+                        <div class="py-3 px-3"
                             style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                        <div class="consultant-info text-center lh-md">
-                            <span class="fs-4 fw-bold">เลขนุการนายก</span><br>
+                        <div class="consultant-info fs-6 text-center lh-md">
+                            <span class="fs-5 fw-bold">เลขนุการนายก</span><br>
                             <span>นายปราโมทย์ ตันเสียง</span><br>
                             <a href="tel:+66890019105" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
                                 style="font-size:1rem; text-decoration: none;">

@@ -243,7 +243,7 @@
                 <img src="{{ asset('pages/home/section-5/ป้ายบางพลวง.png') }}" alt="banner" class="img-fluid">
             </div>
         </div>
-        <div class="row w-100 justify-content-center align-items-center mt-4">
+        <div class="row justify-content-center align-items-center mt-4 mx-0 mx-md-5 px-0 px-md-5">
             <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN1.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:16px;">อาสาสมัครป้องกันภัย<br>ฝ่ายพลเรือน</span>
