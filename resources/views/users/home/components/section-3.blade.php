@@ -177,8 +177,13 @@
                 <img src="{{ asset('pages/home/section-3/topper-video.png') }}" alt="topper" class="mt-4 img-fluid" style="z-index: 2; margin-bottom:-7px;">
 
                 <div class="bg-video-section2 p-2 ">
-                        <iframe src="https://www.youtube.com/embed/l0vhTfHpbQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
+                    <iframe src="https://www.youtube.com/embed/l0vhTfHpbQM"
+                    width="560" height="315"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+
 
                 </div>
             </div>
