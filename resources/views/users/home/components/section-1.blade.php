@@ -139,7 +139,7 @@
 
                         </div>
 
-                        <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="mb-4 mark-personal-img">
+                        <img src="{{ asset('pages/home/section-1/นายก.gif') }}" alt="personal3" class="mb-4 mark-personal-img">
                     </div>
                 </div>
 
