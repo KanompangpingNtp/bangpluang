@@ -111,7 +111,7 @@
                                 @endif
                                 <div class="mt-2 details" style="font-size: 14px;">
                                     {{ $chunk->first()->full_name }}<br>
-                                    {!! $detail->department ?? '' !!}<br>
+                                    {!! $chunk->first()->department ?? '' !!}
                                     {{ $chunk->first()->phone }}
 
                                 </div>
@@ -130,7 +130,7 @@
 
                                 <div class="mt-2 details" style="font-size: 14px;">
                                     {{ $chunk->last()->full_name }}<br>
-                                    {!! $detail->department ?? '' !!}<br>
+                                    {!! $chunk->last()->department ?? '' !!}
                                     {{ $chunk->last()->phone }}
                                 </div>
 
@@ -152,7 +152,7 @@
 
                             <div class="mt-2 details" style="font-size: 14px;">
                                 {{ $detail->full_name }}<br>
-                                {!! $detail->department ?? '' !!}<br>
+                                {!! $detail->department ?? '' !!}
                                 {{ $detail->phone }}
 
                             </div>

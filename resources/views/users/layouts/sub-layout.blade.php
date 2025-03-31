@@ -601,7 +601,7 @@
 
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="personnelDropdown">
-                                        <li><a class="dropdown-item" href="#">โครงสร้างองค์กร</a>
+                                        <li><a class="dropdown-item" href="{{route('Personnel_Chart')}}">โครงสร้างองค์กร</a>
                                         </li>
                                         @foreach ($personnelAgencies as $agency)
                                         <li>
@@ -689,11 +689,10 @@
 
                                     </a>
                                     <ul class="dropdown-menu" style="left: auto;right: 0;transform: translateX(0);" aria-labelledby="citizenMenuDropdown">
-                                        <li><a class="dropdown-item" href="#">รับเรื่องราวร้องทุกข์ </a>
+                                        <li><a class="dropdown-item" href="{{route('ReceiveComplaintsForm')}}">รับเรื่องราวร้องทุกข์ </a>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li>
+                                        <li><a class="dropdown-item" href="{{route('SatisfactionForm')}}">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
+                                        {{-- <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li> --}}
                                         @foreach ($PublicMenus as $detail)
                                         <li>
                                             <a class="dropdown-item" href="{{ route('MenuForPublicSectionPages', ['id' => $detail->id]) }}">
