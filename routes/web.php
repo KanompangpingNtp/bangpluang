@@ -42,7 +42,8 @@ use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryCon
 use App\Http\Controllers\page\contact\AdminContactController;
 use App\Http\Controllers\page\contact\ContactController;
 use App\Http\Controllers\page\home\HomeController;
-
+use App\Http\Controllers\noticeboard\AdminNoticeBoardController ;
+use App\Http\Controllers\noticeboard\NoticeBoardController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,11 +60,20 @@ Route::get('/index', function () {
     return view('users.layouts.main-layout');
 });
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
+Route::get('/showlogin', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+//ข้อมูลพื้นฐาน
+Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');
+Route::get('/general_information/page', [GeneralInformationController::class, 'GeneralInformationPage'])->name('GeneralInformationPage');
+Route::get('/landscape_gallery/page', [LandscapeGalleryController::class, 'LandscapeGalleryPage'])->name('LandscapeGalleryPage');
+Route::get('/CommunityProducts/page', [CommunityProductsController::class, 'CommunityProductsPage'])->name('CommunityProductsPage');
+Route::get('/CommunityProducts/showdetails/index/{id}', [CommunityProductsController::class, 'ShowDetails'])->name('ShowDetails');
+Route::get('/ImportantPlaces/page', [ImportantPlacesController::class, 'ImportantPlacesPage'])->name('ImportantPlacesPage');
+Route::get('/ImportantPlaces/showdetails/index/{id}', [ImportantPlacesController::class, 'ImportantPlacesShowDetails'])->name('ImportantPlacesShowDetails');
 
 //บุคลากร
 Route::get('/agency/detail/{id}', [PersonnelController::class, 'AgencyShow'])->name('AgencyShow');
@@ -91,6 +101,10 @@ Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController:
 //ติดต่อ
 Route::get('/contact', [ContactController::class, 'contactPage'])->name('contactPage');
 
+//ป้ายประกาศ
+Route::get('/NoticeBoard/ShowData', [NoticeBoardController::class, 'NoticeBoardShowData'])->name('NoticeBoardShowData');
+Route::get('/NoticeBoard/ShowDetails/{id}', [NoticeBoardController::class, 'NoticeBoardShowDetails'])->name('NoticeBoardShowDetails');
+
 //กิจกรรม
 Route::get('/Activity/ShowData', [ActivityController::class, 'ActivityShowData'])->name('ActivityShowData');
 Route::get('/Activity/ShowDetails/{id}', [ActivityController::class, 'ActivityShowDetails'])->name('ActivityShowDetails');
@@ -117,6 +131,9 @@ Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePri
 //รายงานผลจัดซื้อจัดจ้าง
 Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
 Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
+
+//ita
+Route::get('/ita/page', [ITAController::class, 'itaPage'])->name('itaPage');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
@@ -315,7 +332,8 @@ Route::middleware(['checklogin'])->group(function () {
     Route::delete('/admin/Contact/delete/{id}', [AdminContactController::class, 'ContactDelete'])->name('ContactDelete');
     Route::put('/admin/Contact/update/{id}', [AdminContactController::class, 'ContactUpdate'])->name('ContactUpdate');
 
-
-
-
+    //NoticeBoard
+    Route::get('/NoticeBoard/page', [AdminNoticeBoardController::class, 'NoticeBoardHome'])->name('NoticeBoardHome');
+    Route::post('/NoticeBoard/create', [AdminNoticeBoardController::class, 'NoticeBoardCreate'])->name('NoticeBoardCreate');
+    Route::delete('/NoticeBoard/delete{id}', [AdminNoticeBoardController::class, 'NoticeBoardDelete'])->name('NoticeBoardDelete');
 });
