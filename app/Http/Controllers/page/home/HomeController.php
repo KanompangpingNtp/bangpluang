@@ -91,6 +91,13 @@ class HomeController extends Controller
                 $query->where('type_name', 'ป้ายประกาศ');
             })->get();
 
+        $touristAttraction = PostDetail::with('postType', 'videos', 'photos', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'แนะนำสถานที่ท่องเที่ยว');
+            })
+            ->orderBy('created_at', 'desc')
+            ->get();
+
         return view('users.home.app', compact(
             'PerfResultsMenu',
             'AuthorityMenu',
@@ -104,7 +111,8 @@ class HomeController extends Controller
             'procurementResults',
             'averagePrice',
             'procurementReport',
-            'noticeBoard'
+            'noticeBoard',
+            'touristAttraction'
         ));
     }
 

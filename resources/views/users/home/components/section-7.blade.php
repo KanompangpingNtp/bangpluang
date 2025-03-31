@@ -249,6 +249,7 @@
             /* ป้องกันการผิดสัดส่วน */
             border-radius: 15px;
         }
+
     </style>
 </head>
 
@@ -258,28 +259,24 @@
             หนังสือราชการ
         </div>
         <div class="row w-100 justify-content-center align-items-center gap-3">
-            <div
-                class="col-lg-5 bg-left-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
+            <div class="col-lg-5 bg-left-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากกรมส่งเสริมการปกครองท้องถิ่น
                 </div>
-                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="link-section7"
-                    target="_blank">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="link-section7" target="_blank">
                     หนังสือราชการของ สถ.
                 </a>
                 <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="link-section7" target="_blank">
                     กฏหมาย ระเบียบ และมติ ก.กลาง
                 </a>
-                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="link-section7"
-                    target="_blank">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="link-section7" target="_blank">
                     บทความที่น่าสนใจ
                 </a>
                 <a href="https://www.dla.go.th/visit/it_royal.jsp" class="link-section7 fs-6 mb-2" target="_blank">
                     พรบ. และประกาศเกี่ยวกับ เทคโนโลยีสารสนเทศ
                 </a>
             </div>
-            <div
-                class="col-lg-5 bg-right-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
+            <div class="col-lg-5 bg-right-section7 pb-4 pt-2 px-3 d-flex flex-column justify-content-center align-items-start">
                 <img src="{{ asset('pages/home/section-7/ผ้าไหม1.png') }}" alt="cloth">
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากราชการจากท้องถิ่นจังหวัด
@@ -303,43 +300,27 @@
                         <span class="title-section7 mb-3">ประกาศของคลัง</span>
                     </div>
                     <div class="row bg-egp justify-content-center shadow-lg w-100">
-                        <img src="{{ asset('pages/home/section-7/ผ้าไหม2.png') }}" alt="cloth"
-                            class="accessory-bg-egp">
-                        <div
-                            class="col-lg-4 d-flex flex-column justify-content-start align-items-center bg-menu-egp  ps-0 ps-lg-3 py-2 py-lg-5 fw-bold pe-0">
-                            <div id="btnProcurement"
-                                onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}">
+                        <img src="{{ asset('pages/home/section-7/ผ้าไหม2.png') }}" alt="cloth" class="accessory-bg-egp">
+                        <div class="col-lg-4 d-flex flex-column justify-content-start align-items-center bg-menu-egp  ps-0 ps-lg-3 py-2 py-lg-5 fw-bold pe-0">
+                            <div id="btnProcurement" onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})" class="w-100 text-center text-lg-start px-4 py-1" data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}">
                                 ประกาศจัดซื้อจัดจ้าง
                             </div>
-                            <div id="btnProcurementResults"
-                                onclick="changeContent('ผลประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurementResults) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
+                            <div id="btnProcurementResults" onclick="changeContent('ผลประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurementResults) }})" class="w-100 text-center text-lg-start px-4 py-1" data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
                                 ผลประกาศจัดซื้อจัดจ้าง
                             </div>
-                            <div id="btnAverage"
-                                onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averagePrice) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('AveragePriceDetail', ['id' => ':id']) }}">
+                            <div id="btnAverage" onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averagePrice) }})" class="w-100 text-center text-lg-start px-4 py-1" data-link="{{ route('AveragePriceDetail', ['id' => ':id']) }}">
                                 ประกาศราคากลาง</div>
-                            <div id="btnProcurementPlan"
-                                onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($procurementReport) }})"
-                                class="w-100 text-center text-lg-start px-4 py-1"
-                                data-link="{{ route('ProcurementReportDetail', ['id' => ':id']) }}">
+                            <div id="btnProcurementPlan" onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($procurementReport) }})" class="w-100 text-center text-lg-start px-4 py-1" data-link="{{ route('ProcurementReportDetail', ['id' => ':id']) }}">
                                 รายงานผลจัดซื้อจัดจ้าง
                             </div>
                         </div>
-                        <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center px-3 py-5 bg-right-egp"
-                            style="gap: 0.5rem 0;" id="contentArea">
+                        <div class="col-lg-8 d-flex flex-column justify-content-center align-items-center px-3 py-5 bg-right-egp" style="gap: 0.5rem 0;" id="contentArea">
 
                         </div>
                     </div>
                     <div class="d-flex justify-content-end align-items-center w-100 me-2 mt-2">
                         <a href="{{ route('TreasuryAnnouncementData') }}" class="bg-link-button7 px-4 py-1 my-1 ">
-                            <span class="px-2 py-1 fw-bold"
-                                style="background-color: #86d2f4; border-radius:20px;">ดูทั้งหมด</span>
+                            <span class="px-2 py-1 fw-bold" style="background-color: #86d2f4; border-radius:20px;">ดูทั้งหมด</span>
                         </a>
                     </div>
                 </div>
@@ -348,11 +329,9 @@
                 <div class="title-section7 mb-1">
                     แนะนำสถานที่ท่องเที่ยว
                 </div>
-                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.gif') }}" alt="topper"
-                    class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.gif') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-video p-2">
-                    <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
                 </div>
             </div>
@@ -363,37 +342,39 @@
                 <div class="p-3 bg-out-slide">
                     <div class="bg-white p-2" style="border-radius: 20px;">
                         <div id="carouselTravel" class="carousel slide custom-carousel" data-bs-ride="carousel">
-                            <div class="carousel-inner ">
-                                <div class="carousel-item active" data-place="วิสาหกิจชุมชนบ้านบางพลวง">
-                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100"
-                                        alt="Default Slide 1">
+                            <div class="carousel-inner">
+                                @if ($touristAttraction->isNotEmpty())
+                                @foreach ($touristAttraction as $key => $attraction)
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-place="{{ $attraction->topic_name }}">
+                                    @php
+                                    // ตรวจสอบว่ามีภาพหลัก (title_image) หรือไม่
+                                    $imagePath = optional($attraction->photos->where('post_photo_status', '1')->first())->post_photo_file;
+                                    @endphp
+                                    @if ($imagePath)
+                                    <img src="{{ asset('storage/' . $imagePath) }}" class="d-block w-100" alt="{{ $attraction->topic_name }}">
+                                    @else
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide">
+                                    @endif
                                 </div>
-                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี">
-                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
-                                        alt="Default Slide 2">
+                                @endforeach
+                                @else
+                                <div class="carousel-item active" data-place="ไม่มีข้อมูล">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide">
                                 </div>
-                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี1">
-                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
-                                        alt="Default Slide 2">
-                                </div>
-                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี2">
-                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
-                                        alt="Default Slide 2">
-                                </div>
+                                @endif
                             </div>
 
                             <!-- ปุ่ม Previous -->
-                            <button class="carousel-control-prev custom-carousel-btn" type="button"
-                                data-bs-target="#carouselTravel" data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
 
                             <!-- ปุ่ม Next -->
-                            <button class="carousel-control-next custom-carousel-btn" type="button"
-                                data-bs-target="#carouselTravel" data-bs-slide="next">
+                            <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>
+
                     </div>
                 </div>
 
@@ -433,6 +414,7 @@
                 }
             });
         });
+
     </script>
 
 
@@ -440,16 +422,16 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let initialData = {
-                'จัดซื้อจัดจ้าง': @json($procurement),
-                'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
-                'ประกาศราคากลาง': @json($averagePrice),
-                'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
-            };
+                'จัดซื้อจัดจ้าง': @json($procurement)
+                , 'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults)
+                , 'ประกาศราคากลาง': @json($averagePrice)
+                , 'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport)
+            , };
 
             // ตั้งค่าลิงก์เริ่มต้นให้ปุ่มทั้งหมด
             for (let [key, value] of Object.entries(initialData)) {
                 if (value.length > 0) {
-                    let firstId = value[0]?.id || 1;
+                    let firstId = value[0] ? .id || 1;
                     let button = document.querySelector(`[onclick*="changeContent('${key}'"]`);
                     if (button) {
                         let link = button.getAttribute('data-link').replace(':id', firstId);
@@ -490,11 +472,11 @@
 
         function setActiveButton(topic) {
             const buttonMap = {
-                'จัดซื้อจัดจ้าง': 'btnProcurement',
-                'ผลประกาศจัดซื้อจัดจ้าง': 'btnProcurementResults',
-                'ประกาศราคากลาง': 'btnAverage',
-                'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan',
-            };
+                'จัดซื้อจัดจ้าง': 'btnProcurement'
+                , 'ผลประกาศจัดซื้อจัดจ้าง': 'btnProcurementResults'
+                , 'ประกาศราคากลาง': 'btnAverage'
+                , 'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan'
+            , };
 
             // ลบคลาส 'active' ออกจากปุ่มทั้งหมด
             Object.values(buttonMap).forEach(buttonId => {
@@ -563,5 +545,6 @@
         function truncateText(text, maxLength) {
             return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
         }
+
     </script>
 </main>
