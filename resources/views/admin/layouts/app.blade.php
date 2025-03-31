@@ -149,7 +149,7 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="{{route('HistoryAdmin')}}">ประวัติความเป็นมา</a>
                                 <a class="nav-link" href="{{route('GeneralInformationAdmin')}}">ข้อมูลสภาพทั่วไป</a>
-                                <a class="nav-link" href="#">ข้อมูลชุมชน</a>
+                                <a class="nav-link" href="{{route('CommunityAdmin')}}">ข้อมูลชุมชน</a>
                                 <a class="nav-link" href="{{route('CommunityProductsAdmin')}}">ผลิตภัณฑ์ชุมชน</a>
                                 <a class="nav-link" href="{{route('ImportantPlacesAdmin')}}">สถานที่สำคัญ</a>
                                 <a class="nav-link" href="{{route('LandscapeGalleryAdmin')}}">แกลอรี่ภาพถ่ายภูมิทัศน์</a>
