@@ -15,6 +15,7 @@ use App\Http\Controllers\average_price\AveragePriceController;
 use App\Http\Controllers\procurement_report\AdminProcurementReportController;
 use App\Http\Controllers\procurement_report\ProcurementReportController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
+use App\Http\Controllers\tourist_attractions\TouristAttractionController;
 use App\Http\Controllers\performance_results\AdminPerformanceResultsController;
 use App\Http\Controllers\performance_results\PerformanceResultsController;
 use App\Http\Controllers\menu_for_public\AdminMenuForPublicController;
@@ -146,6 +147,10 @@ Route::get('/ReceiveComplaints/form', [ReceiveComplaintsController::class, 'Rece
 
 //รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
 Route::get('/Satisfaction/form', [SatisfactionController::class, 'SatisfactionForm'])->name('SatisfactionForm');
+
+//แนะนำสถานที่ท่องเที่ยว
+Route::get('/tourist_attraction/ShowData', [TouristAttractionController::class, 'TouristAttractionShowData'])->name('TouristAttractionShowData');
+Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController::class, 'TouristAttractionShowDetails'])->name('TouristAttractionShowDetails');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
