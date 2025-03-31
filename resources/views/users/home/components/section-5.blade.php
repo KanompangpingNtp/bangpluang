@@ -91,7 +91,7 @@
 
         .btn-link-section5 {
             background: transparent;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             text-decoration: none;
             color: #000;
@@ -118,12 +118,12 @@
         }
 
         .no-reverse img {
-            height: 120px;
+            height: 90px;
             margin-left: -2.6rem;
         }
 
         .yep-reverse img {
-            height: 120px;
+            height: 90px;
             margin-left: -2.6rem;
         }
 
@@ -194,7 +194,7 @@
         <div class="row w-100">
 
             <div class="col-lg-6 col-xl-4 d-flex flex-column justify-content-center align-items-center mb-4 mb-xl-0">
-                <img src="{{ asset('pages/home/section-5/กรอบกลาง.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+                <img src="{{ asset('pages/home/section-5/กรอบกลาง.gif') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section5 d-flex flex-column justify-content-center px-3 py-4">
                     @foreach ($activity->take(3) as $item)
                     <a href="{{ route('ActivityShowDetails', $item->id) }}" class="bg-card-section5 p-2 d-flex justify-content-center align-items-center gap-2 mb-2">
@@ -236,6 +236,14 @@
                     <a href="#" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
                         <span class="ms-2 me-4">องค์กรแห่งการ<br>เรียนรู้(KM)</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา4.png') }}" alt="icon1">
+                    </a>
+                    <a href="#" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
+                        <img src="{{ asset('pages/home/section-5/iconขวา5.png') }}" alt="icon1">
+                        <span class="ms-2 me-4">แผนจัดซื้อจัดจ้าง</span>
+                    </a>
+                    <a href="#" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
+                        <span class="ms-2 me-4">แผนอัตรากำลัง</span>
+                        <img src="{{ asset('pages/home/section-5/iconขวา6.png') }}" alt="icon1">
                     </a>
                 </div>
             </div>

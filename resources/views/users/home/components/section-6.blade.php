@@ -185,7 +185,7 @@
                 <div class="title-section6">
                     ข่าวประชาสัมพันธ์
                 </div>
-                <img src="{{ asset('pages/home/section-6/กรอบข่าวประชาสัมพันธ์.png') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+                <img src="{{ asset('pages/home/section-6/กรอบข่าวประชาสัมพันธ์.gif') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-blue-section6 d-flex flex-column justify-content-center px-3 py-4">
                     @foreach ($pressRelease->take(4) as $item)
                         <a href="{{ route('PressReleaseShowDetails', $item->id) }}" class="bg-card-section6 pt-2 px-3 pb-4 d-flex flex-column justify-content-start align-items-start mb-2">

@@ -315,14 +315,32 @@
                 <div class="title-section7 mb-1">
                     แนะนำสถานที่ท่องเที่ยว
                 </div>
-                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper"
-                    class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
-                <div class="bg-video p-2">
-                        <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                </div>
+                <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.gif') }}" alt="topper"
+                    class=" img-fluid px-2" style="z-index: 2; margin-bottom:-15px;">
+                    <div class="p-3 bg-out-slide ">
+                        <div class="bg-white p-2" style="border-radius: 20px;">
+                            <div id="carouselTravel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner" style="border-radius: 15px;">
+                                    <div class="carousel-item active">
+                                        <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
+                                    </div>
+                                </div>
+    
+                                <!-- ปุ่ม Previous -->
+                                <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+    
+                                <!-- ปุ่ม Next -->
+                                <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 <div class="d-flex justify-content-center align-items-center gap-2 banner-container">
                     <a href="#" class=" banner-hover">
                         <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">

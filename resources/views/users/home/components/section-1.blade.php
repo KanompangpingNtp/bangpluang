@@ -105,11 +105,11 @@
         }
 
         .mark-personal-img{
-            height: 25rem;
+            height: 20rem;
         }
 
         .personal-img{
-            height: 20rem;
+            height: 16rem;
         }
     </style>
 </head>

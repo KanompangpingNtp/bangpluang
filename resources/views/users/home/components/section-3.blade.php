@@ -84,6 +84,7 @@
         .bg-video-section2 iframe{
             width: 100%;
             height: 100%;
+            border-radius: 15px;
         }
 
         @media (max-width: 1024px) {
@@ -174,7 +175,7 @@
                 </div>
 
                 <!-- ปรับภาพให้ใช้ object-fit: contain -->
-                <img src="{{ asset('pages/home/section-3/topper-video.png') }}" alt="topper" class="mt-4 img-fluid" style="z-index: 2; margin-bottom:-7px;">
+                <img src="{{ asset('pages/home/section-3/topper-video.gif') }}" alt="topper" class="mt-4 img-fluid" style="z-index: 2; margin-bottom:-7px;">
 
                 <div class="bg-video-section2 p-2 ">
                         <iframe src="https://www.youtube.com/embed/l0vhTfHpbQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
