@@ -49,15 +49,15 @@
                     </div>
                     <div class="mb-3">
                         <label for="payment_file" class="form-label">ช่องทางการชำระค่าธรรมเนียมต่าง ๆ</label>
-                        <input type="file" class="form-control" id="payment_file" name="payment_file" required>
+                        <input type="file" class="form-control" id="payment_file" name="payment_file">
                     </div>
                     <div class="mb-3">
                         <label for="contact_administration_file" class="form-label">ช่องทางการติดต่อสอบถาม อบต.</label>
-                        <input type="file" class="form-control" id="contact_administration_file" name="contact_administration_file" required>
+                        <input type="file" class="form-control" id="contact_administration_file" name="contact_administration_file">
                     </div>
                     <div class="mb-3">
                         <label for="contact_finance_file" class="form-label">ช่องทางการติดต่อสอบถาม กองคลัง</label>
-                        <input type="file" class="form-control" id="contact_finance_file" name="contact_finance_file" required>
+                        <input type="file" class="form-control" id="contact_finance_file" name="contact_finance_file">
                     </div>
                     {{-- <div class="mb-3">
                         <label for="link_map" class="form-label">link google map</label>
