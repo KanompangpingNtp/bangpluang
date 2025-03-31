@@ -152,7 +152,7 @@
         }
 
         .dropdown-menu {
-            background-color: #3bb0ded0;
+            background-color: #53ceffd0;
             border: 1px solid #39aae7;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -164,13 +164,21 @@
 
 
         .dropdown-menu a {
-            color: #fafafa;
+            color: #000000;
             transition: all 0.3s ease;
         }
 
         .dropdown-menu a:hover {
             color: rgb(0, 0, 0);
-            background-color: #1490d8;
+            background-color: #16a8fd;
+            text-shadow:
+                2px 2px 4px rgba(255, 255, 255, 0.5),
+                /* เงาขอบด้านขวาและล่าง */
+                -2px -2px 4px rgba(255, 255, 255, 0.5),
+                /* เงาขอบด้านซ้ายและบน */
+                2px -2px 4px rgba(255, 255, 255, 0.5),
+                /* เงาขอบด้านขวาและบน */
+                -2px 2px 4px rgba(255, 255, 255, 0.5);
         }
 
         .navbar-nav .nav-item .nav-link {
