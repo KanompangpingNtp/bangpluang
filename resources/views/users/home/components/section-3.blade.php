@@ -179,7 +179,6 @@
                 <div class="bg-video-section2 p-2 ">
                         <iframe src="https://www.youtube.com/embed/l0vhTfHpbQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
-
                 </div>
             </div>
         </div>
