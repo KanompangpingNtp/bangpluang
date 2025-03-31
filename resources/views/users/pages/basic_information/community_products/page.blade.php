@@ -88,7 +88,6 @@
             <div class="row">
                 @foreach ($listDetail as $index => $detail)
                 @php
-                    // กำหนดคลาสพื้นหลังสลับสี
                     $cardBackgroundClass = ($index % 2 == 0) ? 'bg-blue-card-section-6' : 'bg-pink-card-section-6';
                 @endphp
                 <div class="col-lg-6 p-2">
