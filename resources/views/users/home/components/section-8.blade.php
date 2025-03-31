@@ -167,8 +167,8 @@
                         <a href="#">แผนผังเว็บไซต์</a>
                     </div>
                 </div>
-                <div class="text-dark d-flex justify-content-center align-items-center w-100 text-mute " style="font-size:14px;">
-                    copyright@2025
+                <div class="text-dark d-flex justify-content-center align-items-center w-100 text-mute mt-3" style="font-size:14px;">
+                    <strong>Copyright &copy; บริษัท So Smart Solution สงวนสิทธิ์ 2025</strong>
                 </div>
             </div>
 
