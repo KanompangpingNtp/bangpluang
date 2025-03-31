@@ -347,9 +347,12 @@
                                 @foreach ($touristAttraction as $key => $attraction)
                                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}" data-place="{{ $attraction->topic_name }}">
                                     @php
-                                    // ตรวจสอบว่ามีภาพหลัก (title_image) หรือไม่
-                                    $imagePath = optional($attraction->photos->where('post_photo_status', '1')->first())->post_photo_file;
+                                    $image = $attraction->photos->filter(function ($photo) {
+                                    return $photo->post_photo_status == '1';
+                                    })->first();
+                                    $imagePath = $image ? $image->post_photo_file : null;
                                     @endphp
+
                                     @if ($imagePath)
                                     <img src="{{ asset('storage/' . $imagePath) }}" class="d-block w-100" alt="{{ $attraction->topic_name }}">
                                     @else
