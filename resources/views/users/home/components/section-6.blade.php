@@ -248,7 +248,7 @@
                             </div>
                         </div>
                     </div>
-                    <form action="" method="POST">
+                    {{-- <form action="" method="POST"> --}}
                         <div class="lay-out-btn-accept px-2 py-2 ms-auto me-4 d-none d-md-block">
                             {{-- <a href="#" class="btn-accept-comment p-2">กดโหวต</a> --}}
                             <button type="submit" class="btn-accept-comment p-2">กดโหวต</button>

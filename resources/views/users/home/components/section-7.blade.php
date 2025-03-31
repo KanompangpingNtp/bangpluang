@@ -219,16 +219,16 @@
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากกรมส่งเสริมการปกครองท้องถิ่น
                 </div>
-                <a href="#" class="link-section7">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="link-section7" target="_blank">
                     หนังสือราชการของ สถ.
                 </a>
-                <a href="#" class="link-section7">
+                <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="link-section7" target="_blank">
                     กฏหมาย ระเบียบ และมติ ก.กลาง
                 </a>
-                <a href="#" class="link-section7">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="link-section7" target="_blank">
                     บทความที่น่าสนใจ
                 </a>
-                <a href="#" class="link-section7 fs-6 mb-2">
+                <a href="https://www.dla.go.th/visit/it_royal.jsp" class="link-section7 fs-6 mb-2" target="_blank">
                     พรบ. และประกาศเกี่ยวกับ เทคโนโลยีสารสนเทศ
                 </a>
             </div>
@@ -238,16 +238,16 @@
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากราชการจากท้องถิ่นจังหวัด
                 </div>
-                <a href="#" class="link-section7">
+                <a href="http://www.prachinburilocal.go.th/view_all.php?id=841" class="link-section7" target="_blank">
                     ข่าวประชาสัมพันธ์ สถ.
                 </a>
-                <a href="#" class="link-section7">
+                <a href="http://www.prachinburilocal.go.th/view_all.php?id=3448" class="link-section7" target="_blank">
                     หนังสือสั่งการจังหวัด
                 </a>
-                <a href="#" class="link-section7">
-                    กระดานข่าว
+                <a href="http://www.prachinburilocal.go.th/view_all.php?id=850" class="link-section7" target="_blank">
+                    สถานที่สำคัญ/แหล่งท่องเที่ยว
                 </a>
-                <a href="#" class="link-section7">
+                <a href="http://www.prachinburilocal.go.th/page.php?id=1203" class="link-section7" target="_blank">
                     ติดต่อหน่วยงาน สถ.จังหวัด
                 </a>
             </div>
