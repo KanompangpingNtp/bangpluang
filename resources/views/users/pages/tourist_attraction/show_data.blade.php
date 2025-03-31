@@ -107,7 +107,7 @@
                             <!-- ข้อความด้านขวา -->
                             <div class="ms-3 bg-white h-100 rounded p-1" style="flex: 1; position: relative; height: 100%;">
                                 <div class="card-text text-dark">
-                                    {{ Str::limit($post->title_name ?? 'No Title', 60, '...') }}
+                                    {{ Str::limit($post->topic_name ?? 'No Title', 60, '...') }}
                                 </div>
                                 <div class="card-date d-flex align-items-center">
                                     <img src="{{ asset('images/section-5/hourglass.png') }}" alt="icon" width="15" height="20" class="me-2">

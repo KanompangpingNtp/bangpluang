@@ -83,7 +83,7 @@
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">
         <div class=" d-flex flex-column justify-content-center p-5">
-            <div class="fs-1 fw-bold mb-4 text-center">แนะนำสถานที่ท่องเที่ยว <br><span class="fs-3">{{$touristAttraction->title_name}}</span></div>
+            <div class="fs-1 fw-bold mb-4 text-center">แนะนำสถานที่ท่องเที่ยว <br><span class="fs-3">{{$touristAttraction->topic_name}}</span></div>
 
             <p class="text-muted">วันที่เผยแพร่: {{ \Carbon\Carbon::parse($touristAttraction->created_at)->format('d-m-Y') }}</p>
 
