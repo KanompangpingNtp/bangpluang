@@ -23,16 +23,6 @@
             /* เงาขอบด้านซ้ายและล่าง */
         }
 
-        .consultant-info {
-            background: linear-gradient(to left, #ffffff, #ffffff);
-            aspect-ratio: 2/√3;
-            /* ยืดความกว้างให้มากขึ้น */
-
-            clip-path: polygon(25% -50%, 75% -50%, 100% 50%, 75% 150%, 25% 150%, 0 50%);
-            padding: 1rem 5rem;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
 
 
         /* ทำให้สามารถเลื่อนได้ในแนวนอน */
@@ -57,42 +47,8 @@
             flex-shrink: 0;
         }
 
-        .bg-btn-section1 {
-            background: linear-gradient(to right, #37b2e5, #88d7fd);
-            border-radius: 40px;
-            color: #000000;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            position: relative;
-            box-shadow:
-                2px 2px 3px rgba(0, 0, 0, 0.7);
-            transition: background 0.3s, transform 0.3s;
-            /* เพิ่ม transition เพื่อให้การเปลี่ยนแปลงดูนุ่มนวล */
-        }
-
-        .bg-btn-section1:hover {
-            background: linear-gradient(to left, #37b2e5, #88d7fd);
-            /* สลับสีพื้นหลังเมื่อ hover */
-            transform: scale(1.05);
-            /* ขยายขนาดปุ่มเล็กน้อย */
-        }
-
-        .bg-btn-section1 img {
-            position: absolute;
-            left: -30px;
-            /* ออกมาครึ่งหนึ่ง */
-            width: 100px;
-            /* ปรับขนาดรูป */
-            height: auto;
-            transition: transform 0.3s ease;
-            /* เพิ่ม transition ให้รูปภาพ */
-        }
-
-        .bg-btn-section1:hover img {
-            transform: translateX(-10px);
-            /* เลื่อนรูปไปทางซ้ายเมื่อ hover */
+        .personal-img-sub{
+            height: 16rem;
         }
     </style>
 </head>
@@ -178,7 +134,7 @@
                                 081-940-2993
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-2/ผอ.ช่าง.png') }}" alt="personal1" class="personal-img">
+                        <img src="{{ asset('pages/home/section-2/ผอ.ช่าง.png') }}" alt="personal1" class="personal-img-sub">
                     </div>
 
                 </div>
@@ -194,7 +150,7 @@
                                 082-477-2029
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-2/หัวหน้าสำนัก.png') }}" alt="personal2" class="personal-img">
+                        <img src="{{ asset('pages/home/section-2/หัวหน้าสำนัก.png') }}" alt="personal2" class="personal-img-sub">
                     </div>
                 </div>
                 <!-- Slide 4 -->
@@ -208,7 +164,7 @@
                                 093-552-9669
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-2/ผอ.กองการเกษตร.png') }}" alt="personal4" class=" personal-img">
+                        <img src="{{ asset('pages/home/section-2/ผอ.กองการเกษตร.png') }}" alt="personal4" class=" personal-img-sub">
                     </div>
                 </div>
             </div>

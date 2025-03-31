@@ -29,7 +29,7 @@
             /* ยืดความกว้างให้มากขึ้น */
 
             clip-path: polygon(25% -50%, 75% -50%, 100% 50%, 75% 150%, 25% 150%, 0 50%);
-            padding: 1rem 5rem;
+            padding: 0.5rem 3rem;
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
@@ -109,7 +109,7 @@
         }
 
         .personal-img{
-            height: 25rem;
+            height: 20rem;
         }
     </style>
 </head>
