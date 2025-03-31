@@ -65,7 +65,8 @@
 
 <main class=" bg-page-8">
     <div class=" d-flex bg-page-in-8">
-        <div class="container d-flex  flex-column flex-lg-row justify-content-center align-items-center align-items-lg-end pt-3 pt-lg-0 gap-2">
+        <div
+            class="container d-flex  flex-column flex-lg-row justify-content-center align-items-center align-items-lg-end pt-3 pt-lg-0 gap-2">
 
             <div class="bg-blue-section8 p-2">
                 <div class="bg-white p-2 rounded-4 text-center fw-bold lh-sm">
@@ -131,7 +132,7 @@
                         </div>
                     </div>
                     <div class="ms-3 text-center text-sm-start" style="font-size: 14px;">
-                       <span class="fw-bold">เมล์: <br></span>  admin@bangpluang.go.th
+                        <span class="fw-bold">เมล์: <br></span> admin@bangpluang.go.th
 
                     </div>
                     <div class="ms-3 text-center text-sm-start" style="font-size: 14px;">
@@ -139,20 +140,22 @@
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center" style="font-size: 14px;">
-                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center link-footer gap-2">
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-center align-items-center link-footer gap-2">
                         <div class="bg-blue-footer p-1 me-3">
                             <div class="bg-white p-1 px-3 rounded-5 text-center fw-bold lh-sm text-nowrap">
                                 ตัวช่วยเพิ่มเติม
                             </div>
                         </div>
                         <a href="#" class="text-nowrap">ตรวจสอบอีเมล์</a>
-        <a href="#" class="text-nowrap">เว็บเพื่อนบ้าน</a>
-        <a href="#" class="text-nowrap">เว็บมาสเตอร์</a>
-        <a href="{{route('showLoginForm')}}" class="text-nowrap">สำหรับแอดมิน</a>
+                        <a href="#" class="text-nowrap">เว็บเพื่อนบ้าน</a>
+                        <a href="#" class="text-nowrap">เว็บมาสเตอร์</a>
+                        <a href="{{ route('showLoginForm') }}" class="text-nowrap">สำหรับแอดมิน</a>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center fs-6">
-                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center link-footer gap-2">
+                    <div
+                        class="d-flex flex-column flex-sm-row justify-content-center align-items-center link-footer gap-2">
                         <div class="bg-blue-footer p-1 me-3">
                             <div class="bg-white p-1 px-3 rounded-5 text-center fw-bold lh-sm">
                                 ข้อมูลเว็บไซต์
@@ -163,6 +166,9 @@
                         <a href="#">กระดานกระทู้</a>
                         <a href="#">แผนผังเว็บไซต์</a>
                     </div>
+                </div>
+                <div class="text-dark d-flex justify-content-center align-items-center w-100 text-mute " style="font-size:14px;">
+                    copyright@2025
                 </div>
             </div>
 
