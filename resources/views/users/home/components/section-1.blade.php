@@ -155,7 +155,7 @@
                                     style="font-size:1rem; text-decoration: none;">
                                     063-828-6843
                                 </a>
-                            </div>                            
+                            </div>
                         </div>
                         <img src="{{ asset('pages/home/section-1/รองนายก.png') }}" alt="personal1" class=" personal-img">
                     </div>
@@ -172,9 +172,9 @@
                                 <span>นางเกษณี หมื่นศรี</span><br>
                                 <a href="tel:+66981915666" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
                                     style="font-size:1rem; text-decoration: none;">
-                                    098-191-5666
+                                    065-548-5948
                                 </a>
-                            </div>     
+                            </div>
                         </div>
 
                         <img src="{{ asset('pages/home/section-1/รองนายกเกษณี.png') }}" alt="personal2" class="personal-img">
