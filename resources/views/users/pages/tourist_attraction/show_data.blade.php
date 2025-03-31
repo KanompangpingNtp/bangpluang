@@ -82,16 +82,16 @@
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">
         <div class=" d-flex flex-column justify-content-center p-5">
-            <div class="fs-1 fw-bold mb-4 text-center">ข่าวประชาสัมพันธ์</div>
+            <div class="fs-1 fw-bold mb-4 text-center">แนะนำสถานที่ท่องเที่ยว</div>
 
             <div class="row">
-                @foreach ($pressRelease as $index => $post)
+                @foreach ($touristAttraction as $index => $post)
                 @php
                 // กำหนดคลาสพื้นหลังสลับสี
                 $cardBackgroundClass = ($index % 2 == 0) ? 'bg-blue-card-section-6' : 'bg-pink-card-section-6';
                 @endphp
                 <div class="col-lg-6 p-2">
-                    <a href="{{ route('PressReleaseShowDetails', $post->id) }}" class="text-decoration-none">
+                    <a href="{{ route('TouristAttractionShowDetails', $post->id) }}" class="text-decoration-none">
                         <div class="d-flex align-items-center p-3 {{ $cardBackgroundClass }}" style="height: 150px; border-radius: 10px; box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); display: block;">
 
                             <!-- รูปภาพด้านซ้าย -->
@@ -112,7 +112,7 @@
                                 <div class="card-date d-flex align-items-center">
                                     <img src="{{ asset('images/section-5/hourglass.png') }}" alt="icon" width="15" height="20" class="me-2">
                                     <div class="card-text text-dark">
-                                        {{ \Carbon\Carbon::parse($post->date)->format('d-m-Y') }}
+                                        {{ \Carbon\Carbon::parse($post->created_at)->format('d-m-Y') }}
                                     </div>
                                 </div>
                             </div>
@@ -122,24 +122,24 @@
                 @endforeach
             </div>
 
-            @if($pressRelease && $pressRelease->count() > 0)
+            @if($touristAttraction && $touristAttraction->count() > 0)
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center mt-5">
                     <!-- Previous button -->
-                    <li class="page-item {{ $pressRelease->onFirstPage() ? 'disabled' : '' }}">
-                        <a class="page-link" href="{{ $pressRelease->previousPageUrl() }}">ก่อนหน้า</a>
+                    <li class="page-item {{ $touristAttraction->onFirstPage() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $touristAttraction->previousPageUrl() }}">ก่อนหน้า</a>
                     </li>
 
                     <!-- Page number buttons -->
-                    @foreach ($pressRelease->getUrlRange(1, $pressRelease->lastPage()) as $page => $url)
-                    <li class="page-item {{ $page == $pressRelease->currentPage() ? 'active' : '' }}">
+                    @foreach ($touristAttraction->getUrlRange(1, $touristAttraction->lastPage()) as $page => $url)
+                    <li class="page-item {{ $page == $touristAttraction->currentPage() ? 'active' : '' }}">
                         <a class="page-link" href="{{ $url }}">{{ $page }}</a>
                     </li>
                     @endforeach
 
                     <!-- Next button -->
-                    <li class="page-item {{ !$pressRelease->hasMorePages() ? 'disabled' : '' }}">
-                        <a class="page-link" href="{{ $pressRelease->nextPageUrl() }}">ต่อไป</a>
+                    <li class="page-item {{ !$touristAttraction->hasMorePages() ? 'disabled' : '' }}">
+                        <a class="page-link" href="{{ $touristAttraction->nextPageUrl() }}">ต่อไป</a>
                     </li>
                 </ul>
             </nav>

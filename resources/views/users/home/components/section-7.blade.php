@@ -391,7 +391,7 @@
                 <a href="#" class="banner-hover">
                     <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
                 </a>
-                <a href="#" class="banner-hover">
+                <a href="{{route('TouristAttractionShowData')}}" class="banner-hover">
                     <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2" class="img-fluid">
                 </a>
             </div>

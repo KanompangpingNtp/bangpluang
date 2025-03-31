@@ -34,7 +34,7 @@ class TouristAttractionController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(14);
 
-        return view('users.pages.press_release.show_data', compact(
+        return view('users.pages.tourist_attraction.show_data', compact(
             'PublicMenus',
             'touristAttraction',
             'personnelAgencies',
@@ -65,7 +65,7 @@ class TouristAttractionController extends Controller
             })
             ->findOrFail($id);
 
-        return view('users.pages.press_release.show_detail', compact(
+        return view('users.pages.tourist_attraction.show_detail', compact(
             'PublicMenus',
             'touristAttraction',
             'personnelAgencies',
