@@ -46,6 +46,8 @@ use App\Http\Controllers\noticeboard\AdminNoticeBoardController ;
 use App\Http\Controllers\noticeboard\NoticeBoardController ;
 use App\Http\Controllers\menu_for_public\form\ReceiveComplaintsController;
 use App\Http\Controllers\menu_for_public\form\SatisfactionController;
+use App\Http\Controllers\basic_information\community_information\AdminCommunityInformationController;
+use App\Http\Controllers\basic_information\community_information\CommunityInformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +78,7 @@ Route::get('/CommunityProducts/page', [CommunityProductsController::class, 'Comm
 Route::get('/CommunityProducts/showdetails/index/{id}', [CommunityProductsController::class, 'ShowDetails'])->name('ShowDetails');
 Route::get('/ImportantPlaces/page', [ImportantPlacesController::class, 'ImportantPlacesPage'])->name('ImportantPlacesPage');
 Route::get('/ImportantPlaces/showdetails/index/{id}', [ImportantPlacesController::class, 'ImportantPlacesShowDetails'])->name('ImportantPlacesShowDetails');
+Route::get('/community_information/page', [CommunityInformationController::class, 'CommunityPage'])->name('CommunityPage');
 
 //บุคลากร
 Route::get('/agency/detail/{id}', [PersonnelController::class, 'AgencyShow'])->name('AgencyShow');
@@ -306,6 +309,11 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/History/page', [AdminHistoryController::class, 'HistoryAdmin'])->name('HistoryAdmin');
     Route::post('/Admin/History/create', [AdminHistoryController::class, 'HistoryCreate'])->name('HistoryCreate');
     Route::delete('/Admin/History/delete/{id}', [AdminHistoryController::class, 'HistoryDelete'])->name('HistoryDelete');
+
+    //Community
+    Route::get('/Admin/CommunityInformation/page', [AdminCommunityInformationController::class, 'CommunityAdmin'])->name('CommunityAdmin');
+    Route::post('/Admin/CommunityInformation/create', [AdminCommunityInformationController::class, 'CommunityCreate'])->name('CommunityCreate');
+    Route::delete('/Admin/CommunityInformation/delete/{id}', [AdminCommunityInformationController::class, 'CommunityDelete'])->name('CommunityDelete');
 
     //LandscapeGallery
     Route::get('/Admin/LandscapeGallery/page', [AdminLandscapeGalleryController::class, 'LandscapeGalleryAdmin'])->name('LandscapeGalleryAdmin');

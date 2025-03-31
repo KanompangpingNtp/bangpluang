@@ -564,7 +564,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="basicInfoDropdown">
                                         <li><a class="dropdown-item" href="{{route('HistoryPage')}}">ประวัติความเป็นมา</a></li>
                                         <li><a class="dropdown-item" href="{{route('GeneralInformationPage')}}">ข้อมูลสภาพทั่วไป</a></li>
-                                        <li><a class="dropdown-item" href="#">ข้อมูลชุมชน</a></li>
+                                        <li><a class="dropdown-item" href="{{route('CommunityPage')}}">ข้อมูลชุมชน</a></li>
                                         <li><a class="dropdown-item" href="{{route('CommunityProductsPage')}}">ผลิตภัณฑ์ชุมชน</a></li>
                                         <li><a class="dropdown-item" href="{{route('ImportantPlacesPage')}}">สถานที่สำคัญ</a></li>
                                         <li><a class="dropdown-item" href="{{route('LandscapeGalleryPage')}}">แกลอรี่ภาพถ่ายภูมิทัศน์</a></li>

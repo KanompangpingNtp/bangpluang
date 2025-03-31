@@ -45,11 +45,14 @@
 
             @if ($data && $data->files_path)
             @if ($data->files_type === 'pdf')
+
             <iframe src="{{ asset('storage/' . $data->files_path) }}" width="80%" height="900px"></iframe>
+
             @else
             <!-- แสดงไฟล์รูปภาพ -->
             <img src="{{ asset('storage/' . $data->files_path) }}" alt="Uploaded Image" class="img-fluid rounded">
             @endif
+
             @else
             <p></p>
             @endif
