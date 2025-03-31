@@ -190,34 +190,64 @@
         }
 
         .bg-link-button7 {
-    background-color: #56c0ed;
-    border: 2px solid #ffff;
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงอย่างนุ่มนวล */
-}
-
-.bg-link-button7:hover {
-    background-color: #1ea7db; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
-    color: #fff; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
-    transform: scale(1.02); /* ขยายขนาดปุ่มเล็กน้อย */
-    border-color: #fff; /* เปลี่ยนสีเส้นขอบ */
-}
-@media (max-width: 1199px) { /* ขนาดต่ำกว่า 1200px */
-        .bg-video{
-            height: 500px;
+            background-color: #56c0ed;
+            border: 2px solid #ffff;
+            text-decoration: none;
+            color: #000;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            /* เพิ่มการเปลี่ยนแปลงอย่างนุ่มนวล */
         }
-    }
-    @media (max-width: 768px) { /* ขนาดต่ำกว่า 991px */
-        .bg-video{
-            height: 350px;
-        }
-    }
 
-    .bg-video iframe{
+        .bg-link-button7:hover {
+            background-color: #1ea7db;
+            /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+            color: #fff;
+            /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+            transform: scale(1.02);
+            /* ขยายขนาดปุ่มเล็กน้อย */
+            border-color: #fff;
+            /* เปลี่ยนสีเส้นขอบ */
+        }
+
+        @media (max-width: 1199px) {
+
+            /* ขนาดต่ำกว่า 1200px */
+            .bg-video {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* ขนาดต่ำกว่า 991px */
+            .bg-video {
+                height: 350px;
+            }
+        }
+
+        .bg-video iframe {
             width: 100%;
             height: 100%;
+            border-radius: 15px;
+        }
+
+        .custom-carousel {
+            width: 100%;
+            max-width: 700px;
+            /* ปรับขนาดตามต้องการ */
+            height: 350px;
+            /* ปรับความสูงให้รูปภาพมีขนาดคงที่ */
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .custom-carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* ป้องกันการผิดสัดส่วน */
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -233,13 +263,15 @@
                 <div class="bg-white rounded-4 px-2 py-1 fw-bold text-black mb-2 w-100">
                     จากกรมส่งเสริมการปกครองท้องถิ่น
                 </div>
-                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="link-section7" target="_blank">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="link-section7"
+                    target="_blank">
                     หนังสือราชการของ สถ.
                 </a>
                 <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="link-section7" target="_blank">
                     กฏหมาย ระเบียบ และมติ ก.กลาง
                 </a>
-                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="link-section7" target="_blank">
+                <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="link-section7"
+                    target="_blank">
                     บทความที่น่าสนใจ
                 </a>
                 <a href="https://www.dla.go.th/visit/it_royal.jsp" class="link-section7 fs-6 mb-2" target="_blank">
@@ -306,7 +338,8 @@
                     </div>
                     <div class="d-flex justify-content-end align-items-center w-100 me-2 mt-2">
                         <a href="{{ route('TreasuryAnnouncementData') }}" class="bg-link-button7 px-4 py-1 my-1 ">
-                            <span class="px-2 py-1 fw-bold" style="background-color: #86d2f4; border-radius:20px;">ดูทั้งหมด</span>
+                            <span class="px-2 py-1 fw-bold"
+                                style="background-color: #86d2f4; border-radius:20px;">ดูทั้งหมด</span>
                         </a>
                     </div>
                 </div>
@@ -316,50 +349,102 @@
                     แนะนำสถานที่ท่องเที่ยว
                 </div>
                 <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.gif') }}" alt="topper"
-                    class=" img-fluid px-2" style="z-index: 2; margin-bottom:-15px;">
-                    <div class="p-3 bg-out-slide ">
-                        <div class="bg-white p-2" style="border-radius: 20px;">
-                            <div id="carouselTravel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner" style="border-radius: 15px;">
-                                    <div class="carousel-item active">
-                                        <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
-                                    </div>
+                    class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
+                <div class="bg-video p-2">
+                    <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="title-section7 mb-1">
+                    แนะนำสถานที่ท่องเที่ยว
+                </div>
+                <div class="p-3 bg-out-slide">
+                    <div class="bg-white p-2" style="border-radius: 20px;">
+                        <div id="carouselTravel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active" data-place="วิสาหกิจชุมชนบ้านบางพลวง">
+                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100"
+                                        alt="Default Slide 1">
                                 </div>
-    
-                                <!-- ปุ่ม Previous -->
-                                <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                </button>
-    
-                                <!-- ปุ่ม Next -->
-                                <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselTravel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                </button>
+                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
+                                        alt="Default Slide 2">
+                                </div>
+                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี1">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
+                                        alt="Default Slide 2">
+                                </div>
+                                <div class="carousel-item" data-place="ล่องเรือชมวิถีชีวิตลุ่มน้ำปราจีนบุรี2">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100"
+                                        alt="Default Slide 2">
+                                </div>
                             </div>
+
+                            <!-- ปุ่ม Previous -->
+                            <button class="carousel-control-prev custom-carousel-btn" type="button"
+                                data-bs-target="#carouselTravel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+
+                            <!-- ปุ่ม Next -->
+                            <button class="carousel-control-next custom-carousel-btn" type="button"
+                                data-bs-target="#carouselTravel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
                         </div>
                     </div>
+                </div>
+
+                <!-- ชื่อสถานที่ -->
+                <div class="bg-white px-5 py-2 my-3 rounded-5" id="placeName">
+                    สถานที่ 1
+                </div>
+
                 <div class="d-flex justify-content-center align-items-center gap-2 banner-container">
-                    <a href="#" class=" banner-hover">
+                    <a href="#" class="banner-hover">
                         <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
                     </a>
-                    <a href="#" class=" banner-hover">
+                    <a href="#" class="banner-hover">
                         <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2" class="img-fluid">
                     </a>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-    let initialData = {
-        'จัดซื้อจัดจ้าง': @json($procurement),
-        'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
-        'ประกาศราคากลาง': @json($averagePrice),
-        'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
-    };
+            let carousel = document.getElementById("carouselTravel");
+            let placeName = document.getElementById("placeName");
+
+            // ✅ ตั้งค่าชื่อสถานที่เริ่มต้นจากรูปแรกที่แสดง
+            let activeItem = carousel.querySelector(".carousel-item.active");
+            if (activeItem) {
+                placeName.textContent = activeItem.getAttribute("data-place");
+            }
+
+            // ✅ อัปเดตชื่อเมื่อเปลี่ยนสไลด์ (ใช้ "slid.bs.carousel" แทน)
+            carousel.addEventListener("slid.bs.carousel", function() {
+                let newActiveItem = carousel.querySelector(".carousel-item.active");
+                if (newActiveItem) {
+                    placeName.textContent = newActiveItem.getAttribute("data-place");
+                }
+            });
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let initialData = {
+                'จัดซื้อจัดจ้าง': @json($procurement),
+                'ผลประกาศจัดซื้อจัดจ้าง': @json($procurementResults),
+                'ประกาศราคากลาง': @json($averagePrice),
+                'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
+            };
 
             // ตั้งค่าลิงก์เริ่มต้นให้ปุ่มทั้งหมด
             for (let [key, value] of Object.entries(initialData)) {
@@ -375,13 +460,13 @@
 
             // โหลดหมวดหมู่แรกสุดที่มีข้อมูล
             for (let [topic, data] of Object.entries(initialData)) {
-        if (data.length > 0) {
-            changeContent(topic, data);
-            setActiveButton(topic); // เรียก setActiveButton() หลังจากเปลี่ยนเนื้อหา
-            break;
-        }
-    }
-});
+                if (data.length > 0) {
+                    changeContent(topic, data);
+                    setActiveButton(topic); // เรียก setActiveButton() หลังจากเปลี่ยนเนื้อหา
+                    break;
+                }
+            }
+        });
 
         function changeContent(topic, data) {
             allItems = data;
@@ -404,30 +489,30 @@
 
 
         function setActiveButton(topic) {
-    const buttonMap = {
-        'จัดซื้อจัดจ้าง': 'btnProcurement',
-        'ผลประกาศจัดซื้อจัดจ้าง': 'btnProcurementResults',
-        'ประกาศราคากลาง': 'btnAverage',
-        'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan',
-    };
+            const buttonMap = {
+                'จัดซื้อจัดจ้าง': 'btnProcurement',
+                'ผลประกาศจัดซื้อจัดจ้าง': 'btnProcurementResults',
+                'ประกาศราคากลาง': 'btnAverage',
+                'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan',
+            };
 
-    // ลบคลาส 'active' ออกจากปุ่มทั้งหมด
-    Object.values(buttonMap).forEach(buttonId => {
-        let button = document.getElementById(buttonId);
-        if (button) {
-            button.classList.remove('active');
-        }
-    });
+            // ลบคลาส 'active' ออกจากปุ่มทั้งหมด
+            Object.values(buttonMap).forEach(buttonId => {
+                let button = document.getElementById(buttonId);
+                if (button) {
+                    button.classList.remove('active');
+                }
+            });
 
-    // เพิ่ม 'active' ให้ปุ่มที่ตรงกับ topic
-    let activeButtonId = buttonMap[topic];
-    if (activeButtonId) {
-        let activeButton = document.getElementById(activeButtonId);
-        if (activeButton) {
-            activeButton.classList.add('active');
+            // เพิ่ม 'active' ให้ปุ่มที่ตรงกับ topic
+            let activeButtonId = buttonMap[topic];
+            if (activeButtonId) {
+                let activeButton = document.getElementById(activeButtonId);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+            }
         }
-    }
-}
 
 
         let currentPage = 1;
