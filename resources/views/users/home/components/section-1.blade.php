@@ -105,7 +105,7 @@
         }
 
         .mark-personal-img{
-            height: 30rem;
+            height: 25rem;
         }
 
         .personal-img{
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-        <div class="row w-100 mt-5 justify-content-start align-items-center">
+        <div class="row w-100 mt-2 justify-content-start align-items-center">
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
                 <a href="#"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 ps-5 lh-1"
