@@ -579,7 +579,7 @@
 
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="personnelDropdown">
-                                        <li><a class="dropdown-item" href="#">โครงสร้างองค์กร</a>
+                                        <li><a class="dropdown-item" href="{{route('Personnel_Chart')}}">โครงสร้างองค์กร</a>
                                         </li>
                                         @foreach ($personnelAgencies as $agency)
                                         <li>

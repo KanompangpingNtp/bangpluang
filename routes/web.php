@@ -79,6 +79,7 @@ Route::get('/ImportantPlaces/showdetails/index/{id}', [ImportantPlacesController
 
 //บุคลากร
 Route::get('/agency/detail/{id}', [PersonnelController::class, 'AgencyShow'])->name('AgencyShow');
+Route::get('/agency/personnel_chart/detail', [PersonnelController::class, 'Personnel_Chart'])->name('Personnel_Chart');
 
 //ผลการดำเนินงาน
 Route::get('/PerformanceResults/show/section/{id}', [PerformanceResultsController::class, 'PerformanceResultsSectionPages'])->name('PerformanceResultsSectionPages');
