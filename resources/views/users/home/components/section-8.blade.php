@@ -130,25 +130,25 @@
                             ติดต่อ
                         </div>
                     </div>
-                    <div class="ms-3 fw-bold fs-6">
-                        เมล์:....................................
+                    <div class="ms-3 text-center text-sm-start" style="font-size: 14px;">
+                       <span class="fw-bold">เมล์: <br></span>  admin@bangpluang.go.th
 
                     </div>
-                    <div class="ms-3 fw-bold fs-6">
-                        เบอร์ติดต่อ:.................................
+                    <div class="ms-3 text-center text-sm-start" style="font-size: 14px;">
+                        <span class="fw-bold">เบอร์ติดต่อ: <br> </span> โทร 0-3727-1925 <br> โทรสาร 0-3727-1925
                     </div>
                 </div>
-                <div class="d-flex flex-column justify-content-center align-items-center fs-6">
+                <div class="d-flex flex-column justify-content-center align-items-center" style="font-size: 14px;">
                     <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center link-footer gap-2">
                         <div class="bg-blue-footer p-1 me-3">
-                            <div class="bg-white p-1 px-3 rounded-5 text-center fw-bold lh-sm">
+                            <div class="bg-white p-1 px-3 rounded-5 text-center fw-bold lh-sm text-nowrap">
                                 ตัวช่วยเพิ่มเติม
                             </div>
                         </div>
-                        <a href="#">ตรวจสอบอีเมล์</a>
-                        <a href="#">เว็บเพื่อนบ้าน</a>
-                        <a href="#">เว็บมาสเตอร์</a>
-                        <a href="{{route('showLoginForm')}}">สำหรับแอดมิน</a>
+                        <a href="#" class="text-nowrap">ตรวจสอบอีเมล์</a>
+        <a href="#" class="text-nowrap">เว็บเพื่อนบ้าน</a>
+        <a href="#" class="text-nowrap">เว็บมาสเตอร์</a>
+        <a href="{{route('showLoginForm')}}" class="text-nowrap">สำหรับแอดมิน</a>
                     </div>
                 </div>
                 <div class="d-flex flex-column justify-content-center align-items-center fs-6">

@@ -94,6 +94,23 @@
             transform: translateX(-10px);
             /* เลื่อนรูปไปทางซ้ายเมื่อ hover */
         }
+
+        .phone-link:hover {
+            color: #008cff !important;
+            /* เปลี่ยนสีตอน hover */
+            text-decoration: underline !important;
+            /* เพิ่มเส้นใต้ */
+            transition: 0.3s ease-in-out;
+            /* ทำให้เอฟเฟกต์นุ่มนวล */
+        }
+
+        .mark-personal-img{
+            height: 30rem;
+        }
+
+        .personal-img{
+            height: 25rem;
+        }
     </style>
 </head>
 
@@ -109,35 +126,38 @@
                 <!-- Slide 1 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                            <div class="consultant-info text-center lh-sm" >
-                                <span class="fs-3 fw-bold">ตำแหน่ง</span><br>
-                                <span>ชื่อ-นามสกุล</span><br>
-                                <a href="tel:9999999990" class="fw-bold text-center text-dark pe-2 mt-2"
-                                    style="font-size:1.25rem; text-decoration: none;">
-                                    999-9999990
+                        <div class="py-2 px-3"
+                            style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
+                            <div class="consultant-info text-center lh-sm">
+                                <span class="fs-5 fw-bold">นายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
+                                <span>นายจิตรกร แก้วไทรเลิศ</span><br>
+                                <a href="tel:+66819492003" class="fw-bold text-center text-dark pe-2 phone-link"
+                                    style="font-size:1rem; text-decoration: none;">
+                                    081-949-2003
                                 </a>
                             </div>
+
                         </div>
 
-                        <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="mb-4 personal-img">
+                        <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="mb-4 mark-personal-img">
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
+                        <div class="py-2 px-3"
+                            style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
-                                <span>ชื่อ-นามสกุล</span><br>
-                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
-                                    style="font-size:17px; text-decoration: none;">
-                                    999-9999990
+                                <span class="fs-5 fw-bold">รองนายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
+                                <span>นายสุดสาย จิระวัฒนโสภณ</span><br>
+                                <a href="tel:+66638286843" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
+                                    style="font-size:1rem; text-decoration: none;">
+                                    063-828-6843
                                 </a>
-                            </div>
+                            </div>                            
                         </div>
-                        <img src="{{ asset('pages/home/section-1/5.png') }}" alt="personal1" class="mb-4 personal-img">
+                        <img src="{{ asset('pages/home/section-1/รองนายก.png') }}" alt="personal1" class=" personal-img">
                     </div>
 
                 </div>
@@ -145,42 +165,45 @@
 
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
+                        <div class="py-2 px-3"
+                            style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                             <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
-                                <span>ชื่อ-นามสกุล</span><br>
-                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
-                                    style="font-size:17px; text-decoration: none;">
-                                    999-9999990
+                                <span class="fs-5 fw-bold">รองนายกองค์การบริหาร<br>ส่วนตำบลบางพลวง</span><br>
+                                <span>นางเกษณี หมื่นศรี</span><br>
+                                <a href="tel:+66981915666" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
+                                    style="font-size:1rem; text-decoration: none;">
+                                    098-191-5666
                                 </a>
-                            </div>
+                            </div>     
                         </div>
 
-                        <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal2" class="mb-4 personal-img">
+                        <img src="{{ asset('pages/home/section-1/รองนายกเกษณี.png') }}" alt="personal2" class="personal-img">
                     </div>
                 </div>
                 <!-- Slide 4 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
-                        <div class="py-2 px-3" style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
-                            <div class="consultant-info text-center lh-sm">
-                                <span class="fs-4 fw-bold">ตำแหน่ง</span><br>
-                                <span>ชื่อ-นามสกุล</span><br>
-                                <a href="tel:9999999990" class="fw-bold text-dark pe-2 mt-2"
-                                    style="font-size:17px; text-decoration: none;">
-                                    999-9999990
-                                </a>
-                            </div>
+                        <div class="py-2 px-3"
+                            style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
+                        <div class="consultant-info text-center lh-md">
+                            <span class="fs-4 fw-bold">เลขนุการนายก</span><br>
+                            <span>นายปราโมทย์ ตันเสียง</span><br>
+                            <a href="tel:+66890019105" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
+                                style="font-size:1rem; text-decoration: none;">
+                                089-001-9105
+                            </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-1/1.png') }}" alt="personal4" class="mb-4 personal-img">
+                        </div>
+                        <img src="{{ asset('pages/home/section-1/เลขานายก ปราโมท.png') }}" alt="personal4" class="personal-img">
                     </div>
                 </div>
             </div>
         </div>
         <div class="row w-100 mt-5 justify-content-start align-items-center">
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 ps-5 lh-1"
-                style="font-size:20px;">
+                <a href="#"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 ps-5 lh-1"
+                    style="font-size:20px;">
                     <img src="{{ asset('pages/home/section-1/logo1.png') }}" alt="icon">
                     สารจากนายก
                 </a>
@@ -193,7 +216,8 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('itaPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{ route('itaPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส<br> (ITA)</span>

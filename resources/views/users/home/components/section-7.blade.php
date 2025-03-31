@@ -204,7 +204,21 @@
     transform: scale(1.02); /* ขยายขนาดปุ่มเล็กน้อย */
     border-color: #fff; /* เปลี่ยนสีเส้นขอบ */
 }
+@media (max-width: 1199px) { /* ขนาดต่ำกว่า 1200px */
+        .bg-video{
+            height: 500px;
+        }
+    }
+    @media (max-width: 768px) { /* ขนาดต่ำกว่า 991px */
+        .bg-video{
+            height: 350px;
+        }
+    }
 
+    .bg-video iframe{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -298,22 +312,23 @@
                 </div>
             </div>
             <div class="col-xl-5 d-flex flex-column justify-content-center align-items-center">
+                <div class="title-section7 mb-1">
+                    แนะนำสถานที่ท่องเที่ยว
+                </div>
                 <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.png') }}" alt="topper"
                     class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-video p-2">
-                    <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
-                    </div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+                <div class="d-flex justify-content-center align-items-center gap-2 banner-container">
                     <a href="#" class=" banner-hover">
-                        <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1">
+                        <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
                     </a>
                     <a href="#" class=" banner-hover">
-                        <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2">
+                        <img src="{{ asset('pages/home/section-7/N2.png') }}" alt="btn-2" class="img-fluid">
                     </a>
                 </div>
             </div>

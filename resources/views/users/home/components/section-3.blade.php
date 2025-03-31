@@ -78,27 +78,12 @@
                 2px -2px 4px rgba(255, 255, 255, 0.5),
                 -2px 2px 4px rgba(255, 255, 255, 0.5);
             width: 100%;
-            height: 370px;
-        }
-
-
-        .video-container {
-            background: linear-gradient(to bottom, #fd664f, #eba152);
-            border-radius: 15px;
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            /* อัตราส่วน 16:9 */
             height: 350px;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .bg-video-section2 iframe{
             width: 100%;
             height: 100%;
-            border-radius: 10px;
         }
 
         @media (max-width: 1024px) {
@@ -192,10 +177,8 @@
                 <img src="{{ asset('pages/home/section-3/topper-video.png') }}" alt="topper" class="mt-4 img-fluid" style="z-index: 2; margin-bottom:-7px;">
 
                 <div class="bg-video-section2 p-2 ">
-                    <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
-                    </div>
 
                 </div>
             </div>
