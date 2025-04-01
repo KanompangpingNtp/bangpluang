@@ -229,7 +229,7 @@
                         <img src="{{ asset('pages/home/section-6/BN ไลน์.png') }}" alt="line" class="img-fluid">
                     </a>
                 </div>
-                <a href="#" class="banner-hover px-4 py-1">
+                <a href="{{route('eservice_pages')}}" class="banner-hover px-4 py-1">
                     <img src="{{ asset('pages/home/section-6/oss.png') }}" alt="oss" class="img-fluid">
                 </a>
             </div>
