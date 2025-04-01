@@ -81,6 +81,12 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
+                        <a class="nav-link" href="{{route('ContactAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            ติดต่อ
+                        </a>
                         <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
@@ -128,11 +134,17 @@
                             </div>
                             การประเมินคุณธรรม (ITA)
                         </a>
-                        <a class="nav-link" href="{{route('ContactAdmin')}}">
+                        <a class="nav-link" href="{{route('ProcurementPlanType')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
-                            ติดต่อ
+                            แผนจัดซื้อจัดจ้าง
+                        </a>
+                        <a class="nav-link" href="{{route('ManpowerPlanType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            แผนอัตรากำลัง
                         </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
