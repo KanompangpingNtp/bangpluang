@@ -833,7 +833,7 @@
                 width="25" height="25"></a>
         <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/share.png') }}" alt="chair"
                 width="25" height="25"></a>
-        <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/chat.png') }}" alt="message"
+        <a href="https://www.messenger.com/t/281547643643116/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0"><img class="icon-hover-effect" src="{{ asset('navbar/chat.png') }}" alt="message"
                 width="25" height="25"></a>
     </div>
 
