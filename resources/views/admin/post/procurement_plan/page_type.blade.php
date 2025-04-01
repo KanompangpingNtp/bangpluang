@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'อำนาจหน้าที่')
+@section('title', 'แผนจัดซื้อจัดจ้าง')
 @section('content')
 
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">

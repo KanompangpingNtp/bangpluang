@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'ผลการดำเนินงาน')
+@section('title', 'แผนจัดซื้อจัดจ้าง')
 @section('content')
 
 <h3 class="text-center">ข้อมูล <br> <span class="text-primary">{{$ProcurementPlanType->topic_name}}</span> </h3><br>

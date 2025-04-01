@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'ผลการดำเนินงาน')
+@section('title', 'แผนอัตรากำลัง')
 @section('content')
 
 <h3 class="text-center">ข้อมูล <br> <span class="text-primary">{{$ManpowerPlanType->topic_name}}</span> </h3><br>
