@@ -218,7 +218,7 @@
             <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
                 <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
                     <div class="d-flex flex-column justify-content-center align-items-center mt-4">
-                        <a href="#" class="banner-hover px-3 py-1">
+                        <a href="https://www.facebook.com/BangPhluangSubDistrict" class="banner-hover px-3 py-1">
                             <img src="{{ asset('pages/home/section-6/BN เฟสบุ๊ค.png') }}" alt="facebook" class="img-fluid ">
                         </a>
                         <a href="#" class="banner-hover px-3 py-1">
