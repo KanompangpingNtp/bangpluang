@@ -43,12 +43,16 @@ use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryCon
 use App\Http\Controllers\page\contact\AdminContactController;
 use App\Http\Controllers\page\contact\ContactController;
 use App\Http\Controllers\page\home\HomeController;
-use App\Http\Controllers\noticeboard\AdminNoticeBoardController ;
-use App\Http\Controllers\noticeboard\NoticeBoardController ;
+use App\Http\Controllers\noticeboard\AdminNoticeBoardController;
+use App\Http\Controllers\noticeboard\NoticeBoardController;
 use App\Http\Controllers\menu_for_public\form\ReceiveComplaintsController;
 use App\Http\Controllers\menu_for_public\form\SatisfactionController;
 use App\Http\Controllers\basic_information\community_information\AdminCommunityInformationController;
 use App\Http\Controllers\basic_information\community_information\CommunityInformationController;
+use App\Http\Controllers\procurement_plan\AdminProcurementPlanController;
+use App\Http\Controllers\procurement_plan\ProcurementPlanController;
+use App\Http\Controllers\manpower_plan\AdminManpowerPlanController;
+use App\Http\Controllers\manpower_plan\ManpowerPlanController;
 
 
 use App\Http\Controllers\eservice\TemporaryController ;
@@ -364,4 +368,22 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/NoticeBoard/page', [AdminNoticeBoardController::class, 'NoticeBoardHome'])->name('NoticeBoardHome');
     Route::post('/NoticeBoard/create', [AdminNoticeBoardController::class, 'NoticeBoardCreate'])->name('NoticeBoardCreate');
     Route::delete('/NoticeBoard/delete{id}', [AdminNoticeBoardController::class, 'NoticeBoardDelete'])->name('NoticeBoardDelete');
+
+    //ProcurementPlan
+    Route::get('/Admin/ProcurementPlan/page', [AdminProcurementPlanController::class, 'ProcurementPlanType'])->name('ProcurementPlanType');
+    Route::post('/Admin/ProcurementPlan/create/name', [AdminProcurementPlanController::class, 'ProcurementPlanTypeCreate'])->name('ProcurementPlanTypeCreate');
+    Route::put('/Admin/ProcurementPlan/{id}/update', [AdminProcurementPlanController::class, 'ProcurementPlanTypeUpdate'])->name('ProcurementPlanTypeUpdate');
+    Route::delete('/Admin/ProcurementPlan/{id}/delete', [AdminProcurementPlanController::class, 'ProcurementPlanTypeDelete'])->name('ProcurementPlanTypeDelete');
+    Route::get('/Admin/ProcurementPlan/show/detail/{id}', [AdminProcurementPlanController::class, 'ProcurementPlanShowDetail'])->name('ProcurementPlanShowDetail');
+    Route::post('/Admin/ProcurementPlan/show/detail/create/{id}', [AdminProcurementPlanController::class, 'ProcurementPlanDetailCreate'])->name('ProcurementPlanDetailCreate');
+    Route::delete('/Admin/ProcurementPlan/show/detail/delete/{id}', [AdminProcurementPlanController::class, 'ProcurementPlanDetailDelete'])->name('ProcurementPlanDetailDelete');
+
+    //ManpowerPlan
+    Route::get('/Admin/ManpowerPlan/page', [AdminManpowerPlanController::class, 'ManpowerPlanType'])->name('ManpowerPlanType');
+    Route::post('/Admin/ManpowerPlan/create/name', [AdminManpowerPlanController::class, 'ManpowerPlanTypeCreate'])->name('ManpowerPlanTypeCreate');
+    Route::put('/Admin/ManpowerPlan/{id}/update', [AdminManpowerPlanController::class, 'ManpowerPlanTypeUpdate'])->name('ManpowerPlanTypeUpdate');
+    Route::delete('/Admin/ManpowerPlan/{id}/delete', [AdminManpowerPlanController::class, 'ManpowerPlanTypeDelete'])->name('ManpowerPlanTypeDelete');
+    Route::get('/Admin/ManpowerPlan/show/detail/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanShowDetail'])->name('ManpowerPlanShowDetail');
+    Route::post('/Admin/ManpowerPlan/show/detail/create/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanDetailCreate'])->name('ManpowerPlanDetailCreate');
+    Route::delete('/Admin/ManpowerPlan/show/detail/delete/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanDetailDelete'])->name('ManpowerPlanDetailDelete');
 });
