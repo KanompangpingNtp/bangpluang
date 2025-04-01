@@ -88,7 +88,7 @@
             <p class="text-muted">วันที่เผยแพร่: {{ \Carbon\Carbon::parse($touristAttraction->created_at)->format('d-m-Y') }}</p>
 
             <div class="mb-4">
-                <h5 class="text-secondary">รายละเอียด</h5>
+                {{-- <h5 class="text-secondary">รายละเอียด</h5> --}}
                 <p>{{ $touristAttraction->details ?? 'ไม่มีรายละเอียด' }}</p>
             </div>
 
