@@ -45,7 +45,6 @@ class PressReleaseController extends Controller
         ));
     }
 
-
     public function PressReleaseShowDetails($id)
     {
         $personnelAgencies = PersonnelAgency::with('ranks')
