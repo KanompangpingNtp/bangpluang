@@ -44,74 +44,26 @@
             min-height: 5vh;
         }
 
-        /* .bg-header {
-            background: linear-gradient(to bottom, #53b2e6, #53b2e6);
-            height: 40vh;
-        } */
+        .bg-header {
+    background: linear-gradient(to bottom, #53b2e6, #53b2e6);
+    width: 100%;
+    padding: 3rem 0rem;
+    height: 10vh;
+    transition: height 0.3s ease-in-out; /* เพิ่มเอฟเฟกต์ transition */
+}
 
-        @media (max-width: 1400px) {
-            .bg-header {
-                height: 50vh;
-
-            }
-        }
-
-        @media (max-width: 1200px) {
-            .bg-header {
-                height: 55vh;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .bg-header {
-                height: 45vh;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .bg-header {
-                height: 62vh;
-            }
-        }
-
-        @media (max-width: 441px) {
-            .bg-header {
-                height: 64vh;
-            }
-        }
-
-        @media (max-width: 1321px) and (max-height: 700px) {
-            .bg-header {
-                height: 70vh;
-                /* หรือกำหนดเป็นค่า px ตามต้องการ */
-            }
-        }
-        @media (max-width: 1200px) and (max-height: 700px) {
-            .bg-header {
-                height: 75vh;
-                /* หรือกำหนดเป็นค่า px ตามต้องการ */
-            }
-        }
-        @media (max-width: 991px) and (max-height: 700px) {
-            .bg-header {
-                height: 65vh;
-                /* หรือกำหนดเป็นค่า px ตามต้องการ */
-            }
-        }
-        @media (max-width: 767px) and (max-height: 700px) {
-            .bg-header {
-                height: 85vh;
-                /* หรือกำหนดเป็นค่า px ตามต้องการ */
-            }
-        }
+@media (max-width: 991px) {
+    .bg-header {
+        height: 0;
+        padding: 0; /* ลบ padding ออกเพื่อให้ไม่มีพื้นที่ว่าง */
+    }
+}
 
 
         .text-title-nav {
             color: #000000;
             font-weight: bold;
         }
-
-
 
         .button-pink {
             background-color: rgb(255, 157, 211);
