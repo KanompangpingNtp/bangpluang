@@ -105,7 +105,7 @@
         }
 
         .mark-personal-img{
-            height: 20rem;
+            height: 30rem;
         }
 
         .personal-img{

@@ -331,7 +331,10 @@
                 </div>
                 <img src="{{ asset('pages/home/section-7/กรอบวิดิโอขวาล่าง.gif') }}" alt="topper" class="mt-4 img-fluid px-2" style="z-index: 2; margin-bottom:-7px;">
                 <div class="bg-video p-2">
-                    <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe src="https://www.youtube.com/embed/l0vhTfHpbQM?autoplay=1&mute=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
                     </iframe>
                 </div>
             </div>
