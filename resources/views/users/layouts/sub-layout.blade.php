@@ -44,15 +44,10 @@
             min-height: 5vh;
         }
 
-        .bg-header {
-            background-image: url('{{ asset('navbar/sub-bg-header.png') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        /* .bg-header {
+            background: linear-gradient(to bottom, #53b2e6, #53b2e6);
             height: 40vh;
-
-            /* ใช้ min-height เพื่อให้พื้นที่ครอบคลุมหน้าจอ */
-        }
+        } */
 
         @media (max-width: 1400px) {
             .bg-header {
@@ -537,7 +532,7 @@
 <body>
 
     <!-- Content Section -->
-    <header class="bg-header d-flex flex-column justify-content-between">
+    <header class=" d-flex flex-column justify-content-between">
         <div>
             <div class="bg-nav">
                 <div class="container d-flex flex-column justify-content-center align-items-center">
@@ -829,13 +824,7 @@
         </div>
 
         <div class="d-flex flex-column align-items-center justify-content-start">
-            {{-- <div class="video-container">
-                <video autoplay loop muted playsinline>
-                    <source src="#" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-
-            </div> --}}
+            <div class="bg-header"></div>
 
 
             <div class="bg-runtext w-100 d-flex align-items-center">
