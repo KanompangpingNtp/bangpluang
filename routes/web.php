@@ -67,6 +67,14 @@ use App\Http\Controllers\eservice\TemporaryController ;
 |
 */
 
+//แผนจัดซื้อจัดจ้าง
+Route::get('/procurement_plan', [ProcurementPlanController::class, 'ProcurementPlanShowData'])->name('ProcurementPlanShowData');
+Route::get('/procurement_plan/detail/{id}', [ProcurementPlanController::class, 'ProcurementPlanDetail'])->name('ProcurementPlanDetail');
+
+//แผนอัตรากำลัง
+Route::get('/manpower_plan', [ManpowerPlanController::class, 'ManpowerPlanShowData'])->name('ManpowerPlanShowData');
+Route::get('/manpower_plan/detail/{id}', [ManpowerPlanController::class, 'ManpowerPlanDetail'])->name('ManpowerPlanDetail');
+
 Route::get('/index', function () {
     return view('users.layouts.main-layout');
 });
