@@ -50,6 +50,8 @@ use App\Http\Controllers\menu_for_public\form\SatisfactionController;
 use App\Http\Controllers\basic_information\community_information\AdminCommunityInformationController;
 use App\Http\Controllers\basic_information\community_information\CommunityInformationController;
 
+
+use App\Http\Controllers\eservice\TemporaryController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -151,6 +153,10 @@ Route::get('/Satisfaction/form', [SatisfactionController::class, 'SatisfactionFo
 //แนะนำสถานที่ท่องเที่ยว
 Route::get('/tourist_attraction/ShowData', [TouristAttractionController::class, 'TouristAttractionShowData'])->name('TouristAttractionShowData');
 Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController::class, 'TouristAttractionShowDetails'])->name('TouristAttractionShowDetails');
+
+//eservice
+Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');
+Route::get('/e-service/general_requests/page', [TemporaryController::class, 'general_requests_pages'])->name('general_requests_pages');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
