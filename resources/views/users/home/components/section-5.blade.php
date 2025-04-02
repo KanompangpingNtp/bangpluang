@@ -237,11 +237,11 @@
                         <span class="ms-2 me-4">องค์กรแห่งการ<br>เรียนรู้(KM)</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา4.png') }}" alt="icon1">
                     </a>
-                    <a href="#" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
+                    <a href="{{route('ProcurementPlanShowData')}}" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
                         <img src="{{ asset('pages/home/section-5/iconขวา5.png') }}" alt="icon1">
                         <span class="ms-2 me-4">แผนจัดซื้อจัดจ้าง</span>
                     </a>
-                    <a href="#" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
+                    <a href="{{route('ManpowerPlanShowData')}}" class="btn-link-section5 yep-reverse lh-sm d-flex flex-lg-row-reverse justify-content-start align-items-center">
                         <span class="ms-2 me-4">แผนอัตรากำลัง</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา6.png') }}" alt="icon1">
                     </a>

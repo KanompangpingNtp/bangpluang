@@ -1,6 +1,6 @@
 @extends('users.layouts.main-layout')
 
-@section('title', 'บางพลวง')
+@section('title', 'องค์การบริหารส่วนตำบลบางพลวง')
 @section('content')
     @include('users.home.components.section-1')
     @include('users.home.components.section-2')

@@ -63,6 +63,7 @@
         background: #fff;
         padding: 15px;
         border-top: 2px solid #46c700;
+        /* เส้นสีฟ้าที่ด้านบน */
     }
 
     .card-title {
@@ -81,73 +82,29 @@
 </style>
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">
-        <div class=" d-flex flex-column justify-content-center p-5">
-            <div class="fs-1 fw-bold mb-4 text-center">{{ $PerfResultsType->type_name }}</div>
+        <div class="d-flex flex-column justify-content-center p-5">
+            <div class="fs-1 fw-bold mb-4 text-center">แผนอัตรากำลัง <br>
+                <span class="fs-3">{{ $ManpowerPlanType->type_name }}</span>
+            </div>
 
-            <style>
-                .table td:hover {
-                    background-color: #53b2e6;
-                    color: white;
-                }
+            <p class="text-muted">
+                วันที่เผยแพร่: {{ \Carbon\Carbon::parse($ManpowerPlanType->created_at)->format('d-m-Y') }}
+            </p>
 
-                table {
-                    border-collapse: collapse;
-                }
-
-                table td,
-                table th {
-                    border: none;
-                }
-
-                table tr:nth-child(odd) {
-                    background-color: #7eccec;
-                }
-
-                table tr:nth-child(even) {
-                    background-color: #ffffff;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: #333;
-                }
-
-            </style>
-
-            <table class="table">
-                @foreach($PerfResultsSection as $detail)
-                <tr>
-                    <td><a href="{{route('PerfResultsSubTopicPages',$detail->id)}}">{{ $detail->section_name }}</a></td>
-                </tr>
+            @if ($ManpowerPlanFile->count() > 0)
+                <h5 class="text-secondary mt-4">ไฟล์เอกสาร</h5>
+                @foreach ($ManpowerPlanFile as $file)
+                    @if ($file->files_type == 'pdf')
+                        <div class="mb-3">
+                            <iframe src="{{ asset('storage/' . $file->files_path) }}" width="100%" height="700px"></iframe>
+                        </div>
+                    @endif
                 @endforeach
-            </table>
-
-            @if($PerfResultsSection && $PerfResultsSection->count() > 0)
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center mt-5">
-                    <!-- Previous button -->
-                    <li class="page-item {{ $PerfResultsSection->onFirstPage() ? 'disabled' : '' }}">
-                        <a class="page-link" href="{{ $PerfResultsSection->previousPageUrl() }}">ก่อนหน้า</a>
-                    </li>
-
-                    <!-- Page number buttons -->
-                    @foreach ($PerfResultsSection->getUrlRange(1, $PerfResultsSection->lastPage()) as $page => $url)
-                    <li class="page-item {{ $page == $PerfResultsSection->currentPage() ? 'active' : '' }}">
-                        <a class="page-link" href="{{ $url }}">{{ $page }}</a>
-                    </li>
-                    @endforeach
-
-                    <!-- Next button -->
-                    <li class="page-item {{ !$PerfResultsSection->hasMorePages() ? 'disabled' : '' }}">
-                        <a class="page-link" href="{{ $PerfResultsSection->nextPageUrl() }}">ต่อไป</a>
-                    </li>
-                </ul>
-            </nav>
+            @else
+                <span> </span>
             @endif
-
         </div>
 
     </div>
-</div>
 </div>
 @endsection
