@@ -199,8 +199,8 @@
                 </div>
             </div>
         </div>
-        <div class="row w-100 mt-2 justify-content-start align-items-center">
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+        <div class="row w-100 mt-2 justify-content-center align-items-center">
+            <div class="col-lg-6 col-xl-4 px-4 my-4 my-lg-3">
                 <a href="#"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 ps-5 lh-1"
                     style="font-size:20px;">
@@ -208,14 +208,14 @@
                     สารจากนายก
                 </a>
             </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            <div class="col-lg-6 col-xl-4 px-4 my-4 my-lg-3">
                 <a href=" https://www.bangpluang.go.th/public/index.php/ReceiveComplaints/form" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo2.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับแจ้งเรื่องราว<br> ร้องทุกข์</span>
                 </a>
             </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            <div class="col-lg-6 col-xl-4 px-4 my-4 my-lg-3">
                 <a href="{{ route('itaPage') }}"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
@@ -223,34 +223,34 @@
                     <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส<br> (ITA)</span>
                 </a>
             </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            {{-- <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
                 <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center py-4 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo4.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">ท้องถิ่นดิจิทัล </span>
                 </a>
-            </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            </div> --}}
+            <div class="col-lg-6 col-xl-4 px-4 my-4 my-lg-3">
                 <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo5.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> เจตจำนงสุจริต <br> ของผู้บริหาร</span>
                 </a>
             </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            <div class="col-lg-6 col-xl-4 px-4 my-4 my-lg-3">
                 <a href="https://www.bangpluang.go.th/public/index.php/Satisfaction/form" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับเรื่องร้องเรียน <br> ทุจริตประพฤติมิชอบ</span>
                 </a>
             </div>
-            <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
+            {{-- <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
                 <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo7.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> ระบบภูมิศาสตร์สนเทศ<br>การจัดการน้ำ<br> และชุมชน</span>
                 </a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </main>
