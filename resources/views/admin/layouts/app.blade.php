@@ -81,7 +81,7 @@
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
-                    <div class="nav">
+                    <div class="nav mb-5">
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
                         <a class="nav-link" href="{{route('ContactAdmin')}}">
                             <div class="sb-nav-link-icon">
@@ -147,6 +147,18 @@
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             แผนอัตรากำลัง
+                        </a>
+                        <a class="nav-link" href="{{route('MessageFromPMAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            สารจากนายก
+                        </a>
+                        <a class="nav-link" href="{{route('ExecutiveIntentionsAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            เจตจำนงสุจริตของผู้บริหาร
                         </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>

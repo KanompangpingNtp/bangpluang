@@ -22,6 +22,10 @@ class BasicInfoTypeSeeder extends Seeder
             ['type_name' => 'แกลอรี่ภาพถ่ายภูมิทัศน์'],
             ['type_name' => 'บริการขั้นพื้นฐาน'],
             ['type_name' => 'ยุทธศาสตร์การพัฒนา'],
+
+            // อื่นๆ
+            ['type_name' => 'สารจากนายก'],
+            ['type_name' => 'เจตจำนงสุจริตของผู้บริหาร'],
         ];
 
         foreach ($data as $item) {

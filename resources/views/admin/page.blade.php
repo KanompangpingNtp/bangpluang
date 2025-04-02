@@ -26,8 +26,8 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
-                                    <li class="mb-1"><a href="{{route('ProcurementPlanType')}}">แผนจัดซื้อจัดจ้าง</a></li>
-                                    <li class="mb-1"><a href="{{route('ManpowerPlanType')}}">แผนอัตรากำลัง</a></li>
+                                    <li class="mb-1"><a href="{{route('MessageFromPMAdmin')}}">สารจากนายก</a></li>
+                                    <li class="mb-1"><a href="{{route('ExecutiveIntentionsAdmin')}}">เจตจำนงสุจริตของผู้บริหาร</a></li>
                                     {{-- <li class="mb-1">เมนูพื้นฐาน
                                         <ul>
                                             <li class="mb-1">ประวัติความเป็นมา</li>

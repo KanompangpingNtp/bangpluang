@@ -53,6 +53,10 @@ use App\Http\Controllers\procurement_plan\AdminProcurementPlanController;
 use App\Http\Controllers\procurement_plan\ProcurementPlanController;
 use App\Http\Controllers\manpower_plan\AdminManpowerPlanController;
 use App\Http\Controllers\manpower_plan\ManpowerPlanController;
+use App\Http\Controllers\message_from_pm\AdminMessageFromPMController;
+use App\Http\Controllers\message_from_pm\MessageFromPMController;
+use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController;
+use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
 
 
 use App\Http\Controllers\eservice\TemporaryController ;
@@ -67,17 +71,9 @@ use App\Http\Controllers\eservice\TemporaryController ;
 |
 */
 
-//แผนจัดซื้อจัดจ้าง
-Route::get('/procurement_plan', [ProcurementPlanController::class, 'ProcurementPlanShowData'])->name('ProcurementPlanShowData');
-Route::get('/procurement_plan/detail/{id}', [ProcurementPlanController::class, 'ProcurementPlanDetail'])->name('ProcurementPlanDetail');
-
-//แผนอัตรากำลัง
-Route::get('/manpower_plan', [ManpowerPlanController::class, 'ManpowerPlanShowData'])->name('ManpowerPlanShowData');
-Route::get('/manpower_plan/detail/{id}', [ManpowerPlanController::class, 'ManpowerPlanDetail'])->name('ManpowerPlanDetail');
-
-Route::get('/index', function () {
-    return view('users.layouts.main-layout');
-});
+// Route::get('/index', function () {
+//     return view('users.layouts.main-layout');
+// });
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
@@ -169,6 +165,20 @@ Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController:
 //eservice
 Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');
 Route::get('/e-service/general_requests/page', [TemporaryController::class, 'general_requests_pages'])->name('general_requests_pages');
+
+//แผนจัดซื้อจัดจ้าง
+Route::get('/procurement_plan', [ProcurementPlanController::class, 'ProcurementPlanShowData'])->name('ProcurementPlanShowData');
+Route::get('/procurement_plan/detail/{id}', [ProcurementPlanController::class, 'ProcurementPlanDetail'])->name('ProcurementPlanDetail');
+
+//แผนอัตรากำลัง
+Route::get('/manpower_plan', [ManpowerPlanController::class, 'ManpowerPlanShowData'])->name('ManpowerPlanShowData');
+Route::get('/manpower_plan/detail/{id}', [ManpowerPlanController::class, 'ManpowerPlanDetail'])->name('ManpowerPlanDetail');
+
+//สารจากนายก
+Route::get('/message_from_pm/page', [MessageFromPMController::class, 'MessageFromPMPage'])->name('MessageFromPMPage');
+
+//เจตจำนงสุจริตของผู้บริหาร
+Route::get('/executive_intentions/page', [ExecutiveIntentionsController::class, 'ExecutiveIntentionsPage'])->name('ExecutiveIntentionsPage');
 
 Route::middleware(['checklogin'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
@@ -394,4 +404,13 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/ManpowerPlan/show/detail/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanShowDetail'])->name('ManpowerPlanShowDetail');
     Route::post('/Admin/ManpowerPlan/show/detail/create/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanDetailCreate'])->name('ManpowerPlanDetailCreate');
     Route::delete('/Admin/ManpowerPlan/show/detail/delete/{id}', [AdminManpowerPlanController::class, 'ManpowerPlanDetailDelete'])->name('ManpowerPlanDetailDelete');
+
+    //MessageFromPM
+    Route::get('/Admin/MessageFromPM/page', [AdminMessageFromPMController::class, 'MessageFromPMAdmin'])->name('MessageFromPMAdmin');
+    Route::post('/Admin/MessageFromPM/create', [AdminMessageFromPMController::class, 'MessageFromPMCreate'])->name('MessageFromPMCreate');
+    Route::delete('/Admin/MessageFromPM/delete/{id}', [AdminMessageFromPMController::class, 'MessageFromPMDelete'])->name('MessageFromPMDelete');
+    //MessageFromPM
+    Route::get('/Admin/ExecutiveIntentions/page', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsAdmin'])->name('ExecutiveIntentionsAdmin');
+    Route::post('/Admin/ExecutiveIntentions/create', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsCreate'])->name('ExecutiveIntentionsCreate');
+    Route::delete('/Admin/ExecutiveIntentions/delete/{id}', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsDelete'])->name('ExecutiveIntentionsDelete');
 });
