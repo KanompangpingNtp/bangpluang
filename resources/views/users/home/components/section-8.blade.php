@@ -147,7 +147,7 @@
                                 ตัวช่วยเพิ่มเติม
                             </div>
                         </div>
-                        <a href="#" class="text-nowrap">ตรวจสอบอีเมล์</a>
+                        <a href="https://webmail.plaengyao.go.th/" class="text-nowrap">ตรวจสอบอีเมล์</a>
                         <a href="#" class="text-nowrap">เว็บเพื่อนบ้าน</a>
                         <a href="#" class="text-nowrap">เว็บมาสเตอร์</a>
                         <a href="{{ route('showLoginForm') }}" class="text-nowrap">สำหรับแอดมิน</a>
