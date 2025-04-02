@@ -65,9 +65,9 @@
                         <div class="consultant-info fs-6 text-center lh-sm">
                             <span class="fs-5 fw-bold">ปลัดองค์การบริหาร<br>ส่วนตำบลบางพลวง </span><br>
                             <span>ส.ต.อ.ธานินทร์ คล่องแคล้ว</span><br>
-                            <a href="tel:+66819492003" class="fw-bold text-center text-dark pe-2 mt-2"
+                            <a href="tel:+66936845159" class="fw-bold text-center text-dark pe-2 mt-2"
                                 style="font-size:14px; text-decoration: none;">
-                                081-949-2003
+                                093-684-5159
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-2/ปลัด.gif') }}" alt="personal3" class="mb-4 mark-personal-img">

@@ -120,7 +120,7 @@
                 <div class="swiper-slide mt-5">
                     <a href="#" class="slide-container">
                         <img src="{{ asset('pages/home/section-4/รวมicon3.png') }}" alt="banner" class="slide-image-6">
-                        <div class="slide-text">เงิอุดหนุน<br>ดูแลเด็ก<br>แรกเกิด</div>
+                        <div class="slide-text">เงินอุดหนุน<br>ดูแลเด็ก<br>แรกเกิด</div>
                     </a>
                 </div>
                 <div class="swiper-slide">
