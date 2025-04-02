@@ -461,7 +461,7 @@
                 'รายงานผลจัดซื้อจัดจ้าง': @json($procurementReport),
             };
 
-            // console.log("🚀 Initial Data Loaded:", initialData); // ตรวจสอบข้อมูลจาก PHP
+            console.log("🚀 Initial Data Loaded:", initialData); // ตรวจสอบข้อมูลจาก PHP
 
             // เช็คว่ามีข้อมูลหมวดหมู่ไหนบ้าง
             let hasData = false;
@@ -473,7 +473,7 @@
             }
 
             if (!hasData) {
-                // console.warn("⚠️ ไม่มีข้อมูลที่ถูกส่งมาจาก PHP!");
+                console.warn("⚠️ ไม่มีข้อมูลที่ถูกส่งมาจาก PHP!");
             }
 
             // ตั้งค่าปุ่มเริ่มต้น
@@ -491,7 +491,7 @@
             // โหลดหมวดหมู่แรกสุดที่มีข้อมูล
             for (let [topic, data] of Object.entries(initialData)) {
                 if (data.length > 0) {
-                    // console.log(`✅ พบข้อมูลในหมวด: ${topic} (${data.length} รายการ)`);
+                    console.log(`✅ พบข้อมูลในหมวด: ${topic} (${data.length} รายการ)`);
                     changeContent(topic, data);
                     setActiveButton(topic);
                     break;
@@ -500,7 +500,7 @@
         });
 
         function changeContent(topic, data) {
-            // console.log("🔄 Changing Content:", topic, data); // ตรวจสอบค่าที่เปลี่ยน
+            console.log("🔄 Changing Content:", topic, data); // ตรวจสอบค่าที่เปลี่ยน
 
             if (data.length === 0) {
                 console.warn(`⚠️ ไม่มีข้อมูลสำหรับหมวด "${topic}"`);
@@ -531,7 +531,7 @@
                 'รายงานผลจัดซื้อจัดจ้าง': 'btnProcurementPlan',
             };
 
-            // console.log(`🎯 Setting Active Button: ${topic}`);
+            console.log(`🎯 Setting Active Button: ${topic}`);
 
             Object.values(buttonMap).forEach(buttonId => {
                 let button = document.getElementById(buttonId);
@@ -558,7 +558,7 @@
         const bookmarkIcon = "{{ asset('navbar/logo.png') }}";
 
         function displayItems() {
-            // console.log("📌 Displaying Items:", allItems); // ตรวจสอบข้อมูลที่ใช้แสดงผล
+            console.log("📌 Displaying Items:", allItems); // ตรวจสอบข้อมูลที่ใช้แสดงผล
 
             if (allItems.length === 0) {
                 console.warn("⚠️ ไม่มีข้อมูลสำหรับการแสดงผล!");
@@ -578,7 +578,7 @@
             contentArea.innerHTML = '';
 
             itemsToDisplay.forEach((item) => {
-                // console.log("📝 Rendering Item:", item); // ตรวจสอบค่าของแต่ละรายการ
+                console.log("📝 Rendering Item:", item); // ตรวจสอบค่าของแต่ละรายการ
 
                 let newContent = document.createElement('a');
                 let itemLink = baseLink.replace(/\d+$/, item.id);
