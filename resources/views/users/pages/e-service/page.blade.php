@@ -119,7 +119,7 @@
                 <tr>
                     <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
                 </tr>
-                {{-- <tr>
+                <tr>
                     <td><a href="{{route('elderly_allowance_pages')}}">เบี้ยยังชีพผู้สูงอายุ</a></td>
                 </tr>
                 <tr>
@@ -127,7 +127,7 @@
                 </tr>
                 <tr>
                     <td><a href="{{route('receive_assistance_pages')}}">รับเงินสงเคราะห์ ผู้ป่วยเอดส์</a></td>
-                </tr> --}}
+                </tr>
 
             </table>
 
