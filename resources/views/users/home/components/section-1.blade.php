@@ -1,7 +1,7 @@
 <head>
     <style>
         .bg-page1 {
-            background-image: url('{{ asset('pages/home/section-1/bg-1.png') }}');
+            background-image: url('{{ asset('pages/home/section-1/bg-1s.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

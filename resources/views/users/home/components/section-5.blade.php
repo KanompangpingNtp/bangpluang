@@ -1,10 +1,7 @@
 <head>
     <style>
         .bg-page5 {
-            background-image: url('{{ asset('pages/home/section-5/bg-5.png') }}');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(to bottom, #92d7fd, #5abce4);
             padding: 4rem 0rem;
         }
 

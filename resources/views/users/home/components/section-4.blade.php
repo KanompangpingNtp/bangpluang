@@ -1,7 +1,7 @@
 <head>
     <style>
         .bg-page4 {
-            background: linear-gradient(to bottom, #92d7fd, #e8f6ff, #92d7fd);
+            background: linear-gradient(to bottom, #92d7fd, #92d7fd);
             padding: 1rem 0rem;
         }
 
@@ -63,15 +63,15 @@
 
     .slide-image-6 {
         display: block;
-        width: 100%;
+        width: 80%;
         height: auto;
         transition: all 0.3s ease;
     }
 
     .slide-text {
         position: absolute;
-        top: 70%;
-        left: 50%;
+        top: 50%;
+        left: 30%;
         width: 100%;
         transform: translate(-50%, -50%);
         color: rgb(0, 0, 0);
@@ -103,7 +103,7 @@
 
 <main class="d-flex bg-page4">
     <div class="container ">
-        <div class="swiper mySwiper">
+        {{-- <div class="swiper mySwiper">
             <div class="swiper-wrapper py-3">
                 <div class="swiper-slide mt-5">
                     <a href="#" class="slide-container">
@@ -183,7 +183,96 @@
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
 
-        </div>
+        </div> --}}
+        <div class="row justiy-content-center align-items-center g-4 mt-3">
+
+            <!-- เริ่มลูป icon -->
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/1.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">กระดานกระทู้</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/2.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="font-size: 16px; left: 43%;">โรงพยาบาลส่งเสริม<br>สุขภาพตำบล(รพ.สต.)</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/3.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="font-size: 18px; left: 43%;">เงินอุดหนุน<br>ดูแลเด็กแรกเกิด</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/4.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 43%;">ศูนย์พัฒนา<br>ผู้สูงอายุ</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/5.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">เบี้ยยังชีพ<br>ผู้พิการ</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/6.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">วารสาร<br>ออนไลน์</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/7.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%; font-size:16px;">กองทุนหลัก<br>ประกันสุขภาพ<br>(สปสช.)</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/8.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 46%;">เบี้ยยังชีพ<br>ผู้สูงอายุ</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/9.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">ศูนย์ข้อมูล<br>ข่าวสาร</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/10.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">ข้อมูลวารสาร</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/11.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text" style="left: 45%;">กลุ่มสตรี</div>
+              </a>
+            </div>
+      
+            <div class="col-md-6  col-lg-4 col-xl-3 text-center">
+              <a href="#" class="slide-container d-block d-flex justify-content-center">
+                <img src="{{ asset('pages/home/section-4/12.png') }}" alt="banner" class="slide-image-6">
+                <div class="slide-text"  style="left: 45%; font-size:16px;">พรบ.อำนวย<br>ความสะดวก<br>2558</div>
+              </a>
+            </div>
+            <!-- จบลูป icon -->
+      
+          </div>
     </div>
     <script>
         var swiper = new Swiper(".mySwiper", {
