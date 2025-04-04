@@ -42,6 +42,7 @@
             font-weight: bold;
         }
 
+
         body {
             font-family: 'PROMPT', sans-serif;
             font-size: 20px;
