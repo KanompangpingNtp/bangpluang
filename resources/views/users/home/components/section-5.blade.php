@@ -260,7 +260,7 @@
                 <img src="{{ asset('pages/home/section-5/BN2.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:18px;">ประกาศ<br>จัดซื้อจัดจ้าง</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://damrongdham.moi.go.th/" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN3.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:18px;">ศูนย์ดำรงธรรม</span>
             </a>
@@ -273,11 +273,11 @@
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:14px;">ศูนย์ข้อมูลข่าวสาร<br>อิเล็กทรอนิกส์
                     <br>ราชการ(OIC)</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://www.admincourt.go.th/admincourt/site/09illustration.html" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN6.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:16px;">สาระดีๆจากศาล<br>ปกครอง</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://www.nacc.go.th/?" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN7.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:14px;">สำนักงานคณะกรรมการ<br>ป้องกันและปราบปราม<br>การทุจริตแห่งชาติ</span>
             </a>
@@ -285,7 +285,7 @@
                 <img src="{{ asset('pages/home/section-5/BN8.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:20px;">E-Leraning</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://www.dla.go.th/oss.htm" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN9.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:14px;">งานบริการของศูนย์ <br>บริการร่วม One Stop
                     <br>Service</span>

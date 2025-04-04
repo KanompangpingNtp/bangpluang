@@ -216,8 +216,11 @@
                 </div>
             </div>
             <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
-                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <div class="d-flex flex-column flex-lg-row justify-content-center align-items-end">
                     <div class="d-flex flex-column justify-content-center align-items-center mt-4">
+                        <a href="#" class="banner-hover px-3 py-1">
+                            <img src="{{ asset('pages/home/section-6/banner_ศูนพัฒนาเด็ก.png') }}" alt="banner_ศูนพัฒนาเด็ก" class="img-fluid ">
+                        </a>
                         <a href="https://www.facebook.com/BangPhluangSubDistrict" class="banner-hover px-3 py-1">
                             <img src="{{ asset('pages/home/section-6/BN เฟสบุ๊ค.png') }}" alt="facebook" class="img-fluid ">
                         </a>
@@ -225,7 +228,7 @@
                             <img src="{{ asset('pages/home/section-6/BN ห้องสมุด.png') }}" alt="e-library" class="img-fluid">
                         </a>
                     </div>
-                    <a href="https://lin.ee/rwSQgop" class="banner-hover px-3 pt-2 pb-4">
+                    <a href="https://lin.ee/rwSQgop" class="banner-hover px-3 pt-2 ">
                         <img src="{{ asset('pages/home/section-6/line_.png') }}" alt="line" class="img-fluid">
                     </a>
                 </div>

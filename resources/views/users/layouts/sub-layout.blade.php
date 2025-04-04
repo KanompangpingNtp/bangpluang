@@ -492,7 +492,7 @@
                     <div
                         class="container d-flex flex-column flex-xxl-row justify-content-center justify-content-md-between align-items-center">
                         <div class="d-flex flex-column flex-md-row justify-content-start align-items-center">
-                            <img src="{{ asset('navbar/logo.png') }}" alt="logo" class="logo "
+                            <img src="{{ asset('navbar/logo_1.gif') }}" alt="logo" class="logo "
                                 style=" z-index: 3;">
                             <div class="text-title-nav lh-1 text-center text-md-start py-2 ps-3">
                                 <span class="me-1 maintitle-text">องค์การบริหารส่วนตำบลบางพลวง</span><br>
