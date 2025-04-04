@@ -186,7 +186,7 @@
                         <div class="py-3 px-3"
                             style="background: linear-gradient(to right, #37b1e500, #37b2e5, #37b1e500);">
                         <div class="consultant-info fs-6 text-center lh-md">
-                            <span class="fs-5 fw-bold">เลขนุการนายก</span><br>
+                            <span class="fs-5 fw-bold">เลขานุการนายก</span><br>
                             <span>นายปราโมทย์ ตันเสียง</span><br>
                             <a href="tel:+66890019105" class="fw-bold text-dark pe-2 d-block mt-2 phone-link"
                                 style="font-size:1rem; text-decoration: none;">
