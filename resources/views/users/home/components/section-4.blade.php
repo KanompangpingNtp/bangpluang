@@ -218,7 +218,7 @@
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/5.png') }}" alt="banner" class="slide-image-6">
-                <div class="slide-text" style="left: 45%;">เบี้ยยังชีพ<br>ผู้พิการ</div>
+                <div class="slide-text" style="left: 45%;">เบี้ยยังชีพ<br>คนพิการ</div>
               </a>
             </div>
       
@@ -274,7 +274,7 @@
       
           </div>
     </div>
-    <script>
+    {{-- <script>
         var swiper = new Swiper(".mySwiper", {
           slidesPerView: 8,  // แสดงทีละ 4 อัน
           spaceBetween: 1,  // ระยะห่างระหว่างภาพ
@@ -300,5 +300,5 @@
             1200: { slidesPerView: 8 }  
           }
         });
-      </script>
+      </script> --}}
 </main>
