@@ -718,8 +718,8 @@
                         </div>
                         <div class="bg-text w-100">
                             <div style="white-space: nowrap; overflow: hidden; position: relative; width: 100%; height: 38px; background: linear-gradient(to right, #ffffff, #ffffff); border-radius: 20px; border: 3px solid #ffffff; padding: 4px;">
-                                <span style="display: inline-block; position: absolute; white-space: nowrap; animation: marquee 15s linear infinite; color: black; font-size: 20px; font-weight: bold; ">
-                                    วิสัยทัศน์ : บางพลวงเมืองน่าอยู่ มุ่งสู่เกษตรกรรมก้าวหน้า นำพาภูมิปัญญาท้องถิ่น
+                                <span style="display: inline-block; position: absolute; white-space: nowrap; animation: marquee 25s linear infinite; color: black; font-size: 20px; font-weight: bold; ">
+                                    <span class="b-block d-md-none ">วิสัยทัศน์ : </span>บางพลวงเมืองน่าอยู่ มุ่งสู่เกษตรกรรมก้าวหน้า นำพาภูมิปัญญาท้องถิ่น
                                     บนพื้นฐานวัฒนธรรมของชุมชน
                                 </span>
                             </div>
