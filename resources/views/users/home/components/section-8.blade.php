@@ -121,7 +121,7 @@
                 </div>
                 <div class="lh-sm fs-6 text-white fw-bold">
                     Bang Phluang Subdistrict Administrative Organization <br>
-                    ตำบลบางพลวง อำเภอบ้านสร้าง จังหวัดปราจีนบุรี 25150
+                    104 หมู่ 3 ตำบลบางพลวง อำเภอบ้านสร้าง จังหวัดปราจีนบุรี 25150
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center align-items-sm-start gap-2">

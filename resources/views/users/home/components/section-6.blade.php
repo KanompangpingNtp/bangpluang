@@ -225,8 +225,8 @@
                             <img src="{{ asset('pages/home/section-6/BN ห้องสมุด.png') }}" alt="e-library" class="img-fluid">
                         </a>
                     </div>
-                    <a href="#" class="banner-hover px-3 pt-2 pb-4">
-                        <img src="{{ asset('pages/home/section-6/BN ไลน์.png') }}" alt="line" class="img-fluid">
+                    <a href="https://lin.ee/rwSQgop" class="banner-hover px-3 pt-2 pb-4">
+                        <img src="{{ asset('pages/home/section-6/line_.png') }}" alt="line" class="img-fluid">
                     </a>
                 </div>
                 <a href="{{route('eservice_pages')}}" class="banner-hover px-4 py-1">
