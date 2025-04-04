@@ -14,7 +14,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
-        @font-face {
+        /* @font-face {
             font-family: 'PROMPT';
             src: url('/fonts/PROMPT-LIGHT.ttf') format('woff2');
             font-weight: normal;
@@ -29,7 +29,25 @@
         body {
             font-family: 'PROMPT', sans-serif;
             font-size: 20px;
+        } */
+        @font-face {
+            font-family: 'PROMPT';
+            src: url('{{ asset('fonts/PROMPT-LIGHT.TTF') }}') format('truetype');
+            font-weight: normal;
         }
+
+        @font-face {
+            font-family: 'PROMPT';
+            src: url('{{ asset('fonts/PROMPT-SEMIBOLD.TTF') }}') format('truetype');
+            font-weight: bold;
+        }
+
+        body {
+            font-family: 'PROMPT', sans-serif;
+            font-size: 20px;
+        }
+
+
 
         .bg-nav {
             background: linear-gradient(to bottom, #33acdd, #cbe7f7);
@@ -493,8 +511,7 @@
                 <div class="container d-flex flex-column justify-content-center align-items-center">
                     <div class="container d-flex flex-column flex-xxl-row justify-content-center justify-content-md-between align-items-center">
                         <div class="d-flex flex-column flex-md-row justify-content-start align-items-center">
-                            <img src="{{ asset('navbar/logo_1.gif') }}" alt="logo" class="logo "
-                                style=" z-index: 3;">
+                            <img src="{{ asset('navbar/logo_1.gif') }}" alt="logo" class="logo " style=" z-index: 3;">
                             <div class="text-title-nav lh-1 text-center text-md-start py-2 ps-3">
                                 <span class="me-1 maintitle-text">องค์การบริหารส่วนตำบลบางพลวง</span><br>
                                 <span class="subtitle-text">Bang Phluang Subdistrict Administrative Organizetion</span>
