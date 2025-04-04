@@ -783,7 +783,7 @@
         <div class="d-flex flex-column align-items-center justify-content-start">
             <div class="video-container">
                 <video autoplay loop muted playsinline>
-                    <source src="{{ asset('video/อบต.บางพลวง.webm') }}" type="video/mp4">
+                    <source src="{{ asset('video/อบต.บางพลวงxx.webm') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
