@@ -14,22 +14,6 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
-        /* @font-face {
-            font-family: 'PROMPT';
-            src: url('/fonts/PROMPT-LIGHT.ttf') format('woff2');
-            font-weight: normal;
-        }
-
-        @font-face {
-            font-family: 'PROMPT';
-            src: url('/fonts/PROMPT-SEMIBOLD.ttf') format('woff2');
-            font-weight: bold;
-        }
-
-        body {
-            font-family: 'PROMPT', sans-serif;
-            font-size: 20px;
-        } */
         @font-face {
             font-family: 'PROMPT';
             src: url('{{ asset('fonts/PROMPT-LIGHT.TTF') }}') format('truetype');
@@ -47,8 +31,6 @@
             font-family: 'PROMPT', sans-serif;
             font-size: 20px;
         }
-
-
 
         .bg-nav {
             background: linear-gradient(to bottom, #33acdd, #cbe7f7);
