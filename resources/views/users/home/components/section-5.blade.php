@@ -226,7 +226,7 @@
                         <span class="ms-2 me-4">ปฎิทินกิจกรรม</span>
                         <img src="{{ asset('pages/home/section-5/iconขวา2.png') }}" alt="icon1">
                     </a>
-                    <a href="#" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
+                    <a href="https://www.bangpluang.go.th/public/index.php/PerformanceResults/show/section/topic/20" class="btn-link-section5 no-reverse lh-sm d-flex justify-content-start align-items-center">
                         <img src="{{ asset('pages/home/section-5/iconขวา3.png') }}" alt="icon1">
                         <span class="ms-2 me-4">ประมวลจริยธรรม</span>
                     </a>
@@ -253,7 +253,7 @@
                 <img src="{{ asset('pages/home/section-5/BN1.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:16px;">อาสาสมัครป้องกันภัย<br>ฝ่ายพลเรือน</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://www.gprocurement.go.th/new_index.html" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN2.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:18px;">ประกาศ<br>จัดซื้อจัดจ้าง</span>
             </a>
@@ -265,7 +265,7 @@
                 <img src="{{ asset('pages/home/section-5/BN4.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark  banner-text" style="left: 57%; top: 68%; font-size:14px;">การประเมินประสิทธิ<br>ภาพของ อปท. (LPA)</span>
             </a>
-            <a href="#" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
+            <a href="https://infocenter.oic.go.th/" class="col-sm-6 col-lg-4 col-xl-4 lh-1 fw-bold position-relative d-flex justify-content-center align-items-center mt-3 banner-hover">
                 <img src="{{ asset('pages/home/section-5/BN5.png') }}" alt="banner" class="img-fluid">
                 <span class="position-absolute translate-middle text-center text-dark banner-text" style="left: 57%; top: 68%; font-size:14px;">ศูนย์ข้อมูลข่าวสาร<br>อิเล็กทรอนิกส์
                     <br>ราชการ(OIC)</span>
