@@ -232,17 +232,47 @@
             border-radius: 15px;
         }
 
-        .custom-carousel {
-            width: 100%;
-            max-width: 700px;
+        .travel-carousel {
+            width: 500px;
             /* ปรับขนาดตามต้องการ */
-            height: 350px;
+            height: 300px;
             /* ปรับความสูงให้รูปภาพมีขนาดคงที่ */
             overflow: hidden;
             border-radius: 20px;
         }
 
-        .custom-carousel img {
+        @media (max-width: 1200px) {
+            .travel-carousel {
+                width: 700px;
+                height: 450px;
+            }
+        }
+        @media (max-width: 991px) {
+            .travel-carousel {
+                width: 600px;
+                height: 400px;
+            }
+        }
+        @media (max-width: 768px) {
+            .travel-carousel {
+                width: 450px;
+                height: 350px;
+            }
+        }
+        @media (max-width: 540px) {
+            .travel-carousel {
+                width: 400px;
+                height: 300px;
+            }
+        }
+        @media (max-width: 470px) {
+            .travel-carousel {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .travel-carousel img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -297,7 +327,7 @@
                     ติดต่อหน่วยงาน สถ.จังหวัด
                 </a>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-8 mt-xl-3">
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <div class="lh-1 fw-bold w-100 ms-2 mb-3 text-center">
                         <span class="title-section7 mb-3">ประกาศของคลัง</span>
@@ -356,13 +386,13 @@
                     </iframe>
                 </div>
             </div>
-            <div class="col-xl-8 d-flex flex-column justify-content-center align-items-center">
-                <div class="title-section7 mb-1">
+            <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
+                <div class="title-section7 mb-xl-5">
                     แนะนำสถานที่ท่องเที่ยว
                 </div>
                 <div class="p-3 bg-out-slide">
                     <div class="bg-white p-2" style="border-radius: 20px;">
-                        <div id="carouselTravel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+                        <div id="carouselTravel" class="carousel slide travel-carousel" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 @if ($touristAttraction->isNotEmpty())
                                     @foreach ($touristAttraction as $key => $attraction)
@@ -416,8 +446,7 @@
                 </div>
 
             </div>
-            <div
-                class="col-xl-3 d-flex flex-row flex-xl-column justify-content-center align-items-center gap-2 banner-container">
+            <div class="col-xl-6 d-flex justify-content-center align-items-center gap-2 banner-container">
                 <a href="#" class="banner-hover">
                     <img src="{{ asset('pages/home/section-7/N1.png') }}" alt="btn-1" class="img-fluid">
                 </a>
