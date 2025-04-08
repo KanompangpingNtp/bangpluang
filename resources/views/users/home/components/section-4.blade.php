@@ -253,14 +253,14 @@
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/10.png') }}" alt="banner" class="slide-image-6">
-                <div class="slide-text" style="left: 45%;">ข้อมูลวารสาร</div>
+                <div class="slide-text" style="left: 45%;">กลุ่มสตรี</div>
               </a>
             </div>
       
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/11.png') }}" alt="banner" class="slide-image-6">
-                <div class="slide-text" style="left: 45%;">กลุ่มสตรี</div>
+                <div class="slide-text" style="left: 45%;">ข้อมูลวารสาร</div>
               </a>
             </div>
       
