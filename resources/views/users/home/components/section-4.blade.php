@@ -216,7 +216,7 @@
             </div>
       
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
-              <a href="#" class="slide-container d-block d-flex justify-content-center">
+              <a href="https://govwelfare.dep.go.th/" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/5.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">เบี้ยยังชีพ<br>คนพิการ</div>
               </a>
@@ -237,7 +237,7 @@
             </div>
       
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
-              <a href="#" class="slide-container d-block d-flex justify-content-center">
+              <a href="https://welfare.dla.go.th/webview/" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/8.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 46%;">เบี้ยยังชีพ<br>ผู้สูงอายุ</div>
               </a>
