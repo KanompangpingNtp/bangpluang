@@ -177,7 +177,7 @@
                         <div class="slide-text" style="font-size: 18px;">พรบ.อำนวย<br>ความสะดวก<br>2558</div>
                     </a>
                 </div>
-                
+
             </div>
             <!-- ปุ่มเลื่อน -->
             <div class="swiper-button-next"></div>
@@ -188,82 +188,82 @@
 
             <!-- เริ่มลูป icon -->
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
-              <a href="#" class="slide-container d-block d-flex justify-content-center">
+              <a href="{{route('forum_pages')}}" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/1.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">กระดานกระทู้</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/2.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="font-size: 16px; left: 43%;">โรงพยาบาลส่งเสริม<br>สุขภาพตำบล(รพ.สต.)</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/3.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="font-size: 18px; left: 43%;">เงินอุดหนุน<br>ดูแลเด็กแรกเกิด</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/4.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 43%;">ศูนย์พัฒนา<br>ผู้สูงอายุ</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="https://govwelfare.dep.go.th/" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/5.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">เบี้ยยังชีพ<br>คนพิการ</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/6.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">วารสาร<br>ออนไลน์</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/7.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%; font-size:16px;">กองทุนหลัก<br>ประกันสุขภาพ<br>(สปสช.)</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="https://welfare.dla.go.th/webview/" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/8.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 46%;">เบี้ยยังชีพ<br>ผู้สูงอายุ</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/9.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">ศูนย์ข้อมูล<br>ข่าวสาร</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/10.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">กลุ่มสตรี</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/11.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">ข้อมูลวารสาร</div>
               </a>
             </div>
-      
+
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
               <a href="#" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/12.png') }}" alt="banner" class="slide-image-6">
@@ -271,7 +271,7 @@
               </a>
             </div>
             <!-- จบลูป icon -->
-      
+
           </div>
     </div>
     {{-- <script>
@@ -296,8 +296,8 @@
             520: { slidesPerView: 3 },  // หน้าจอเล็ก แสดง 1 อัน
             676: { slidesPerView: 4 },  // หน้าจอกลาง แสดง 2 อัน
             868: { slidesPerView: 5 },  // หน้าจอใหญ่ขึ้น แสดง 3 อัน
-            1024: { slidesPerView: 7 },  
-            1200: { slidesPerView: 8 }  
+            1024: { slidesPerView: 7 },
+            1200: { slidesPerView: 8 }
           }
         });
       </script> --}}

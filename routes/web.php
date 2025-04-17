@@ -59,7 +59,8 @@ use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController
 use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
 
 
-use App\Http\Controllers\eservice\TemporaryController ;
+use App\Http\Controllers\eservice\TemporaryController;
+use App\Http\Controllers\TestController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,6 +81,8 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/showlogin', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/forum/page', [TestController::class, 'forum_pages'])->name('forum_pages');
 
 //ข้อมูลพื้นฐาน
 Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');
