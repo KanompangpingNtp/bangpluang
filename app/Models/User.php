@@ -42,4 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function forumDetails()
+    {
+        return $this->hasMany(ForumDetail::class);
+    }
+
+    public function forumComments()
+    {
+        return $this->hasMany(ForumComment::class);
+    }
 }

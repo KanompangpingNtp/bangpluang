@@ -57,7 +57,7 @@ use App\Http\Controllers\message_from_pm\AdminMessageFromPMController;
 use App\Http\Controllers\message_from_pm\MessageFromPMController;
 use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController;
 use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
-
+use App\Http\Controllers\forum\ForumController;
 
 use App\Http\Controllers\eservice\TemporaryController;
 use App\Http\Controllers\TestController ;
@@ -76,13 +76,19 @@ use App\Http\Controllers\TestController ;
 //     return view('users.layouts.main-layout');
 // });
 
+//Forum
+Route::get('/forum/pages', [ForumController::class, 'ForumPages'])->name('forum_pages');
+Route::post('/forum/create/form', [ForumController::class, 'ForumFormCreate'])->name('ForumFormCreate');
+Route::get('/forum/details/{id}', [ForumController::class, 'ForumDeatils'])->name('ForumDeatils');
+Route::post('/forum/create/comments/{id}', [ForumController::class, 'ForumCommentsCreate'])->name('ForumCommentsCreate');
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::get('/showlogin', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/forum/page', [TestController::class, 'forum_pages'])->name('forum_pages');
+// Route::get('/forum/page', [TestController::class, 'forum_pages'])->name('forum_pages');
 
 //ข้อมูลพื้นฐาน
 Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');
