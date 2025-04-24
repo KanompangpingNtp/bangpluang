@@ -123,7 +123,14 @@
                     <td><a href="{{route('elderly_allowance_pages')}}">เบี้ยยังชีพผู้สูงอายุ</a></td>
                 </tr>
                 <tr>
-                    <td><a href="{{route('disability_pages')}}">เบี้ยยังชีพผู้พิการ</a></td>
+                    <td>
+                        <a href="{{route('disability_pages')}}">เบี้ยยังชีพผู้พิการ</a>
+
+                        <a href="{{ asset('eserivce/คู่มือแบบคำขอลงทะเบียนรับเงินเบี้ยความพ.pdf') }}" class="btn btn-success btn-sm">
+                            คู่มือการใช้งานระบบ E-Service
+                            <i class="bi bi-file-earmark-pdf"></i>
+                        </a>
+                    </td>
                 </tr>
                 <tr>
                     <td><a href="{{route('receive_assistance_pages')}}">รับเงินสงเคราะห์ ผู้ป่วยเอดส์</a></td>
@@ -131,12 +138,12 @@
 
             </table>
 
-            <div class="d-flex justify-content-center align-items-center text-center mt-5">
+            {{-- <div class="d-flex justify-content-center align-items-center text-center mt-5">
                 <a href="{{ asset('eserivce/คู่มือแบบคำขอลงทะเบียนรับเงินเบี้ยความพ.pdf') }}" class="btn btn-success">
                     คู่มือการใช้งานระบบ E-Service
                     <i class="bi bi-file-earmark-pdf"></i>
                 </a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
