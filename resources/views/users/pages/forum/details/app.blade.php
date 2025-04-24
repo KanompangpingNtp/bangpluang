@@ -44,7 +44,7 @@
 
     /* เพิ่มเส้นขอบให้ความคิดเห็น */
     .comment {
-        border: 1px solid #1dac01;
+        border: 1px solid blue;
         /* สีเขียวสำหรับขอบ */
         padding: 15px;
         border-radius: 8px;
@@ -74,34 +74,77 @@
 
         <!-- ส่วนเนื้อหากระทู้ -->
         <div class="forum-content">
-            <p class="text-muted">โพสต์โดย: <strong> {{ $forumDeatils->user->name ?? 'ผู้ใช้งานทั่วไป' }}</strong> | วันที่โพสต์: {{ \Carbon\Carbon::parse($forumDeatils->created_at)->format('d/m/Y') }}</p>
+            <p class="text-muted">โพสต์โดย : <strong> {{ $forumDeatils->user->name ?? 'ผู้ใช้งานทั่วไป' }}</strong> | วันที่โพสต์: {{ \Carbon\Carbon::parse($forumDeatils->created_at)->format('d/m/Y') }}</p>
             <div class="mb-4">
                 <h5 class="fw-bold">รายละเอียด</h5>
                 {!! $forumDeatils->description !!}
+                @forelse ($forumDeatils->files as $file)
+                <div class="mb-2">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="{{ asset('storage/' . $file->file_path) }}">
+                        <img src="{{ asset('storage/' . $file->file_path) }}" alt="Forum Image" class="forum-img rounded me-3 mb-2" style="max-width: 100%; height: auto;">
+                    </a>
+                </div>
+                @empty
+                @endforelse
             </div>
-
 
             <!-- ส่วนความคิดเห็น -->
             <div class="comments-section mt-5">
-                <h5 class="fw-bold">ความคิดเห็น</h5>
+                <h5 class="fw-bold d-flex justify-content-between">
+                    <span>ความคิดเห็น</span>
+                    <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#commentModal">เพิ่มความคิดเห็น</button>
+                </h5>
 
                 <!-- ตัวอย่างความคิดเห็น -->
-                @foreach ($forumDeatils->comments as $comment)
+                @foreach ($comments as $comment)
                 <div class="comment mb-3">
                     <div class="d-flex justify-content-between">
                         <span class="text-muted">
-                            โพสต์โดย: <strong>{{ $comment->user->name ?? 'ไม่ทราบชื่อ' }}</strong>
+                            โพสต์โดย : <strong>{{ $comment->user->name ?? 'ไม่ทราบชื่อ' }}</strong>
                         </span>
                         <span class="text-muted small">
                             วันที่: {{ \Carbon\Carbon::parse($comment->created_at)->format('d/m/Y H:i') }}
                         </span>
                     </div>
-                    <p>{{ $comment->comments_details }}</p>
+                    <p>{{ strip_tags($comment->comments_details) }}</p>
                 </div>
                 @endforeach
 
-                <!-- ปุ่มสำหรับเพิ่มความคิดเห็น -->
-                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#commentModal">เพิ่มความคิดเห็น</button>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center mt-5">
+                        <!-- Previous button -->
+                        <li class="page-item {{ $comments->onFirstPage() ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $comments->previousPageUrl() }}">ก่อนหน้า</a>
+                        </li>
+
+                        <!-- Page number buttons -->
+                        @foreach ($comments->getUrlRange(1, $comments->lastPage()) as $page => $url)
+                        <li class="page-item {{ $page == $comments->currentPage() ? 'active' : '' }}">
+                            <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                        </li>
+                        @endforeach
+
+                        <!-- Next button -->
+                        <li class="page-item {{ !$comments->hasMorePages() ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $comments->nextPageUrl() }}">ต่อไป</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">แสดงไฟล์</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="ภาพขนาดใหญ่">
+                </div>
             </div>
         </div>
     </div>
@@ -134,6 +177,23 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modalImage = document.getElementById('modalImage');
+            const imageLinks = document.querySelectorAll('[data-bs-toggle="modal"][data-bs-target="#imageModal"]');
+
+            imageLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const imageUrl = link.getAttribute('data-bs-image');
+                    modalImage.src = imageUrl;
+                });
+            });
+        });
+
+    </script>
+
 
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <script>

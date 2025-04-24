@@ -189,7 +189,7 @@
             <!-- เริ่มลูป icon -->
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
                 {{-- {{route('forum_pages')}} --}}
-              <a href="#" class="slide-container d-block d-flex justify-content-center">
+              <a href="{{route('forum_pages')}}" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/1.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">กระดานกระทู้</div>
               </a>

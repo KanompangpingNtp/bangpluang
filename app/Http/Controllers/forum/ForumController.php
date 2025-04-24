@@ -89,6 +89,8 @@ class ForumController extends Controller
 
         $forumDeatils = ForumDetail::with('user', 'comments', 'files')->findOrFail($id);
 
+        $comments = $forumDeatils->comments()->paginate(perPage: 10);
+
         return view('users.pages.forum.details.app', compact(
             'personnelAgencies',
             'PerfResultsMenu',
@@ -96,7 +98,8 @@ class ForumController extends Controller
             'AuthorityMenu',
             'PublicMenus',
             'LawsRegsMenu',
-            'forumDeatils'
+            'forumDeatils',
+            'comments'
         ));
     }
 
