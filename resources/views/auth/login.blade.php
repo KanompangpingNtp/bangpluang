@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -27,7 +28,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <h4 class="mb-2">สำหรับผู้ดูแลระบบ</h4>
+                        <h4 class="mb-2">ลงชื่อเข้าใช้งานระบบ</h4>
                         <h6>องค์การบริหารส่วนตำบลบางพลวง</h6>
                     </div>
                     <div class="card-body">

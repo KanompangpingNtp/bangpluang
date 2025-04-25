@@ -117,14 +117,14 @@
             <table class="table">
 
                 <tr>
-                    <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                    <td><a href="{{route('GeneralRequestsFormPage')}}">คำร้องทั่วไป</a></td>
                 </tr>
                 <tr>
-                    <td><a href="{{route('elderly_allowance_pages')}}">เบี้ยยังชีพผู้สูงอายุ</a></td>
+                    <td><a href="{{route('ElderlyAllowanceFormPage')}}">แบบยืนยันเบี้ยยังชีพผู้สูงอายุ</a></td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="{{route('disability_pages')}}">เบี้ยยังชีพผู้พิการ</a>
+                        <a href="{{route('DisabilityFormPage')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a>
 
                         <a href="{{ asset('eserivce/คู่มือแบบคำขอลงทะเบียนรับเงินเบี้ยความพ.pdf') }}" class="btn btn-success btn-sm">
                             คู่มือการใช้งาน E-Service
@@ -133,7 +133,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href="{{route('receive_assistance_pages')}}">รับเงินสงเคราะห์ ผู้ป่วยเอดส์</a></td>
+                    <td><a href="{{route('ReceiveAssistanceFormPage')}}">แบบคำขอรับการสงเคราะห์ (ผู้ป่วยเอดส์)</a></td>
+                </tr>
+
+                <tr>
+                    <td><a href="{{route('HealthHazardApplicationFormPage')}}">แบบคำร้องใบอนุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ</a></td>
                 </tr>
 
             </table>

@@ -513,8 +513,8 @@
                                                 ติดต่อ</a>
                                         </div>
                                         <div class="d-flex d-md-none flex-column justify-content-center align-items-center gap-1">
-                                            <a class="button-blue lh-1" href="#"> เข้าสู่ระบบ</a>
-                                            <a class="button-blue lh-1" href="#"> สมัครสมาชิก</a>
+                                            <a class="button-blue lh-1" href="{{route('showLoginForm')}}"> เข้าสู่ระบบ</a>
+                                            <a class="button-blue lh-1" href="{{route('showRegistrationForm')}}"> สมัครสมาชิก</a>
                                         </div>
 
                                     </div>
@@ -599,8 +599,8 @@
 
                                     <div class="d-none d-md-flex flex-column justify-content-center align-items-center gap-1 button-img">
 
-                                        <a class="button-blue lh-1" href="#"> เข้าสู่ระบบ</a>
-                                        <a class="button-blue lh-1" href="#"> สมัครสมาชิก</a>
+                                        <a class="button-blue lh-1" href="{{route('showLoginForm')}}"> เข้าสู่ระบบ</a>
+                                        <a class="button-blue lh-1" href="{{route('showRegistrationForm')}}"> สมัครสมาชิก</a>
                                     </div>
 
 

@@ -21,6 +21,7 @@ class AdminSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => Hash::make('123456789'),
                 'remember_token' => null,
+                'status' => 1,
             ]
         );
 
@@ -31,6 +32,29 @@ class AdminSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password' => Hash::make('123456789'),
                 'remember_token' => null,
+                'status' => 1,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'eservice@example.com'], // เงื่อนไขตรวจซ้ำ
+            [
+                'name' => 'ผู้ดูแลระบบ Eservice',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 2,
+            ]
+        );
+
+        User::updateOrCreate(
+            ['email' => 'users@example.com'], // เงื่อนไขตรวจซ้ำ
+            [
+                'name' => 'สมชาย ใจดี',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 3,
             ]
         );
     }
