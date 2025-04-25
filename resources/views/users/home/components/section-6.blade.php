@@ -233,7 +233,7 @@
                     </a>
                 </div>
                 <a href="{{route('eservice_pages')}}" class="banner-hover px-4 py-1">
-                    <img src="{{ asset('pages/home/section-6/oss.png') }}" alt="oss" class="img-fluid">
+                    <img src="{{ asset('pages/home/section-6/ossa.png') }}" alt="oss" class="img-fluid">
                 </a>
             </div>
         </div>
