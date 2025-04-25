@@ -127,7 +127,7 @@
                         <a href="{{route('disability_pages')}}">เบี้ยยังชีพผู้พิการ</a>
 
                         <a href="{{ asset('eserivce/คู่มือแบบคำขอลงทะเบียนรับเงินเบี้ยความพ.pdf') }}" class="btn btn-success btn-sm">
-                            คู่มือการใช้งานระบบ E-Service
+                            คู่มือการใช้งาน E-Service
                             <i class="bi bi-file-earmark-pdf"></i>
                         </a>
                     </td>
