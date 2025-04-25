@@ -58,6 +58,7 @@ use App\Http\Controllers\message_from_pm\MessageFromPMController;
 use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController;
 use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
 use App\Http\Controllers\forum\ForumController;
+use App\Http\Controllers\forum\AdminForumController;
 
 use App\Http\Controllers\eservice\TemporaryController;
 use App\Http\Controllers\TestController ;
@@ -421,8 +422,14 @@ Route::middleware(['checklogin'])->group(function () {
     Route::get('/Admin/MessageFromPM/page', [AdminMessageFromPMController::class, 'MessageFromPMAdmin'])->name('MessageFromPMAdmin');
     Route::post('/Admin/MessageFromPM/create', [AdminMessageFromPMController::class, 'MessageFromPMCreate'])->name('MessageFromPMCreate');
     Route::delete('/Admin/MessageFromPM/delete/{id}', [AdminMessageFromPMController::class, 'MessageFromPMDelete'])->name('MessageFromPMDelete');
-    //MessageFromPM
+
+    //ExecutiveIntentions
     Route::get('/Admin/ExecutiveIntentions/page', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsAdmin'])->name('ExecutiveIntentionsAdmin');
     Route::post('/Admin/ExecutiveIntentions/create', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsCreate'])->name('ExecutiveIntentionsCreate');
     Route::delete('/Admin/ExecutiveIntentions/delete/{id}', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsDelete'])->name('ExecutiveIntentionsDelete');
+
+    //Forum
+    Route::get('/Admin/Forum/page', [AdminForumController::class, 'ForumAdminPages'])->name('ForumAdminPages');
+    Route::get('/Admin/Forum/details/{id}', [AdminForumController::class, 'ForumAdminDeatils'])->name('ForumAdminDeatils');
+    Route::post('/Admin/Forum/comments/{id}', [AdminForumController::class, 'ForumAdminCommentsCreate'])->name('ForumAdminCommentsCreate');
 });
