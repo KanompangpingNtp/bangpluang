@@ -47,7 +47,7 @@
                 @endforelse
 
                 <!-- ข้อมูลกระทู้ -->
-                <div class="flex-grow-1">
+                <div class="flex-grow-1" style="font-size: 16px;">
                     <h5 class="mb-1">{{ $forum->title }}</h5>
                     <p class="text-muted mb-1">{{ strip_tags($forum->description) }}</p>
                     <div class="text-muted small">
@@ -58,10 +58,21 @@
                             {{ \Carbon\Carbon::parse($forum->created_at)->format('d/m/Y H:i') }}</span>
                         <span><i class="bi bi-chat-dots"></i> {{ $forum->comments->count() }} ความคิดเห็น</span>
                     </div>
+
+                    <br>
+
+                    <div class="text-end">
+                        <form action="{{ route('ForumAdminDetailsDelete', $forum->id) }}" method="POST" style="display: inline;" onsubmit="return confirm('คุณต้องการลบคอมเมนต์นี้ใช่หรือไม่?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">ลบกระทู้</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </a>
+
     @endforeach
 
     @if ($forumDetail && $forumDetail->count() > 0)
