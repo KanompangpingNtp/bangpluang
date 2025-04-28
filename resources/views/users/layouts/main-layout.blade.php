@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <style>
         @font-face {
             font-family: 'PROMPT';
@@ -740,7 +743,7 @@
                                         </li>
                                         <li><a class="dropdown-item" href="{{ route('SatisfactionForm') }}">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
                                         </li>
-                                        {{-- <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li> --}}
+                                        <li><a class="dropdown-item" href="{{route('QuestionsPage')}}">แบบสอบถามความพึงพอใจ </a></li>
                                         @foreach ($PublicMenus as $detail)
                                         <li>
                                             <a class="dropdown-item" href="{{ route('MenuForPublicSectionPages', ['id' => $detail->id]) }}">

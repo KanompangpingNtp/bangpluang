@@ -72,7 +72,14 @@ use App\Http\Controllers\eservice\receive_assistance\AdminReceiveAssistanceContr
 use App\Http\Controllers\eservice\health_hazard_applications\HealthHazardApplicationController;
 use App\Http\Controllers\eservice\health_hazard_applications\AdminHealthHazardApplicationController;
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\evaluation_questions\EvaluationQuestionsController;
+use App\Http\Controllers\evaluation_questions\AdminEvaluationQuestionsController;
+
+
+Route::get('/evaluation_questions/page', [EvaluationQuestionsController::class, 'QuestionsPage'])->name('QuestionsPage');
+Route::post('/evaluation_questions/create', [EvaluationQuestionsController::class, 'EvaluationQuestionsCreate'])->name('EvaluationQuestionsCreate');
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,16 +91,6 @@ use App\Http\Controllers\TestController;
 |
 */
 
-// Route::get('/index', function () {
-//     return view('users.layouts.main-layout');
-// });
-
-//Forum
-Route::get('/forum/pages', [ForumController::class, 'ForumPages'])->name('forum_pages');
-Route::post('/forum/create/form', [ForumController::class, 'ForumFormCreate'])->name('ForumFormCreate');
-Route::get('/forum/details/{id}', [ForumController::class, 'ForumDeatils'])->name('ForumDeatils');
-Route::post('/forum/create/comments/{id}', [ForumController::class, 'ForumCommentsCreate'])->name('ForumCommentsCreate');
-
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Route::get('/showlogin', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
@@ -103,7 +100,11 @@ Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationFor
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout/user-account', [AuthController::class, 'logoutUserAccount'])->name('logoutUserAccount');
 
-// Route::get('/forum/page', [TestController::class, 'forum_pages'])->name('forum_pages');
+//Forum
+Route::get('/forum/pages', [ForumController::class, 'ForumPages'])->name('forum_pages');
+Route::post('/forum/create/form', [ForumController::class, 'ForumFormCreate'])->name('ForumFormCreate');
+Route::get('/forum/details/{id}', [ForumController::class, 'ForumDeatils'])->name('ForumDeatils');
+Route::post('/forum/create/comments/{id}', [ForumController::class, 'ForumCommentsCreate'])->name('ForumCommentsCreate');
 
 //ข้อมูลพื้นฐาน
 Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');
@@ -447,6 +448,11 @@ Route::middleware(['auth', 'checklogin:1'])->group(function () {
     Route::get('/Admin/Forum/details/{id}', [AdminForumController::class, 'ForumAdminDeatils'])->name('ForumAdminDeatils');
     Route::post('/Admin/Forum/comments/{id}', [AdminForumController::class, 'ForumAdminCommentsCreate'])->name('ForumAdminCommentsCreate');
     Route::delete('/Admin/Forum/delete/{id}', [AdminForumController::class, 'ForumAdminDetailsDelete'])->name('ForumAdminDetailsDelete');
+
+    //แบบสอบถามความพึงพอใจ
+    Route::get('/user-account/evaluation_questions/show-details', [AdminEvaluationQuestionsController::class, 'AdminQuestions'])->name('AdminQuestions');
+    Route::get('/user-account/evaluation_questions/show-details/requester_name/{id}', [AdminEvaluationQuestionsController::class, 'AdminShowEvaluator'])->name('AdminShowEvaluator');
+
 });
 
 //คำร้องทั่วไป
