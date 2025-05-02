@@ -35,11 +35,11 @@
     <h3 class="text-center">ข้อมูลกระดานกระทู้ <br></h3><br>
 
     @foreach($forumDetail as $forum)
-    <a href="{{route('ForumAdminDeatils',$forum->id )}}" class="forum-card rounded mb-2 border border-primary">
+    <a href="{{ route('ForumAdminDeatils', $forum->id) }}" class="forum-card rounded mb-2 border border-primary">
         <div class="card p-3 shadow-sm">
             <div class="d-flex flex-column flex-lg-row align-items-center">
                 @php
-                    // หาทุกไฟล์ที่เป็นรูปภาพ
+                    // หาภาพแรกที่เป็นไฟล์ประเภท image
                     $imageFile = $forum->files->firstWhere(function ($file) {
                         return Str::startsWith($file->file_type, 'image/');
                     });
@@ -50,7 +50,6 @@
                 @else
                     <img src="{{ asset('pages/home/section-5/LOGOบางพลวง.png') }}" alt="Default Forum Image" class="forum-img rounded me-3 mb-2">
                 @endif
-            </div>
 
                 <!-- ข้อมูลกระทู้ -->
                 <div class="flex-grow-1" style="font-size: 16px;">
@@ -78,8 +77,8 @@
             </div>
         </div>
     </a>
+@endforeach
 
-    @endforeach
 
     @if ($forumDetail && $forumDetail->count() > 0)
         <nav aria-label="Page navigation example">
