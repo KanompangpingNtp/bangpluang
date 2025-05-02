@@ -38,13 +38,19 @@
     <a href="{{route('ForumAdminDeatils',$forum->id )}}" class="forum-card rounded mb-2 border border-primary">
         <div class="card p-3 shadow-sm">
             <div class="d-flex flex-column flex-lg-row align-items-center">
-                @forelse ($forum->files as $file)
-                @if (Str::startsWith($file->file_type, 'image/'))
-                <img src="{{ asset('storage/' . $file->file_path) }}" alt="Forum Image" class="forum-img rounded me-3 mb-2">
+                @php
+                    // หาทุกไฟล์ที่เป็นรูปภาพ
+                    $imageFile = $forum->files->firstWhere(function ($file) {
+                        return Str::startsWith($file->file_type, 'image/');
+                    });
+                @endphp
+
+                @if ($imageFile)
+                    <img src="{{ asset('storage/' . $imageFile->file_path) }}" alt="Forum Image" class="forum-img rounded me-3 mb-2">
+                @else
+                    <img src="{{ asset('pages/home/section-5/LOGOบางพลวง.png') }}" alt="Default Forum Image" class="forum-img rounded me-3 mb-2">
                 @endif
-                @empty
-                <img src="{{ asset('pages/home/section-5/LOGOบางพลวง.png') }}" alt="Default Forum Image" class="forum-img rounded me-3 mb-2">
-                @endforelse
+            </div>
 
                 <!-- ข้อมูลกระทู้ -->
                 <div class="flex-grow-1" style="font-size: 16px;">
