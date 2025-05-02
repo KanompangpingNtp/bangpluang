@@ -48,7 +48,7 @@ class ForumController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'file_post.*' => 'nullable|file|mimes:jpg,jpeg,png,pdf',
+            'attachments.*' => 'nullable|file|mimes:jpg,jpeg,png,pdf',
         ]);
         // dd($request);
         $forumDetail = ForumDetail::create([
@@ -57,10 +57,9 @@ class ForumController extends Controller
             'description' => $request->description,
         ]);
 
-        if ($request->hasFile('file_post')) {
-            foreach ($request->file('file_post') as $file) {
+        if ($request->hasFile('attachments')) {
+            foreach ($request->file('attachments') as $file) {
                 $filename = time() . '_' . $file->getClientOriginalName();
-
                 $path = $file->storeAs('forum-files', $filename, 'public');
 
                 ForumFile::create([
