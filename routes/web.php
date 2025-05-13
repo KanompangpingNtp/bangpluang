@@ -71,9 +71,11 @@ use App\Http\Controllers\eservice\receive_assistance\ReceiveAssistanceController
 use App\Http\Controllers\eservice\receive_assistance\AdminReceiveAssistanceController;
 use App\Http\Controllers\eservice\health_hazard_applications\HealthHazardApplicationController;
 use App\Http\Controllers\eservice\health_hazard_applications\AdminHealthHazardApplicationController;
-
 use App\Http\Controllers\evaluation_questions\EvaluationQuestionsController;
 use App\Http\Controllers\evaluation_questions\AdminEvaluationQuestionsController;
+use App\Http\Controllers\information_center\AdminInformationCenterController;
+use App\Http\Controllers\information_center\InformationCenterController;
+
 
 
 Route::get('/evaluation_questions/page', [EvaluationQuestionsController::class, 'QuestionsPage'])->name('QuestionsPage');
@@ -207,6 +209,10 @@ Route::get('/message_from_pm/page', [MessageFromPMController::class, 'MessageFro
 
 //เจตจำนงสุจริตของผู้บริหาร
 Route::get('/executive_intentions/page', [ExecutiveIntentionsController::class, 'ExecutiveIntentionsPage'])->name('ExecutiveIntentionsPage');
+
+//ศูนย์ข้อมูลข่าวสาร
+Route::get('/information_center', [InformationCenterController::class, 'InformationCenterShowData'])->name('InformationCenterShowData');
+Route::get('/information_center/detail/{id}', [InformationCenterController::class, 'InformationCenterDetail'])->name('InformationCenterDetail');
 
 Route::middleware(['auth', 'checklogin:1'])->group(function () {
     Route::get('/admin', [AuthController::class, 'AdminIndex'])->name('AdminIndex');
@@ -450,8 +456,17 @@ Route::middleware(['auth', 'checklogin:1'])->group(function () {
     Route::delete('/Admin/Forum/delete/{id}', [AdminForumController::class, 'ForumAdminDetailsDelete'])->name('ForumAdminDetailsDelete');
 
     //แบบสอบถามความพึงพอใจ
-    Route::get('/user-account/evaluation_questions/show-details', [AdminEvaluationQuestionsController::class, 'AdminQuestions'])->name('AdminQuestions');
-    Route::get('/user-account/evaluation_questions/show-details/requester_name/{id}', [AdminEvaluationQuestionsController::class, 'AdminShowEvaluator'])->name('AdminShowEvaluator');
+    Route::get('/Admin/evaluation_questions/show-details', [AdminEvaluationQuestionsController::class, 'AdminQuestions'])->name('AdminQuestions');
+    Route::get('/Admin/evaluation_questions/show-details/requester_name/{id}', [AdminEvaluationQuestionsController::class, 'AdminShowEvaluator'])->name('AdminShowEvaluator');
+
+    //ศูนย์ข้อมูลข่าวสาร
+    Route::get('/Admin/information_center/page', [AdminInformationCenterController::class, 'InformationCenterType'])->name('InformationCenterType');
+    Route::post('/Admin/information_center/create/name', [AdminInformationCenterController::class, 'InformationCenterCreate'])->name('InformationCenterCreate');
+    Route::put('/Admin/information_center/{id}/update', [AdminInformationCenterController::class, 'InformationCenterUpdate'])->name('InformationCenterUpdate');
+    Route::delete('/Admin/information_center/delete/{id}', [AdminInformationCenterController::class, 'InformationCenterDelete'])->name('InformationCenterDelete');
+    Route::get('/Admin/information_center/show/detail/{id}', [AdminInformationCenterController::class, 'InformationCenterShowDetail'])->name('InformationCenterShowDetail');
+    Route::post('/Admin/information_center/show/detail/create/{id}', [AdminInformationCenterController::class, 'InformationCenterDetailCreate'])->name('InformationCenterDetailCreate');
+    Route::delete('/Admin/information_center/show/detail/delete/{id}', [AdminInformationCenterController::class, 'InformationCenterDetailDelete'])->name('InformationCenterDetailDelete');
 
 });
 

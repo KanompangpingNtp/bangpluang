@@ -26,17 +26,7 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
-                                    <li class="mb-1"><a href="{{route('MessageFromPMAdmin')}}">สารจากนายก</a></li>
-                                    <li class="mb-1"><a href="{{route('ExecutiveIntentionsAdmin')}}">เจตจำนงสุจริตของผู้บริหาร</a></li>
-                                    {{-- <li class="mb-1">เมนูพื้นฐาน
-                                        <ul>
-                                            <li class="mb-1">ประวัติความเป็นมา</li>
-                                            <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
-                                            <li class="mb-1">ผลิตภัณฑ์ชุมชน</li>
-                                            <li class="mb-1">สถานที่สำคัญ</li>
-                                            <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
-                                        </ul>
-                                    </li> --}}
+                                    <li class="mb-1"><a href="{{route('InformationCenterType')}}">ศูนย์ข้อมูลข่าวสาร</a></li>
                                 </ul>
                             </div>
                             <div class="modal-footer">

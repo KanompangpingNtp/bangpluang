@@ -172,6 +172,12 @@
                             </div>
                             แบบสอบถามความพึงพอใจ
                         </a>
+                        <a class="nav-link" href="{{route('InformationCenterType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            ศูนย์ข้อมูลข่าวสาร
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">

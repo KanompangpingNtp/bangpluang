@@ -245,7 +245,7 @@
             </div>
 
             <div class="col-md-6  col-lg-4 col-xl-3 text-center">
-              <a href="#" class="slide-container d-block d-flex justify-content-center">
+              <a href="{{route('InformationCenterShowData')}}" class="slide-container d-block d-flex justify-content-center">
                 <img src="{{ asset('pages/home/section-4/9.png') }}" alt="banner" class="slide-image-6">
                 <div class="slide-text" style="left: 45%;">ศูนย์ข้อมูล<br>ข่าวสาร</div>
               </a>
