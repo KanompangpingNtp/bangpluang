@@ -20,7 +20,7 @@ class DisabilityController extends Controller
 {
     public function DisabilityFormPage()
     {
-        return view('eservice.users.disability.page-form');
+        return view('eservice.users.disability.page');
     }
 
     public function DisabilityFormCreate(Request $request)
