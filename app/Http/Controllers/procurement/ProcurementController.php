@@ -17,9 +17,9 @@ class ProcurementController extends Controller
     public function ProcurementShowData()
     {
         $personnelAgencies = PersonnelAgency::with('ranks')
-        ->whereIn('status', [1, 2, 3, 4, 5])
-        ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
-        ->get();
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
 
         $PerfResultsMenu = PerfResultsType::all();
         $AuthorityMenu = AuthorityType::all();
@@ -27,10 +27,12 @@ class ProcurementController extends Controller
         $LawsRegsMenu = LawsRegsType::all();
         $PublicMenus = PublicMenusType::all();
 
-        $Procurement = PostDetail::with('postType','photos')
+        $Procurement = PostDetail::with('postType', 'photos')
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'ประกาศจัดซื้อจัดจ้าง');
-            })->paginate(14);
+            })
+            ->orderBy('date', 'desc')
+            ->paginate(14);
 
         return view('users.pages.procurement.show_data', compact(
             'Procurement',
@@ -46,9 +48,9 @@ class ProcurementController extends Controller
     public function ProcurementDetail($id)
     {
         $personnelAgencies = PersonnelAgency::with('ranks')
-        ->whereIn('status', [1, 2, 3, 4, 5])
-        ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
-        ->get();
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
 
         $PerfResultsMenu = PerfResultsType::all();
         $AuthorityMenu = AuthorityType::all();
