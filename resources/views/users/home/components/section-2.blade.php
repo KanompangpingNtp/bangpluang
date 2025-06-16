@@ -143,7 +143,7 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="consultant-info fs-6 text-center lh-sm">
-                            <span class="fs-6 fw-bold">หัวหน้าสำนนักปลัด รักษาราชการแทน <br> ผู้อำนวยการกองศึกษา ศาสนาและวัฒนธรรม</span><br>
+                            <span class="fs-6 fw-bold">หัวหน้าสำนักปลัด รักษาราชการแทน <br> ผู้อำนวยการกองการศึกษา ศาสนาและวัฒนธรรม</span><br>
                             <span>นางสาวปิ่นมณี ชาญชนะวิวัฒน์</span><br>
                             <a href="tel:+66824772029" class="phone-link fw-bold text-dark pe-2 mt-2"
                                 style="font-size:14px; text-decoration: none;">
