@@ -79,13 +79,13 @@
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="consultant-info fs-6 text-center lh-sm">
                             <span class="fs-5 fw-bold">รองปลัดองค์การบริหาร<br>ส่วนตำบลบางพลวง </span><br>
-                            <span>นางวรรณนภัส ประสังสิต</span><br>
-                            <a href="tel:+66979968289" class="phone-link fw-bold text-dark pe-2 mt-2"
+                            <span>-</span><br>
+                            <a href="#" class="phone-link fw-bold text-dark pe-2 mt-2"
                                 style="font-size:14px; text-decoration: none;">
-                                097-996-8289
+
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-2/รองปลัด.png') }}" alt="personal1" class="personal-img">
+                        <img src="" class="personal-img">
                     </div>
 
                 </div>
@@ -158,13 +158,13 @@
                     <div class="d-flex flex-column-reverse align-items-center justify-content-center">
                         <div class="consultant-info fs-6 text-center lh-sm">
                             <span class="fs-6 fw-bold">ผู้อำนวยการ<br>กองส่งเสริมการเกษตร</span><br>
-                            <span>นายณรัชพงศ์ สีงุ้ม</span><br>
-                            <a href="tel:+66935529669" class="phone-link fw-bold text-dark pe-2 mt-2"
+                            <span>-</span><br>
+                            <a href="#" class="phone-link fw-bold text-dark pe-2 mt-2"
                                 style="font-size:14px; text-decoration: none;">
-                                093-552-9669
+
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-2/ผอ.กองการเกษตร.png') }}" alt="personal4" class=" personal-img-sub">
+                        <img src="" class=" personal-img-sub">
                     </div>
                 </div>
             </div>
